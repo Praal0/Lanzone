@@ -13,7 +13,7 @@ import dorian.guerrero.lanzone.R;
 public class SplashActivity extends AppCompatActivity {
 
     ProgressBar splashProgress;
-    int SPLASH_TIME = 3000; //This is 3 seconds
+    int SPLASH_TIME = 5000; //This is 5 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
 
-        //This is additional feature, used to run a progress bar
+        //Rn a progress bar
         splashProgress = findViewById(R.id.splashProgress);
         playProgress();
 
@@ -32,7 +32,6 @@ public class SplashActivity extends AppCompatActivity {
                 //We are moving to next page
                 Intent mySuperIntent = new Intent(SplashActivity.this, HomeActivity.class);
                 startActivity(mySuperIntent);
-
                 //This 'finish()' is for exiting the app when back button pressed from Home page which is HomeActivity
                 finish();
 
@@ -40,10 +39,10 @@ public class SplashActivity extends AppCompatActivity {
         }, SPLASH_TIME);
     }
 
-    //Method to run progress bar for 5 seconds
+    //Void to run progress bar for 5 seconds
     private void playProgress() {
         ObjectAnimator.ofInt(splashProgress, "progress", 100)
-                .setDuration(5000)
+                .setDuration(SPLASH_TIME)
                 .start();
     }
 }
