@@ -13,7 +13,7 @@
 
         </activity>
         <activity android:name=".mareu_list.AddReuActivity" />
-        <activity android:name=".mareu_list.MainActivity">
+        <activity android:name=".mareu_list.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

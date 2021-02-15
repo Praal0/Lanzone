@@ -8,11 +8,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
 
-import java.io.Serializable;
-
 import dorian.guerrero.lanzone.R;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     ProgressBar splashProgress;
     int SPLASH_TIME = 3000; //This is 3 seconds
@@ -20,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
 
         //This is additional feature, used to run a progress bar
@@ -31,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //Do any action here. Now we are moving to next page
-                Intent mySuperIntent = new Intent(MainActivity.this, HomeActivity.class);
+                //We are moving to next page
+                Intent mySuperIntent = new Intent(SplashActivity.this, HomeActivity.class);
                 startActivity(mySuperIntent);
 
-                //This 'finish()' is for exiting the app when back button pressed from Home page which is ActivityHome
+                //This 'finish()' is for exiting the app when back button pressed from Home page which is HomeActivity
                 finish();
 
             }

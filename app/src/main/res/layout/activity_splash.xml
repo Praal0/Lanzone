@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mareu_list.MainActivity"
+    tools:context=".mareu_list.SplashActivity"
     android:background="@drawable/ic_custom___1">
 
     <ImageView
