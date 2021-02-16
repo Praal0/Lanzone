@@ -23,11 +23,12 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_height="wrap_content"
+        android:id="@+id/addMeeting"
         android:layout_width="wrap_content"
-        android:src="@drawable/ic_white_add_24"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_white_add_24" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/container"
