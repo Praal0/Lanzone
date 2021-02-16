@@ -5,8 +5,26 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="" />
+    <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +53,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -60,12 +79,16 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.825694839">
+      <recent name="dorian.guerrero.lanzone" />
+      <recent name="dorian.guerrero.lanzone.mareu_list" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="dorian.guerrero.lanzone.mareu_list" />
       <recent name="dorian.guerrero.lanzone" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="dorian.guerrero.lanzone.mareu_list" />
     </key>
     <key name="android.template.-498762814">
       <recent name="dorian.guerrero.lanzone.lanzone_list" />
@@ -73,9 +96,8 @@
       <recent name="dorian.guerrero.lanzone.ui_lanzone_list" />
       <recent name="dorian.guerrero.lanzone.ui" />
     </key>
-    <key name="android.template.825694839">
-      <recent name="dorian.guerrero.lanzone" />
-      <recent name="dorian.guerrero.lanzone.mareu_list" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
   <component name="RunManager">
@@ -171,11 +193,11 @@
     </state>
     <state x="-1231" y="387" width="555" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1613032363842" />
     <state x="689" y="387" width="582" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.25.1920.985/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1613033500954" />
-    <state x="667" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613033017098">
+    <state x="667" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613468838606">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="-1253" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1613032501115" />
-    <state x="667" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613033017098" />
+    <state x="667" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613468838606" />
     <state x="318" y="262" key="AndroidCreateResourceDirectoryDialog" timestamp="1613031045226">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
@@ -184,22 +206,26 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="548" y="276" key="AndroidCreateResourceFileDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613034551336" />
-    <state width="1876" height="264" key="GridCell.Tab.0.bottom" timestamp="1613390413820">
+    <state x="1201" y="411" key="AndroidCreateXmlResourceDialog" timestamp="1613468650273">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1876" height="264" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613390413820" />
-    <state width="1876" height="264" key="GridCell.Tab.0.center" timestamp="1613390413819">
+    <state x="1201" y="411" key="AndroidCreateXmlResourceDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613468650273" />
+    <state width="1876" height="264" key="GridCell.Tab.0.bottom" timestamp="1613469184462">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1876" height="264" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613390413819" />
-    <state width="1876" height="264" key="GridCell.Tab.0.left" timestamp="1613390413819">
+    <state width="1876" height="264" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613469184462" />
+    <state width="1876" height="264" key="GridCell.Tab.0.center" timestamp="1613469184461">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1876" height="264" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613390413819" />
-    <state width="1876" height="264" key="GridCell.Tab.0.right" timestamp="1613390413819">
+    <state width="1876" height="264" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613469184461" />
+    <state width="1876" height="264" key="GridCell.Tab.0.left" timestamp="1613469184460">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1876" height="264" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613390413819" />
+    <state width="1876" height="264" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613469184460" />
+    <state width="1876" height="264" key="GridCell.Tab.0.right" timestamp="1613469184461">
+      <screen x="0" y="25" width="1920" height="985" />
+    </state>
+    <state width="1876" height="264" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613469184461" />
     <state width="1876" height="264" key="GridCell.Tab.1.bottom" timestamp="1613390413821">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
@@ -228,7 +254,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/SplashActivity.java</url>
-          <line>34</line>
+          <line>35</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
