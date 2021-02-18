@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Maréu</string>
+
+
+    <string-array name="progamming_language">
+        <item>C++</item>
+        <item>C</item>
+        <item>Java</item>
+        <item>Kotlin</item>
+    </string-array>
+
+
+    <string-array name="email">
+        <item>praal@hotmail.fr</item>
+        <item>toto@gmail.com</item>
+        <item>toti@gmail.com</item>
+        <item>tota@gmail.com</item>
+    </string-array>
+
+
 </resources>

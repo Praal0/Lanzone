@@ -10,6 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/MeetingAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_delete_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/meeting_list_content.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -20,17 +23,18 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/HomeActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_API_21]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -52,8 +56,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -180,6 +185,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1613486602598">
+      <screen x="0" y="25" width="1920" height="985" />
+    </state>
+    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613486602598" />
     <state x="663" y="298" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1613033499338">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
@@ -198,14 +207,14 @@
     </state>
     <state x="-1253" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1613032501115" />
     <state x="667" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613468838606" />
-    <state x="318" y="262" key="AndroidCreateResourceDirectoryDialog" timestamp="1613031045226">
+    <state x="318" y="262" key="AndroidCreateResourceDirectoryDialog" timestamp="1613485781775">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state x="318" y="262" key="AndroidCreateResourceDirectoryDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613031045226" />
-    <state x="548" y="276" key="AndroidCreateResourceFileDialog" timestamp="1613034551336">
+    <state x="318" y="262" key="AndroidCreateResourceDirectoryDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613485781775" />
+    <state x="558" y="270" key="AndroidCreateResourceFileDialog" timestamp="1613489226755">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state x="548" y="276" key="AndroidCreateResourceFileDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613034551336" />
+    <state x="558" y="270" key="AndroidCreateResourceFileDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613489226755" />
     <state x="1201" y="411" key="AndroidCreateXmlResourceDialog" timestamp="1613468650273">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
