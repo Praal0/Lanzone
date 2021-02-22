@@ -23,6 +23,9 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        int image[] = {R.drawable.sydney,R.drawable.antartique,R.drawable.artique,R.drawable.barcelone,R.drawable.etretas,R.drawable.everest,
+        R.drawable.milan,R.drawable.oslo,R.drawable.himalaya,R.drawable.paris};
+
         mRecyclerView = findViewById(R.id.rcvMeeting);
 
         s1 = getResources().getStringArray(R.array.progamming_language);
@@ -37,8 +40,10 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        MeetingAdapter myAdapter = new MeetingAdapter(this,s1,s2);
+        MeetingAdpater meetingAdpater = new MeetingAdpater(this,s1,s2,image);
+        mRecyclerView.setAdapter(meetingAdpater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
 
     }
 

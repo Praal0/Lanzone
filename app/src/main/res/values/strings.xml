@@ -7,6 +7,12 @@
         <item>C</item>
         <item>Java</item>
         <item>Kotlin</item>
+        <item>Kotlin</item>
+        <item>Kotlin</item>
+        <item>Kotlin</item>
+        <item>Kotlin</item>
+        <item>Kotlin</item>
+        <item>Kotlin</item>
     </string-array>
 
 
@@ -15,7 +21,14 @@
         <item>toto@gmail.com</item>
         <item>toti@gmail.com</item>
         <item>tota@gmail.com</item>
+        <item>tota@gmail.com</item>
+        <item>tota@gmail.com</item>
+        <item>tota@gmail.com</item>
+        <item>tota@gmail.com</item>
+        <item>tota@gmail.com</item>
+        <item>tota@gmail.com</item>
     </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,22 +12,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import dorian.guerrero.lanzone.R;
 
-public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> {
-
-    String data1[], data2[];
+public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHolder> {
+    String data1[],data2[];
+    int images[];
     Context mContext;
 
-    public MeetingAdapter(Context ct, String s1[],String s2[]) {
+    public MeetingAdpater(Context ct, String s1[], String s2[], int img[]){
         mContext = ct;
         data1 = s1;
         data2 = s2;
+        images = img;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.meeting_list_content,parent,false);
+        View view = inflater.inflate(R.layout.meeting_detail,parent,false);
         return new MyViewHolder(view);
     }
 
@@ -34,20 +36,25 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.myText1.setText(data1[position]);
         holder.myText2.setText(data2[position]);
+        holder.myImage.setImageResource(images[position]);
+
     }
 
     @Override
     public int getItemCount() {
-        return data1.length;
+        return images.length;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder{
+
         TextView myText1, myText2;
+        ImageView myImage;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            myText1 = itemView.findViewById(R.id.txtDetail);
-            myText2 = itemView.findViewById(R.id.txtEmail);
-
+            myText1 = itemView.findViewById(R.id.myText1);
+            myText2 = itemView.findViewById(R.id.myText2);
+            myImage = itemView.findViewById(R.id.myImageView);
         }
     }
 }
