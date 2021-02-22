@@ -9,10 +9,16 @@ import android.os.Bundle;
 import android.view.View;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+
 import dorian.guerrero.lanzone.R;
+import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
+import dorian.guerrero.lanzone.service.MeetingApiService;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private MeetingApiService mMeetingApiService;
     private FloatingActionButton addButton;
     private RecyclerView mRecyclerView;
     private String s1[],s2[];
@@ -23,8 +29,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        int image[] = {R.drawable.sydney,R.drawable.antartique,R.drawable.artique,R.drawable.barcelone,R.drawable.etretas,R.drawable.everest,
-        R.drawable.milan,R.drawable.oslo,R.drawable.himalaya,R.drawable.paris};
+        int image[] = {R.drawable.barcelone,R.drawable.barcelone,R.drawable.barcelone,R.drawable.barcelone,R.drawable.barcelone,R.drawable.barcelone,
+        R.drawable.barcelone,R.drawable.barcelone,R.drawable.barcelone,R.drawable.barcelone};
 
         mRecyclerView = findViewById(R.id.rcvMeeting);
 
@@ -47,8 +53,22 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
 
+    @Subscribe
+    public void onDeleteFavorisNeighbour(DeleteMeetingEvent event) {
+        mMeetingApiService.deleteMeeting(event.meeting);
+    }
 
 }
 

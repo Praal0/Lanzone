@@ -11,28 +11,34 @@ public class DummyMeetingApiService implements MeetingApiService{
     /**
      * {@inheritDoc}
      */
-
     public List<Meeting> getNeighbours() {
         return lstMeeting;
+    }
+
+    /**
+     * Return List Meeting
+     */
+    @Override
+    public List<Meeting> getMeeting() {
+        return lstMeeting;
+    }
+
+    /**
+     * Delete Meeting in list
+     * @param meeting
+     */
+    @Override
+    public void deleteMeeting(Meeting meeting) {
+        lstMeeting.remove(meeting);
     }
 
     /**
      * Create a new Meeting in list
      * @param meeting
      */
-    public void createNeighbour(Meeting meeting) {
+    @Override
+    public void createMeeting(Meeting meeting) {
         lstMeeting.add(meeting);
-    }
-
-    /**
-     * Remove Meeting in list
-     */
-    public void deleteNeighbour(Meeting meeting) {
-        lstMeeting.remove(meeting);
 
     }
-
-
-
-
 }

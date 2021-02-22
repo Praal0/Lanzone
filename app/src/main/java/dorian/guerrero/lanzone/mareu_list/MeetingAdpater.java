@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.greenrobot.eventbus.EventBus;
+
 import dorian.guerrero.lanzone.R;
 
 public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHolder> {
@@ -55,6 +57,7 @@ public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHo
             myText1 = itemView.findViewById(R.id.myText1);
             myText2 = itemView.findViewById(R.id.myText2);
             myImage = itemView.findViewById(R.id.myImageView);
+
         }
     }
 }
