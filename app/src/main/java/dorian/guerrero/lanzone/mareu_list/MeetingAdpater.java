@@ -1,6 +1,7 @@
 package dorian.guerrero.lanzone.mareu_list;
 
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +24,6 @@ import dorian.guerrero.lanzone.service.MeetingApiService;
 
 public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHolder> {
     List<Meeting> mMeeting;
-    Context mContext;
-    MeetingApiService mApiService;
 
     public MeetingAdpater(List<Meeting> items) {
         mMeeting = items;
@@ -42,6 +41,7 @@ public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHo
         Meeting meeting = mMeeting.get(position);
         holder.myTextDescription.setText(meeting.getMeetingSubject());
         holder.myTextEmail.setText("toto@gmail.com");
+
 
         holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {
             @Override

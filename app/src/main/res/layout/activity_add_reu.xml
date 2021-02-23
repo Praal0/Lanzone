@@ -123,9 +123,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/emails"
-                android:hint="E-mail des participants"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="E-mail des participants"
                 android:inputType="textEmailAddress" />
 
             <com.google.android.material.chip.ChipGroup
@@ -136,6 +136,11 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter" />
 
 
     </LinearLayout>

@@ -1,16 +1,20 @@
 package dorian.guerrero.lanzone.model;
 
 
+import android.graphics.Color;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import static java.util.Arrays.asList;
 
 public class Meeting {
 
+    private static Random sRandom = new Random();
     private static List<Meeting> DUMMY_MEETINGS = asList(
             new Meeting(
                     1,
@@ -46,6 +50,7 @@ public class Meeting {
             )
     );
 
+
     public static List<Meeting> generateMeetings() {
         return new ArrayList<>(DUMMY_MEETINGS);
     }
@@ -62,6 +67,8 @@ public class Meeting {
 
     public List<String> meetingGuestListId;
 
+    private Integer  mColor;
+
     public Meeting(int idMeeting, String room, String meetingSubject, Date meetingDateDebut, Date meetingDateFin, List<String> meetingGuestListId) {
         this.idMeeting = idMeeting;
         this.room = room;
@@ -69,6 +76,12 @@ public class Meeting {
         this.meetingDateDebut = meetingDateDebut;
         this.meetingDateFin = meetingDateFin;
         this.meetingGuestListId = meetingGuestListId;
+        // Generate random color
+        mColor = Color.argb(
+                sRandom.nextInt(255),
+                sRandom.nextInt(255),
+                sRandom.nextInt(255),
+                sRandom.nextInt(255));
     }
 
     public long getIdMeeting() {
@@ -93,5 +106,9 @@ public class Meeting {
 
     public List<String> getMeetingGuestListId() {
         return meetingGuestListId;
+    }
+
+    public Integer getColor() {
+        return mColor;
     }
 }
