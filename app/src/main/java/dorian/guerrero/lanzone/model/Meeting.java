@@ -1,56 +1,81 @@
 package dorian.guerrero.lanzone.model;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+
+import static java.util.Arrays.asList;
 
 public class Meeting {
 
-    private long id;
-    private String mRoomName;
-    private Calendar mStart;
-    private Calendar mEnd;
-    private String mTopic;
-    private List<String> mParticipants;
+    private static List<Meeting> DUMMY_MEETINGS = asList(
+            new Meeting(
+                    1,
+                    4,
+                    "Objet Réunion 1",
+                    new Date(1623247200000L),
+                    new Date(1623250800000L),
+                    Arrays.asList("toto@hotmail.fr")
+            ),
+            new Meeting(
+                    2,
+                    3,
+                    "Objet Réunion 2",
+                    new Date(1623247200000L),
+                    new Date(1623250800000L),
+                    Arrays.asList("toto@hotmail.fr")
+            )
+    );
 
-    /**
-     * Constructor
-     * @param topic topic of the meeting
-     * @param roomName name of the meeting room
-     * @param start meeting start date and time
-     * @param end meeting end date and time
-     * @param participants list of email addresses of meeting participants
-     */
-    public Meeting(long id,String roomName, Calendar start, Calendar end, String topic, List<String> participants) {
-        this.id = id;
-        this.mRoomName = roomName;
-        this.mStart = start;
-        this.mEnd = end;
-        this.mTopic = topic;
-        this.mParticipants = participants;
+    public static List<Meeting> generateMeetings() {
+        return new ArrayList<>(DUMMY_MEETINGS);
     }
 
-    public long getId() {
-        return id;
+    public int idMeeting;
+
+    public int idRoom;
+
+    public String meetingSubject;
+
+    public Date meetingDateDebut;
+
+    public Date meetingDateFin;
+
+    public List<String> meetingGuestListId;
+
+    public Meeting(int idMeeting, int idRoom, String meetingSubject, Date meetingDateDebut, Date meetingDateFin, List<String> meetingGuestListId) {
+        this.idMeeting = idMeeting;
+        this.idRoom = idRoom;
+        this.meetingSubject = meetingSubject;
+        this.meetingDateDebut = meetingDateDebut;
+        this.meetingDateFin = meetingDateFin;
+        this.meetingGuestListId = meetingGuestListId;
     }
 
-    public String getRoomName() {
-        return mRoomName;
+    public long getIdMeeting() {
+        return idMeeting;
     }
 
-    public Calendar getStart() {
-        return mStart;
+    public long getIdRoom() {
+        return idRoom;
     }
 
-    public Calendar getEnd() {
-        return mEnd;
+    public String getMeetingSubject() {
+        return meetingSubject;
     }
 
-    public String getTopic() {
-        return mTopic;
+    public Date getMeetingDateDebut() {
+        return meetingDateDebut;
     }
 
-    public List<String> getParticipants() {
-        return mParticipants;
+    public Date getMeetingDateFin() {
+        return meetingDateFin;
+    }
+
+    public List<String> getMeetingGuestListId() {
+        return meetingGuestListId;
     }
 }

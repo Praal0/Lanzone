@@ -1,18 +1,27 @@
 package dorian.guerrero.lanzone.service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import dorian.guerrero.lanzone.model.Meeting;
 
 public class DummyMeetingApiService implements MeetingApiService{
-    private List<Meeting> lstMeeting = new ArrayList<>();
+    private List<Meeting> mMeetings;
+    private final List<String> mRooms;
 
+    public DummyMeetingApiService(){
+        mMeetings = new ArrayList<>();
+        mRooms = new ArrayList<>(Arrays.asList(
+                "Room 1", "Room 2", "Room 3", "Room 4", "Room 5",
+                "Room 6", "Room 7", "Room 8", "Room 9", "Room 10"));
+    }
     /**
-     * {@inheritDoc}
+     * Return List of meeting
      */
-    public List<Meeting> getNeighbours() {
-        return lstMeeting;
+    @Override
+    public List<String> getRooms() {
+        return mRooms;
     }
 
     /**
@@ -20,7 +29,7 @@ public class DummyMeetingApiService implements MeetingApiService{
      */
     @Override
     public List<Meeting> getMeeting() {
-        return lstMeeting;
+        return mMeetings;
     }
 
     /**
@@ -29,7 +38,7 @@ public class DummyMeetingApiService implements MeetingApiService{
      */
     @Override
     public void deleteMeeting(Meeting meeting) {
-        lstMeeting.remove(meeting);
+        mMeetings.remove(meeting);
     }
 
     /**
@@ -38,7 +47,7 @@ public class DummyMeetingApiService implements MeetingApiService{
      */
     @Override
     public void createMeeting(Meeting meeting) {
-        lstMeeting.add(meeting);
+        mMeetings.add(meeting);
 
     }
 }

@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/delete/baseline_delete_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/circle/baseline_circle_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="363b52" />
-                            <entry key="outputName" value="ic_baseline_delete_24" />
+                            <entry key="color" value="a8a8a8" />
+                            <entry key="outputName" value="ic_baseline_circle_24" />
                             <entry key="sourceFile" value="$USER_HOME$/Downloads/Splash Screen Project Files/custom – 1.svg" />
                           </map>
                         </option>

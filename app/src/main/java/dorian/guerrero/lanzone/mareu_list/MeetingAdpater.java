@@ -16,14 +16,13 @@ import dorian.guerrero.lanzone.R;
 
 public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHolder> {
     String data1[],data2[];
-    int images[];
     Context mContext;
 
-    public MeetingAdpater(Context ct, String s1[], String s2[], int img[]){
+    public MeetingAdpater(Context ct, String s1[], String s2[]){
         mContext = ct;
         data1 = s1;
         data2 = s2;
-        images = img;
+
     }
 
     @NonNull
@@ -38,13 +37,12 @@ public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.myText1.setText(data1[position]);
         holder.myText2.setText(data2[position]);
-        holder.myImage.setImageResource(images[position]);
 
     }
 
     @Override
     public int getItemCount() {
-        return images.length;
+        return data1.length ;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -54,9 +52,9 @@ public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHo
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            myText1 = itemView.findViewById(R.id.myText1);
-            myText2 = itemView.findViewById(R.id.myText2);
-            myImage = itemView.findViewById(R.id.myImageView);
+            myText1 = itemView.findViewById(R.id.description_item);
+            myText2 = itemView.findViewById(R.id.participants_item);
+            myImage = itemView.findViewById(R.id.circle_item);
 
         }
     }

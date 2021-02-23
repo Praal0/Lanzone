@@ -22,12 +22,14 @@
         android:id="@+id/addMeeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="336dp"
-        android:layout_marginTop="656dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="612dp"
         android:src="@drawable/ic_white_add_24"
+        app:backgroundTint="#E91E1E"
+        app:tint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    "
 
 </androidx.constraintlayout.widget.ConstraintLayout>

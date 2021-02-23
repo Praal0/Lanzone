@@ -10,7 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_greenrobot_eventbus_3_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_10_2_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_annotations_10_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_runtime_10_2_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_circle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -25,18 +29,32 @@
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/Lanzone.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Lanzone.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/AddReuActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/AddReuActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/HomeActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/MeetingAdpater.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/mareu_list/MeetingAdpater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Room.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingGenerator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/MeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/MeetingApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/antartique.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/antartique.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/antartique.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/artique.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/barcelone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/etretas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/everest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/himalaya.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/milan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/oslo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/paris.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/sydney.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_reu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_reu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/meeting_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/meeting_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +86,7 @@
         <option value="AnnotationType" />
         <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -204,11 +223,12 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="773" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1613999631386">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="773" y="243" key="#com.intellij.ide.util.MemberChooser" timestamp="1614067549069">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="773" y="223" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1613999631386" />
     <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613986635425" />
+    <state x="773" y="243" key="#com.intellij.ide.util.MemberChooser/1920.25.1920.985/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614067549069" />
     <state x="663" y="298" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1613033499338">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
@@ -223,12 +243,12 @@
     <state x="-1231" y="387" width="555" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1613032363842" />
     <state x="689" y="363" width="582" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613988287458" />
     <state x="689" y="387" width="582" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.25.1920.985/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1613033500954" />
-    <state x="667" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613997413691">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="667" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614064743261">
+      <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="667" y="251" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1613997413691" />
     <state x="-1253" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1613032501115" />
-    <state x="667" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613994501962" />
+    <state x="667" y="254" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614064743261" />
     <state x="100" y="100" width="1720" height="880" key="AVDManager" timestamp="1613996141785">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -237,35 +257,36 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="318" y="262" key="AndroidCreateResourceDirectoryDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613485781775" />
-    <state x="558" y="269" key="AndroidCreateResourceFileDialog" timestamp="1613999510397">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="558" y="269" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1613999510397" />
-    <state x="558" y="270" key="AndroidCreateResourceFileDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613987097629" />
-    <state x="1201" y="411" key="AndroidCreateXmlResourceDialog" timestamp="1613468650273">
+    <state x="558" y="270" width="824" height="478" key="AndroidCreateResourceFileDialog" timestamp="1614064500818">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
+    <state x="558" y="269" width="824" height="478" key="AndroidCreateResourceFileDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614003058058" />
+    <state x="558" y="270" key="AndroidCreateResourceFileDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614064500818" />
+    <state x="1201" y="423" key="AndroidCreateXmlResourceDialog" timestamp="1614003095808">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1201" y="423" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614003095808" />
     <state x="1201" y="411" key="AndroidCreateXmlResourceDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613468650273" />
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog" timestamp="1613730667549">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613730667549" />
-    <state width="1876" height="222" key="GridCell.Tab.0.bottom" timestamp="1613992752769">
+    <state width="1876" height="221" key="GridCell.Tab.0.bottom" timestamp="1614065181061">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1876" height="222" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613992752769" />
-    <state width="1876" height="222" key="GridCell.Tab.0.center" timestamp="1613992752768">
+    <state width="1876" height="221" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614065181061" />
+    <state width="1876" height="221" key="GridCell.Tab.0.center" timestamp="1614065181060">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1876" height="222" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613992752768" />
-    <state width="1876" height="222" key="GridCell.Tab.0.left" timestamp="1613992752767">
+    <state width="1876" height="221" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614065181060" />
+    <state width="1876" height="221" key="GridCell.Tab.0.left" timestamp="1614065181060">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1876" height="222" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613992752767" />
-    <state width="1876" height="222" key="GridCell.Tab.0.right" timestamp="1613992752769">
+    <state width="1876" height="221" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614065181060" />
+    <state width="1876" height="221" key="GridCell.Tab.0.right" timestamp="1614065181061">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1876" height="222" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613992752769" />
+    <state width="1876" height="221" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614065181061" />
     <state width="1876" height="264" key="GridCell.Tab.1.bottom" timestamp="1613390413821">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
@@ -282,10 +303,10 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state width="1876" height="264" key="GridCell.Tab.1.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613390413821" />
-    <state width="500" height="447" key="SwitcherDM" timestamp="1613731336927">
+    <state width="500" height="456" key="SwitcherDM" timestamp="1614065049223">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="500" height="447" key="SwitcherDM/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613731336927" />
+    <state width="500" height="456" key="SwitcherDM/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614065049223" />
     <state x="747" y="282" key="chooseDestDirectoryDialog" timestamp="1613999294759">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
