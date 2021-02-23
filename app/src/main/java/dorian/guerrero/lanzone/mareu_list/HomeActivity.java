@@ -13,6 +13,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import dorian.guerrero.lanzone.R;
+import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 
@@ -27,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mMeetingApiService = DI.getMeetingApiService();
         setContentView(R.layout.activity_home);
 
 
@@ -44,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        MeetingAdpater meetingAdpater = new MeetingAdpater(this,s1,s2);
+        MeetingAdpater meetingAdpater = new MeetingAdpater(mMeetingApiService.getMeeting());
         mRecyclerView.setAdapter(meetingAdpater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 

@@ -14,19 +14,35 @@ public class Meeting {
     private static List<Meeting> DUMMY_MEETINGS = asList(
             new Meeting(
                     1,
-                    4,
+                    "Room 1",
                     "Objet Réunion 1",
+                    new Date(1623247200000L),
+                    new Date(1623250800000L),
+                    Arrays.asList("tata@hotmail.fr")
+            ),
+            new Meeting(
+                    2,
+                    "Room 1",
+                    "Objet Réunion 2",
                     new Date(1623247200000L),
                     new Date(1623250800000L),
                     Arrays.asList("toto@hotmail.fr")
             ),
             new Meeting(
-                    2,
                     3,
-                    "Objet Réunion 2",
+                    "Room 10",
+                    "Objet Réunion 3",
                     new Date(1623247200000L),
                     new Date(1623250800000L),
-                    Arrays.asList("toto@hotmail.fr")
+                    Arrays.asList("titi@hotmail.fr")
+            ),
+            new Meeting(
+                    4,
+                    "Room 8",
+                    "Objet Réunion 4",
+                    new Date(1623247200000L),
+                    new Date(1623250800000L),
+                    Arrays.asList("tita@hotmail.fr")
             )
     );
 
@@ -36,7 +52,7 @@ public class Meeting {
 
     public int idMeeting;
 
-    public int idRoom;
+    public String room;
 
     public String meetingSubject;
 
@@ -46,9 +62,9 @@ public class Meeting {
 
     public List<String> meetingGuestListId;
 
-    public Meeting(int idMeeting, int idRoom, String meetingSubject, Date meetingDateDebut, Date meetingDateFin, List<String> meetingGuestListId) {
+    public Meeting(int idMeeting, String room, String meetingSubject, Date meetingDateDebut, Date meetingDateFin, List<String> meetingGuestListId) {
         this.idMeeting = idMeeting;
-        this.idRoom = idRoom;
+        this.room = room;
         this.meetingSubject = meetingSubject;
         this.meetingDateDebut = meetingDateDebut;
         this.meetingDateFin = meetingDateFin;
@@ -59,8 +75,8 @@ public class Meeting {
         return idMeeting;
     }
 
-    public long getIdRoom() {
-        return idRoom;
+    public String getRoom() {
+        return room;
     }
 
     public String getMeetingSubject() {
