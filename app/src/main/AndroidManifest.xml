@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lanzone">
-        <activity android:name=".mareu_list.HomeActivity">
+        <activity android:name=".ui.meeting_list.HomeActivity">
 
         </activity>
-        <activity android:name=".mareu_list.AddReuActivity" />
-        <activity android:name=".mareu_list.SplashActivity">
+        <activity android:name=".ui.AddMeetingActivity" />
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package dorian.guerrero.lanzone.mareu_list;
+package dorian.guerrero.lanzone.ui.meeting_list;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,14 +16,13 @@ import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
 import dorian.guerrero.lanzone.service.MeetingApiService;
+import dorian.guerrero.lanzone.ui.AddMeetingActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
     private MeetingApiService mMeetingApiService;
     private FloatingActionButton addButton;
     private RecyclerView mRecyclerView;
-    private String s1[],s2[];
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,23 +30,19 @@ public class HomeActivity extends AppCompatActivity {
         mMeetingApiService = DI.getMeetingApiService();
         setContentView(R.layout.activity_home);
 
-
         mRecyclerView = findViewById(R.id.rcvMeeting);
-
-        s1 = getResources().getStringArray(R.array.progamming_language);
-        s2 = getResources().getStringArray(R.array.email);
 
         addButton = findViewById(R.id.addMeeting);
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                Intent addIntent = new Intent(HomeActivity.this, AddReuActivity.class);
+                Intent addIntent = new Intent(HomeActivity.this, AddMeetingActivity.class);
                 startActivity(addIntent);
             }
         });
 
-        MeetingAdpater meetingAdpater = new MeetingAdpater(mMeetingApiService.getMeeting());
-        mRecyclerView.setAdapter(meetingAdpater);
+        MeetingAdapter meetingAdapater = new MeetingAdapter(mMeetingApiService.getMeeting());
+        mRecyclerView.setAdapter(meetingAdapater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 

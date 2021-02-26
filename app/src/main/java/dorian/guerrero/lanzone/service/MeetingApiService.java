@@ -3,10 +3,11 @@ package dorian.guerrero.lanzone.service;
 import java.util.List;
 
 import dorian.guerrero.lanzone.model.Meeting;
+import dorian.guerrero.lanzone.model.Room;
 
 public interface MeetingApiService {
 
-    List<String> getRooms();
+    List<Room> getRooms();
 
 
     /**

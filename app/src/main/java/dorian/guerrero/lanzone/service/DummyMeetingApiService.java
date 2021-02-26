@@ -1,26 +1,24 @@
 package dorian.guerrero.lanzone.service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import dorian.guerrero.lanzone.model.Meeting;
+import dorian.guerrero.lanzone.model.Room;
 
 public class DummyMeetingApiService implements MeetingApiService{
     private List<Meeting> mMeetings;
-    private final List<String> mRooms;
+    private List<Room> mRooms;
 
     public DummyMeetingApiService(){
-        mMeetings = Meeting.generateMeetings();
-        mRooms = new ArrayList<>(Arrays.asList(
-                "Room 1", "Room 2", "Room 3", "Room 4", "Room 5",
-                "Room 6", "Room 7", "Room 8", "Room 9", "Room 10"));
+        mMeetings = DummyGenerator.generateMeetings();
+        mRooms = GeneratorRoom.generateRoom();
     }
     /**
      * Return List of meeting
+     * @return
      */
     @Override
-    public List<String> getRooms() {
+    public List<Room> getRooms() {
         return mRooms;
     }
 

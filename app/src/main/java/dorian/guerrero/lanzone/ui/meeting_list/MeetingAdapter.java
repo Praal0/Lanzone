@@ -1,7 +1,5 @@
-package dorian.guerrero.lanzone.mareu_list;
+package dorian.guerrero.lanzone.ui.meeting_list;
 
-import android.content.Context;
-import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,15 +15,13 @@ import org.greenrobot.eventbus.EventBus;
 import java.util.List;
 
 import dorian.guerrero.lanzone.R;
-import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
 import dorian.guerrero.lanzone.model.Meeting;
-import dorian.guerrero.lanzone.service.MeetingApiService;
 
-public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHolder> {
+public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> {
     List<Meeting> mMeeting;
 
-    public MeetingAdpater(List<Meeting> items) {
+    public MeetingAdapter(List<Meeting> items) {
         mMeeting = items;
     }
 
@@ -39,7 +35,8 @@ public class MeetingAdpater extends RecyclerView.Adapter<MeetingAdpater.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Meeting meeting = mMeeting.get(position);
-        holder.myTextDescription.setText(meeting.getMeetingSubject());
+        holder.myTextDescription.setText(meeting.getMeetingSubject()+ ' ' + meeting.getMeetingHeureDebut()
+                +" "+ meeting.getRoom());
         holder.myTextEmail.setText("toto@gmail.com");
 
 

@@ -1,4 +1,4 @@
-package dorian.guerrero.lanzone.mareu_list;
+package dorian.guerrero.lanzone.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.widget.ProgressBar;
 
 import dorian.guerrero.lanzone.R;
+import dorian.guerrero.lanzone.ui.meeting_list.HomeActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

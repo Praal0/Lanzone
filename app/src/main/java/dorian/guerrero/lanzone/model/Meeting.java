@@ -1,94 +1,40 @@
 package dorian.guerrero.lanzone.model;
 
 
-import android.graphics.Color;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
-
-import static java.util.Arrays.asList;
 
 public class Meeting {
 
-    private static Random sRandom = new Random();
-    private static List<Meeting> DUMMY_MEETINGS = asList(
-            new Meeting(
-                    1,
-                    "Room 1",
-                    "Objet Réunion 1",
-                    new Date(1623247200000L),
-                    new Date(1623250800000L),
-                    Arrays.asList("tata@hotmail.fr")
-            ),
-            new Meeting(
-                    2,
-                    "Room 1",
-                    "Objet Réunion 2",
-                    new Date(1623247200000L),
-                    new Date(1623250800000L),
-                    Arrays.asList("toto@hotmail.fr")
-            ),
-            new Meeting(
-                    3,
-                    "Room 10",
-                    "Objet Réunion 3",
-                    new Date(1623247200000L),
-                    new Date(1623250800000L),
-                    Arrays.asList("titi@hotmail.fr")
-            ),
-            new Meeting(
-                    4,
-                    "Room 8",
-                    "Objet Réunion 4",
-                    new Date(1623247200000L),
-                    new Date(1623250800000L),
-                    Arrays.asList("tita@hotmail.fr")
-            )
-    );
+    public long idMeeting;
 
-
-    public static List<Meeting> generateMeetings() {
-        return new ArrayList<>(DUMMY_MEETINGS);
-    }
-
-    public int idMeeting;
-
-    public String room;
+    public Integer room;
 
     public String meetingSubject;
 
-    public Date meetingDateDebut;
+    public String meetingHeureDebut;
 
-    public Date meetingDateFin;
+    public String meetingHeureFin;
 
-    public List<String> meetingGuestListId;
+    private List<String> mParticipants;
 
-    private Integer  mColor;
-
-    public Meeting(int idMeeting, String room, String meetingSubject, Date meetingDateDebut, Date meetingDateFin, List<String> meetingGuestListId) {
+    public Meeting(long idMeeting, Integer room, String meetingSubject, String meetingTimeDebut, String meetingTimeFin, List<String> mParticipants) {
         this.idMeeting = idMeeting;
         this.room = room;
         this.meetingSubject = meetingSubject;
-        this.meetingDateDebut = meetingDateDebut;
-        this.meetingDateFin = meetingDateFin;
-        this.meetingGuestListId = meetingGuestListId;
-        // Generate random color
-        mColor = Color.argb(
-                sRandom.nextInt(255),
-                sRandom.nextInt(255),
-                sRandom.nextInt(255),
-                sRandom.nextInt(255));
+        this.meetingHeureDebut = meetingTimeDebut;
+        this.meetingHeureFin = meetingTimeFin;
+        this.mParticipants =  mParticipants;
     }
+
+    //Getters
 
     public long getIdMeeting() {
         return idMeeting;
     }
 
-    public String getRoom() {
+    public void setIdMeeting(long id){this.idMeeting = id;}
+
+    public Integer getRoom() {
         return room;
     }
 
@@ -96,19 +42,16 @@ public class Meeting {
         return meetingSubject;
     }
 
-    public Date getMeetingDateDebut() {
-        return meetingDateDebut;
+    public String getMeetingHeureDebut() {
+        return meetingHeureDebut;
     }
 
-    public Date getMeetingDateFin() {
-        return meetingDateFin;
+    public String getMeetingHeureFin() {
+        return meetingHeureFin;
     }
 
-    public List<String> getMeetingGuestListId() {
-        return meetingGuestListId;
+    public List<String>  getMeetingGuestList() {
+        return mParticipants;
     }
 
-    public Integer getColor() {
-        return mColor;
-    }
 }
