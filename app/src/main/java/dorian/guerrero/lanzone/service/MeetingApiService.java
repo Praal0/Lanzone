@@ -22,6 +22,8 @@ public interface MeetingApiService {
 
     long getIdRoom(String roomName);
 
+    String getNameRoom(long idRoom);
+
     /**
      * Deletes a neighbour
      * @param meeting
@@ -33,6 +35,8 @@ public interface MeetingApiService {
      * @param meeting
      */
     void createMeeting(Meeting meeting);
+
+    Room getRoomWithId(long id);
 
 
 }

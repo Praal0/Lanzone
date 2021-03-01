@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -49,7 +50,7 @@ public class AddMeetingActivity extends AppCompatActivity {
     private ChipGroup mEmailsChipGroup;
     private TextInputEditText mEmailsTextInputEditText;
     private Button mButtonAdd;
-    private TextInputLayout mEmailsTextInputLayout,mEditTextSubjet;
+    private TextInputLayout mEmailsTextInputLayout,mEditTextSubjet,mDateTextInputLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,12 +69,14 @@ public class AddMeetingActivity extends AppCompatActivity {
         mButtonAdd = findViewById(R.id.btn_add);
         mEditTextSubjet = findViewById(R.id.topic_layout);
         mEmailsTextInputLayout = findViewById(R.id.participants);
+        mDateTextInputLayout = findViewById(R.id.date);
         List<String> participants = validateEmailInput(mEmailsTextInputLayout, mEmailsChipGroup);
         mButtonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 long idRoom = mApiService.getIdRoom(mRootName.getText().toString());
-                mApiService.createMeeting(new Meeting(System.currentTimeMillis(), idRoom ,mEditTextSubjet.toString(),"",""
+                EditText date = mDateTextInputLayout.getEditText();
+                mApiService.createMeeting(new Meeting(System.currentTimeMillis(), idRoom ,mEditTextSubjet.toString(),new Date(String.valueOf(date)),"",""
                         ,participants));
                 finish();
             }

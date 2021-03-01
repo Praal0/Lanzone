@@ -60,6 +60,21 @@ public class DummyMeetingApiService implements MeetingApiService{
     }
 
     /**
+     * Return name of Rooms
+     */
+    @Override
+    public String getNameRoom(long idRoom) {
+        String name = null;
+        for (Room room : getRooms()){
+            long roomId = room.getId();
+            if (roomId == idRoom){
+                name = room.getRoomName();
+                break;
+            }
+        }
+        return name;
+    }
+    /**
      * Delete Meeting in list
      * @param meeting
      */
@@ -76,5 +91,18 @@ public class DummyMeetingApiService implements MeetingApiService{
     public void createMeeting(Meeting meeting) {
         mMeetings.add(meeting);
 
+    }
+
+    @Override
+    public Room getRoomWithId(long id) {
+        Room roomReturn = null;
+        for (Room room : getRooms()){
+            long roomId = room.getId();
+            if (roomId == id){
+                roomReturn = room;
+                break;
+            }
+        }
+        return roomReturn;
     }
 }

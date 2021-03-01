@@ -1,6 +1,7 @@
 package dorian.guerrero.lanzone.model;
 
 
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,16 +13,19 @@ public class Meeting {
 
     public String meetingSubject;
 
+    public Date meetingDate;
+
     public String meetingHeureDebut;
 
     public String meetingHeureFin;
 
     private List<String> mParticipants;
 
-    public Meeting(long idMeeting, long room, String meetingSubject, String meetingTimeDebut, String meetingTimeFin, List<String> mParticipants) {
+    public Meeting(long idMeeting, long room, String meetingSubject,Date meetingDate, String meetingTimeDebut, String meetingTimeFin, List<String> mParticipants) {
         this.idMeeting = idMeeting;
         this.room = room;
         this.meetingSubject = meetingSubject;
+        this.meetingDate = meetingDate;
         this.meetingHeureDebut = meetingTimeDebut;
         this.meetingHeureFin = meetingTimeFin;
         this.mParticipants =  mParticipants;
@@ -33,17 +37,13 @@ public class Meeting {
         return idMeeting;
     }
 
-    public void setIdMeeting(long id){this.idMeeting = id;}
-
-    public long getRoom() {
+    public long getRoomId() {
         return room;
     }
 
-    public void setRoom(Integer room){this.room = room;}
-
     public String getMeetingSubject() { return meetingSubject; }
 
-    public void setMeetingSubject(String meetingSubject){this.meetingSubject = meetingSubject;}
+    public Date getMeetingDate(){ return meetingDate; }
 
     public String getMeetingHeureDebut() {
         return meetingHeureDebut;
@@ -55,6 +55,31 @@ public class Meeting {
 
     public List<String>  getMeetingGuestList() {
         return mParticipants;
+    }
+
+    //Setters
+
+    public void setIdMeeting(long id){this.idMeeting = id;}
+
+    public void setRoom(Integer room){this.room = room;}
+
+    public void setMeetingSubject(String meetingSubject){this.meetingSubject = meetingSubject;}
+
+
+    public void setMeetingDate(Date meetingDate){
+        this.meetingDate = meetingDate;
+    }
+
+    public void setMeetingHeureDebut(String heureDebut){
+        this.meetingHeureDebut = heureDebut;
+    }
+
+    public void setMeetingHeureFin(String heureFin){
+        this.meetingHeureFin = heureFin;
+    }
+
+    public void setMeetingGuestList(List<String> meetingGuestList){
+        this.mParticipants = meetingGuestList;
     }
 
     @Override
