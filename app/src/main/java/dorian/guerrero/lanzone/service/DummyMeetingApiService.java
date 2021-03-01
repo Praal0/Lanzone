@@ -1,5 +1,6 @@
 package dorian.guerrero.lanzone.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import dorian.guerrero.lanzone.model.Meeting;
@@ -13,14 +14,6 @@ public class DummyMeetingApiService implements MeetingApiService{
         mMeetings = DummyGenerator.generateMeetings();
         mRooms = GeneratorRoom.generateRoom();
     }
-    /**
-     * Return List of meeting
-     * @return
-     */
-    @Override
-    public List<Room> getRooms() {
-        return mRooms;
-    }
 
     /**
      * Return List Meeting
@@ -29,6 +22,21 @@ public class DummyMeetingApiService implements MeetingApiService{
     public List<Meeting> getMeeting() {
         return mMeetings;
     }
+
+    @Override
+    public List<Room> getRooms() {
+        return mRooms;
+    }
+
+    @Override
+    public List<String> getListNameRooms() {
+        List<String>mRoom = new ArrayList<>();
+        for (Room room : getRooms()){
+            mRoom.add(room.getRoomName());
+        }
+        return mRoom;
+    }
+
 
     /**
      * Delete Meeting in list

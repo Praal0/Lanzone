@@ -11,7 +11,7 @@ import static java.util.Arrays.asList;
 
 public abstract class DummyGenerator {
 
-    private static ArrayList<String> participant = (ArrayList<String>) asList("praal@hotmail.fr","toto@hotmail.fr");
+    private static ArrayList<String> participant = new ArrayList<>();
 
 
     private static List<Meeting> DUMMY_MEETINGS = asList(

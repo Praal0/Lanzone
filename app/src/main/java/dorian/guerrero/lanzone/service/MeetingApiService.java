@@ -7,14 +7,17 @@ import dorian.guerrero.lanzone.model.Room;
 
 public interface MeetingApiService {
 
-    List<Room> getRooms();
-
 
     /**
      * Get all my Neighbours
      * @return {@link List}
      */
     List<Meeting> getMeeting();
+
+
+    List<Room> getRooms();
+
+    List<String>getListNameRooms();
 
     /**
      * Deletes a neighbour
@@ -27,4 +30,6 @@ public interface MeetingApiService {
      * @param meeting
      */
     void createMeeting(Meeting meeting);
+
+
 }

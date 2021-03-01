@@ -15,6 +15,13 @@ public class Room {
 
     // getters...
 
+    public long getId(){
+        return mId;
+    }
+
+    public String getRoomName(){
+        return mRoomName;
+    }
 
     @DrawableRes
     public int getDrawableRes() {

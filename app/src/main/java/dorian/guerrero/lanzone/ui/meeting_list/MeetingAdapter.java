@@ -35,8 +35,7 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Meeting meeting = mMeeting.get(position);
-        holder.myTextDescription.setText(meeting.getMeetingSubject()+ ' ' + meeting.getMeetingHeureDebut()
-                +" "+ meeting.getRoom());
+
         holder.myTextEmail.setText("toto@gmail.com");
 
 

@@ -7,7 +7,7 @@ public class Meeting {
 
     public long idMeeting;
 
-    public Integer room;
+    public long room;
 
     public String meetingSubject;
 
@@ -17,7 +17,7 @@ public class Meeting {
 
     private List<String> mParticipants;
 
-    public Meeting(long idMeeting, Integer room, String meetingSubject, String meetingTimeDebut, String meetingTimeFin, List<String> mParticipants) {
+    public Meeting(long idMeeting, long room, String meetingSubject, String meetingTimeDebut, String meetingTimeFin, List<String> mParticipants) {
         this.idMeeting = idMeeting;
         this.room = room;
         this.meetingSubject = meetingSubject;
@@ -34,17 +34,21 @@ public class Meeting {
 
     public void setIdMeeting(long id){this.idMeeting = id;}
 
-    public Integer getRoom() {
+    public long getRoom() {
         return room;
     }
 
-    public String getMeetingSubject() {
-        return meetingSubject;
-    }
+    public void setRoom(Integer room){this.room = room;}
+
+    public String getMeetingSubject() { return meetingSubject; }
+
+    public void setMeetingSubject(String meetingSubject){this.meetingSubject = meetingSubject;}
 
     public String getMeetingHeureDebut() {
         return meetingHeureDebut;
     }
+
+
 
     public String getMeetingHeureFin() {
         return meetingHeureFin;
