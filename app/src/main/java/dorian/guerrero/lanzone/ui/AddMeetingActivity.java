@@ -14,6 +14,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -23,6 +24,8 @@ import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -31,6 +34,7 @@ import java.util.Objects;
 
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
+import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.model.Room;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 
@@ -39,11 +43,13 @@ public class AddMeetingActivity extends AppCompatActivity {
     Date dt;
     List<String> roomNameList;
     private MeetingApiService mApiService;
-    private TextView mEdtDate,mEditTextDe, mEditTexteA;
+    private TextView mEdtDate, mEditTextDe, mEditTexteA, mRootName;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private AutoCompleteTextView mRoomNameAutoCompleteTextView;
     private ChipGroup mEmailsChipGroup;
     private TextInputEditText mEmailsTextInputEditText;
+    private Button mButtonAdd;
+    private TextInputLayout mEmailsTextInputLayout,mEditTextSubjet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +60,41 @@ public class AddMeetingActivity extends AppCompatActivity {
         initTime();
         initListRoom();
         initEmailsOnKeyListener();
+        initButtonAdd();
+    }
 
+    private void initButtonAdd() {
+        mRootName = findViewById(R.id.room_name);
+        mButtonAdd = findViewById(R.id.btn_add);
+        mEditTextSubjet = findViewById(R.id.topic_layout);
+        mEmailsTextInputLayout = findViewById(R.id.participants);
+        List<String> participants = validateEmailInput(mEmailsTextInputLayout, mEmailsChipGroup);
+        mButtonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                long idRoom = mApiService.getIdRoom(mRootName.getText().toString());
+                mApiService.createMeeting(new Meeting(System.currentTimeMillis(), idRoom ,mEditTextSubjet.toString(),"",""
+                        ,participants));
+                finish();
+            }
+        });
+    }
+
+    private List<String> validateEmailInput(TextInputLayout inputValue, ChipGroup emails) {
+        int nb = emails.getChildCount();
+        List<String> lEmails = new ArrayList<>();
+
+        for (int i = 0; i<nb;i++){
+            Chip tmpEmail = (Chip) emails.getChildAt(i);
+            String email = tmpEmail.getText().toString();
+            lEmails.add(email);
+        }
+        return lEmails;
     }
 
     private void initEmailsOnKeyListener() {
         mEmailsTextInputEditText = findViewById(R.id.emails);
         mEmailsChipGroup = findViewById(R.id.emails_group);
-
         mEmailsTextInputEditText.setOnKeyListener((v, keyCode, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN){
               if (keyCode == KeyEvent.KEYCODE_ENTER){
@@ -71,7 +105,6 @@ public class AddMeetingActivity extends AppCompatActivity {
             }
             return false;
         });
-
     }
 
     private void addEmailToChipGroup(String email) {

@@ -17,27 +17,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/root_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Meeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/MeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/MeetingApiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/MeetingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/MeetingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_reu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_reu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/HomeActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,10 +83,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-view/Users/dorianguerrero/Library/Android/sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/values" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="multi-representation-preview/Users/dorianguerrero/Library/Android/sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -207,11 +204,11 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1614586505491">
+    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1614592634870">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="773" y="223" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1613999631386" />
-    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614586505491" />
+    <state x="773" y="228" key="#com.intellij.ide.util.MemberChooser/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614592634870" />
     <state x="773" y="243" key="#com.intellij.ide.util.MemberChooser/1920.25.1920.985/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614067549069" />
     <state x="663" y="298" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1613033499338">
       <screen x="0" y="25" width="1920" height="1055" />
@@ -255,50 +252,54 @@
     </state>
     <state x="1201" y="423" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614003095808" />
     <state x="1201" y="411" key="AndroidCreateXmlResourceDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614335024333" />
-    <state width="496" height="466" key="DebuggerActiveHint" timestamp="1614586636271">
+    <state width="496" height="466" key="DebuggerActiveHint" timestamp="1614600843968">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="496" height="466" key="DebuggerActiveHint/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614586636271" />
+    <state width="496" height="466" key="DebuggerActiveHint/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614600843968" />
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog" timestamp="1613730667549">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613730667549" />
-    <state width="1758" height="263" key="GridCell.Tab.0.bottom" timestamp="1614587348533">
+    <state width="1758" height="263" key="GridCell.Tab.0.bottom" timestamp="1614601947354">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state width="1876" height="229" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604070" />
-    <state width="1758" height="263" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614587348533" />
-    <state width="1758" height="263" key="GridCell.Tab.0.center" timestamp="1614587348533">
+    <state width="1758" height="263" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614601947354" />
+    <state width="1758" height="263" key="GridCell.Tab.0.center" timestamp="1614601947354">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state width="1876" height="229" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604069" />
-    <state width="1758" height="263" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614587348533" />
-    <state width="1758" height="263" key="GridCell.Tab.0.left" timestamp="1614587348532">
+    <state width="1758" height="263" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614601947354" />
+    <state width="1758" height="263" key="GridCell.Tab.0.left" timestamp="1614601947353">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state width="1876" height="229" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604068" />
-    <state width="1758" height="263" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614587348532" />
-    <state width="1758" height="263" key="GridCell.Tab.0.right" timestamp="1614587348533">
+    <state width="1758" height="263" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614601947353" />
+    <state width="1758" height="263" key="GridCell.Tab.0.right" timestamp="1614601947354">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state width="1876" height="229" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604070" />
-    <state width="1758" height="263" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614587348533" />
-    <state width="1758" height="263" key="GridCell.Tab.1.bottom" timestamp="1614587348534">
+    <state width="1758" height="263" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614601947354" />
+    <state width="1758" height="263" key="GridCell.Tab.1.bottom" timestamp="1614601947356">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1758" height="263" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614587348534" />
-    <state width="1758" height="263" key="GridCell.Tab.1.center" timestamp="1614587348534">
+    <state width="1758" height="263" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614601947356" />
+    <state width="1758" height="263" key="GridCell.Tab.1.center" timestamp="1614601947355">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1758" height="263" key="GridCell.Tab.1.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614587348534" />
-    <state width="1758" height="263" key="GridCell.Tab.1.left" timestamp="1614587348533">
+    <state width="1758" height="263" key="GridCell.Tab.1.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614601947355" />
+    <state width="1758" height="263" key="GridCell.Tab.1.left" timestamp="1614601947355">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1758" height="263" key="GridCell.Tab.1.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614587348533" />
-    <state width="1758" height="263" key="GridCell.Tab.1.right" timestamp="1614587348534">
+    <state width="1758" height="263" key="GridCell.Tab.1.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614601947355" />
+    <state width="1758" height="263" key="GridCell.Tab.1.right" timestamp="1614601947356">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
-    <state width="1758" height="263" key="GridCell.Tab.1.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614587348534" />
+    <state width="1758" height="263" key="GridCell.Tab.1.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614601947356" />
+    <state x="566" y="264" key="IDE.errors.dialog" timestamp="1614595869019">
+      <screen x="0" y="25" width="1920" height="985" />
+    </state>
+    <state x="566" y="264" key="IDE.errors.dialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614595869019" />
     <state width="500" height="456" key="SwitcherDM" timestamp="1614065049223">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
@@ -320,9 +321,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -23,11 +23,17 @@ public class DummyMeetingApiService implements MeetingApiService{
         return mMeetings;
     }
 
+    /**
+     * Return List Rooms
+     */
     @Override
     public List<Room> getRooms() {
         return mRooms;
     }
 
+    /**
+     * Return List Name of Rooms
+     */
     @Override
     public List<String> getListNameRooms() {
         List<String>mRoom = new ArrayList<>();
@@ -37,6 +43,21 @@ public class DummyMeetingApiService implements MeetingApiService{
         return mRoom;
     }
 
+    /**
+     * Return id of Rooms
+     */
+    @Override
+    public long getIdRoom(String roomName) {
+        long idRoom = 0;
+       for (Room room : getRooms()){
+           String roomNames = room.getRoomName();
+           if (roomNames.equals(roomName)){
+               idRoom = room.getId();
+               break;
+           }
+       }
+        return idRoom;
+    }
 
     /**
      * Delete Meeting in list

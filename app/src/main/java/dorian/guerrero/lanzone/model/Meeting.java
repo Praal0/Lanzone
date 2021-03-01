@@ -2,6 +2,7 @@ package dorian.guerrero.lanzone.model;
 
 
 import java.util.List;
+import java.util.Objects;
 
 public class Meeting {
 
@@ -48,14 +49,20 @@ public class Meeting {
         return meetingHeureDebut;
     }
 
-
-
     public String getMeetingHeureFin() {
         return meetingHeureFin;
     }
 
     public List<String>  getMeetingGuestList() {
         return mParticipants;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Meeting meeting = (Meeting) o;
+        return Objects.equals(idMeeting, meeting.idMeeting);
     }
 
 }

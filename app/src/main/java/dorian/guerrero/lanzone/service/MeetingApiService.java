@@ -17,7 +17,10 @@ public interface MeetingApiService {
 
     List<Room> getRooms();
 
+
     List<String>getListNameRooms();
+
+    long getIdRoom(String roomName);
 
     /**
      * Deletes a neighbour

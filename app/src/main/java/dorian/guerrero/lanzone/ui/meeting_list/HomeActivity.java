@@ -12,15 +12,19 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import java.util.List;
+
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
+import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 import dorian.guerrero.lanzone.ui.AddMeetingActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
     private MeetingApiService mMeetingApiService;
+    private List<Meeting> mMeetings;
     private FloatingActionButton addButton;
     private RecyclerView mRecyclerView;
 
@@ -46,6 +50,16 @@ public class HomeActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        initList();
+    }
+
+    private void initList() {
+        mMeetings = mMeetingApiService.getMeeting();
     }
 
     @Override
