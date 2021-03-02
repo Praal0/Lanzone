@@ -26,6 +26,9 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.joda.time.DateTime;
+import org.joda.time.LocalTime;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -35,6 +38,8 @@ import java.util.Objects;
 
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
+import dorian.guerrero.lanzone.events.AddMeetingEvent;
+import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
 import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.model.Room;
 import dorian.guerrero.lanzone.service.MeetingApiService;
@@ -50,7 +55,7 @@ public class AddMeetingActivity extends AppCompatActivity {
     private ChipGroup mEmailsChipGroup;
     private TextInputEditText mEmailsTextInputEditText;
     private Button mButtonAdd;
-    private TextInputLayout mEmailsTextInputLayout,mEditTextSubjet,mDateTextInputLayout;
+    private TextInputLayout mEmailsTextInputLayout,mEditTextSubjet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,15 +74,14 @@ public class AddMeetingActivity extends AppCompatActivity {
         mButtonAdd = findViewById(R.id.btn_add);
         mEditTextSubjet = findViewById(R.id.topic_layout);
         mEmailsTextInputLayout = findViewById(R.id.participants);
-        mDateTextInputLayout = findViewById(R.id.date);
         List<String> participants = validateEmailInput(mEmailsTextInputLayout, mEmailsChipGroup);
         mButtonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 long idRoom = mApiService.getIdRoom(mRootName.getText().toString());
-                EditText date = mDateTextInputLayout.getEditText();
-                mApiService.createMeeting(new Meeting(System.currentTimeMillis(), idRoom ,mEditTextSubjet.toString(),new Date(String.valueOf(date)),"",""
-                        ,participants));
+                Meeting meeting = new Meeting(System.currentTimeMillis(), idRoom ,mEditTextSubjet.toString(),new Date()
+                        ,new DateTime(DateTime.now()),new DateTime(DateTime.now()),participants);
+                EventBus.getDefault().post(new AddMeetingEvent(meeting));
                 finish();
             }
         });
@@ -205,4 +209,23 @@ public class AddMeetingActivity extends AppCompatActivity {
             }
         };
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe
+    public void onCreateMeeting(AddMeetingEvent event){
+        mApiService.createMeeting(event.meeting);
+    }
+
+
 }

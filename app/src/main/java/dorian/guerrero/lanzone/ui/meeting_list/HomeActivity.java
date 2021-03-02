@@ -6,7 +6,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.SearchView;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.greenrobot.eventbus.EventBus;
@@ -27,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
     private List<Meeting> mMeetings;
     private FloatingActionButton addButton;
     private RecyclerView mRecyclerView;
+    private MeetingAdapter meetingAdapater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +52,34 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        MeetingAdapter meetingAdapater = new MeetingAdapter(mMeetingApiService.getMeeting());
+        meetingAdapater = new MeetingAdapter(mMeetingApiService.getMeeting());
         mRecyclerView.setAdapter(meetingAdapater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.meeting_menu, menu);
 
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                meetingAdapater.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return true;
     }
 
     @Override
@@ -75,7 +105,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @Subscribe
-    public void onDeleteFavorisNeighbour(DeleteMeetingEvent event) {
+    public void onDeleteMeeting(DeleteMeetingEvent event) {
         mMeetingApiService.deleteMeeting(event.meeting);
     }
 

@@ -1,9 +1,13 @@
 package dorian.guerrero.lanzone.model;
 
 
+import org.joda.time.DateTime;
+import org.joda.time.LocalTime;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+
 
 public class Meeting {
 
@@ -15,13 +19,13 @@ public class Meeting {
 
     public Date meetingDate;
 
-    public String meetingHeureDebut;
+    public DateTime meetingHeureDebut;
 
-    public String meetingHeureFin;
+    public DateTime meetingHeureFin;
 
     private List<String> mParticipants;
 
-    public Meeting(long idMeeting, long room, String meetingSubject,Date meetingDate, String meetingTimeDebut, String meetingTimeFin, List<String> mParticipants) {
+    public Meeting(long idMeeting, long room, String meetingSubject,Date meetingDate, DateTime meetingTimeDebut, DateTime meetingTimeFin, List<String> mParticipants) {
         this.idMeeting = idMeeting;
         this.room = room;
         this.meetingSubject = meetingSubject;
@@ -45,11 +49,10 @@ public class Meeting {
 
     public Date getMeetingDate(){ return meetingDate; }
 
-    public String getMeetingHeureDebut() {
-        return meetingHeureDebut;
+    public DateTime getMeetingHeureDebut() { return meetingHeureDebut;
     }
 
-    public String getMeetingHeureFin() {
+    public DateTime getMeetingHeureFin() {
         return meetingHeureFin;
     }
 
@@ -70,11 +73,11 @@ public class Meeting {
         this.meetingDate = meetingDate;
     }
 
-    public void setMeetingHeureDebut(String heureDebut){
+    public void setMeetingHeureDebut(DateTime heureDebut){
         this.meetingHeureDebut = heureDebut;
     }
 
-    public void setMeetingHeureFin(String heureFin){
+    public void setMeetingHeureFin(DateTime heureFin){
         this.meetingHeureFin = heureFin;
     }
 

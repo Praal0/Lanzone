@@ -1,22 +1,36 @@
 package dorian.guerrero.lanzone.ui.meeting_list;
 
+import android.os.Build;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
 import org.greenrobot.eventbus.EventBus;
+import org.joda.time.Chronology;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+import org.joda.time.LocalTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
@@ -25,13 +39,15 @@ import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.model.Room;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 
-public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> {
+public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> implements Filterable {
     List<Meeting> mMeeting;
-    List<Room> mRooms;
+    List<Meeting> mMeetingFull;
 
 
     public MeetingAdapter(List<Meeting> items) {
         mMeeting = items;
+        // We save full list for when we use search view
+        mMeetingFull = new ArrayList<>(mMeeting);
     }
 
     @Override
@@ -41,20 +57,24 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
         return new MyViewHolder(view);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         MeetingApiService mApiService = DI.getMeetingApiService();
         Meeting meeting = mMeeting.get(position);
-        String nameRoom = mApiService.getNameRoom(meeting.getRoomId());
+
+        //We take all element of Room with ID
         Room room = mApiService.getRoomWithId(meeting.getRoomId());
-        String img = room.getDrawableRes();
 
-        Glide.with(holder.myImage.getContext())
-                .load(img)
-                .apply(RequestOptions.circleCropTransform())
-                .into(holder.myImage);
+        //Change Pater for have time : HH h mm
+        DateTimeFormatter fmt = DateTimeFormat.forPattern("HH'h'mm");
+        String str = fmt.print(meeting.meetingHeureDebut);
 
-        holder.myTextDescription.setText( meeting.meetingSubject + " - " + nameRoom);
+        holder.myImage.setImageResource(room.getDrawableRes());
+
+        holder.myTextDescription.setText(meeting.meetingSubject + " - " + str + " - " + room.getRoomName());
+
+        // We Insert element in description delimiter with ,
         holder.myTextEmail.setText(TextUtils.join(", ",
                 meeting.getMeetingGuestList()));
 
@@ -65,11 +85,6 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
                 notifyDataSetChanged();
             }
         });
-    }
-
-    @Override
-    public int getItemCount() {
-        return mMeeting.size() ;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -87,4 +102,49 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
 
         }
     }
+
+    @Override
+    public int getItemCount() {
+        return mMeeting.size() ;
+    }
+
+    @Override
+    public Filter getFilter() {
+        return meetingFilter;
+    }
+
+    private Filter meetingFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<Meeting> filteredList = new ArrayList<>();
+
+            if (constraint == null || constraint.length() == 0) {
+                filteredList.addAll(mMeetingFull);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+                for (Meeting item : mMeeting) {
+                    if (item.getMeetingSubject().toLowerCase().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                    if (item.getMeetingGuestList().contains(filterPattern)) {
+                        filteredList.add(item);
+                    }
+                }
+            }
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+            return results;
+        }
+
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            mMeeting.clear();
+            mMeeting.addAll((List) results.values);
+            notifyDataSetChanged();
+        }
+    };
+
+
+
 }

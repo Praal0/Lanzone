@@ -7,9 +7,9 @@ import java.util.Objects;
 public class Room {
     private final long mId;
     private final String mRoomName;
-    private final String mDrawableRes;
+    private final int mDrawableRes;
 
-    public Room(long id, String roomName, String drawableRes) {
+    public Room(long id, String roomName, int drawableRes) {
         mId = id;
         mRoomName = roomName;
         mDrawableRes = drawableRes;
@@ -26,7 +26,7 @@ public class Room {
     }
 
 
-    public String getDrawableRes() {
+    public int getDrawableRes() {
         return mDrawableRes;
     }
 
