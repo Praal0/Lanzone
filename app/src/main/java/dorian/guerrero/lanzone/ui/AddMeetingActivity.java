@@ -157,12 +157,10 @@ public class AddMeetingActivity extends AppCompatActivity {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
                         mEditTextDe.setText(hourOfDay+":"+minutes);
-
                     }
                 },
                         dt.getHours(), dt.getMinutes(), true);
                 timePickerDialog.show();
-
             }
         });
 

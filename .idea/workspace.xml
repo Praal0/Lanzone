@@ -17,40 +17,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/meeting_menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Meeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/GeneratorRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/GeneratorRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/MeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/MeetingApiService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/HomeActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/MeetingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/MeetingAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/corrin.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/corrin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/falcom.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/falcom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/fox.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fox.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/kirby.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/kirby.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/kong.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/kong.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/luigi.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/luigi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/mario.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mario.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ness.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ness.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/pikachu.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/pikachu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/yoshi.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/yoshi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/meeting_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/meeting_detail.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +75,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_4_API_21" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-01T08:57:29.730Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-02T15:09:04.072Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -291,35 +269,39 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613730667549" />
-    <state width="1876" height="263" key="GridCell.Tab.0.bottom" timestamp="1614692842866">
+    <state width="1876" height="304" key="GridCell.Tab.0.bottom" timestamp="1614698330732">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="263" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614692842866" />
+    <state width="1876" height="304" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614698330732" />
     <state width="1876" height="263" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824342" />
+    <state width="1876" height="304" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1614697721707" />
     <state width="1636" height="274" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416927" />
     <state width="1876" height="229" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604070" />
     <state width="1636" height="274" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614680168776" />
-    <state width="1876" height="263" key="GridCell.Tab.0.center" timestamp="1614692842865">
+    <state width="1876" height="304" key="GridCell.Tab.0.center" timestamp="1614698330729">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="263" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614692842865" />
+    <state width="1876" height="304" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614698330729" />
     <state width="1876" height="263" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824340" />
+    <state width="1876" height="304" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1614697721680" />
     <state width="1636" height="274" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416926" />
     <state width="1876" height="229" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604069" />
     <state width="1636" height="274" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614680168775" />
-    <state width="1876" height="263" key="GridCell.Tab.0.left" timestamp="1614692842864">
+    <state width="1876" height="304" key="GridCell.Tab.0.left" timestamp="1614698330727">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="263" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614692842864" />
+    <state width="1876" height="304" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614698330727" />
     <state width="1876" height="263" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824340" />
+    <state width="1876" height="304" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1614697721670" />
     <state width="1636" height="274" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416926" />
     <state width="1876" height="229" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604068" />
     <state width="1636" height="274" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614680168775" />
-    <state width="1876" height="263" key="GridCell.Tab.0.right" timestamp="1614692842865">
+    <state width="1876" height="304" key="GridCell.Tab.0.right" timestamp="1614698330731">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="263" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614692842865" />
+    <state width="1876" height="304" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614698330731" />
     <state width="1876" height="263" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824341" />
+    <state width="1876" height="304" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1614697721706" />
     <state width="1636" height="274" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416927" />
     <state width="1876" height="229" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604070" />
     <state width="1636" height="274" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614680168776" />

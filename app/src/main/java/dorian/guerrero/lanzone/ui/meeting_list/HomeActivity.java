@@ -18,6 +18,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import dorian.guerrero.lanzone.R;
@@ -38,11 +39,17 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mMeetings = new ArrayList<>();
         mMeetingApiService = DI.getMeetingApiService();
         setContentView(R.layout.activity_home);
-
         mRecyclerView = findViewById(R.id.rcvMeeting);
+        meetingAdapater = new MeetingAdapter(mMeetingApiService.getMeeting());
+        mRecyclerView.setAdapter(meetingAdapater);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        addbutton();
+    }
 
+    private void addbutton() {
         addButton = findViewById(R.id.addMeeting);
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -51,10 +58,6 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(addIntent);
             }
         });
-
-        meetingAdapater = new MeetingAdapter(mMeetingApiService.getMeeting());
-        mRecyclerView.setAdapter(meetingAdapater);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
