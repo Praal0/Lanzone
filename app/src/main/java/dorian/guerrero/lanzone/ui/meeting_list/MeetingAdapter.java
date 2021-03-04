@@ -15,22 +15,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-
 import org.greenrobot.eventbus.EventBus;
-import org.joda.time.Chronology;
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
-import org.joda.time.LocalTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
@@ -40,9 +30,7 @@ import dorian.guerrero.lanzone.model.Room;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 
 public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> implements Filterable {
-    List<Meeting> mMeeting;
-    List<Meeting> mMeetingFull;
-
+    List<Meeting> mMeeting,mMeetingFull;
 
     public MeetingAdapter(List<Meeting> items) {
         mMeeting = items;
@@ -68,7 +56,7 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
 
         //Change Pater for have time : HH h mm
         DateTimeFormatter fmt = DateTimeFormat.forPattern("HH'h'mm");
-        String str = fmt.print(meeting.meetingHeureDebut);
+        String str = fmt.print(meeting.meetingHeureBegin);
 
         holder.myImage.setImageResource(room.getDrawableRes());
 
@@ -82,7 +70,8 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
             @Override
             public void onClick(View v) {
                 EventBus.getDefault().post(new DeleteMeetingEvent(meeting));
-                notifyDataSetChanged();
+                mMeetingFull.remove(meeting);
+                notifyItemRemoved(position);
             }
         });
     }

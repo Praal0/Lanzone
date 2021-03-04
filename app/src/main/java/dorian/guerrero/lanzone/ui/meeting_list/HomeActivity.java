@@ -23,6 +23,7 @@ import java.util.List;
 
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
+import dorian.guerrero.lanzone.events.AddMeetingEvent;
 import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
 import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.service.MeetingApiService;
@@ -31,7 +32,7 @@ import dorian.guerrero.lanzone.ui.AddMeetingActivity;
 public class HomeActivity extends AppCompatActivity {
 
     private MeetingApiService mMeetingApiService;
-    private List<Meeting> mMeetings;
+    List<Meeting> mMeetings,mMeetingFull;
     private FloatingActionButton addButton;
     private RecyclerView mRecyclerView;
     private MeetingAdapter meetingAdapater;
@@ -40,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mMeetings = new ArrayList<>();
+        mMeetingFull = new ArrayList<>(mMeetings);
         mMeetingApiService = DI.getMeetingApiService();
         setContentView(R.layout.activity_home);
         mRecyclerView = findViewById(R.id.rcvMeeting);
@@ -93,6 +95,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initList() {
         mMeetings = mMeetingApiService.getMeeting();
+        meetingAdapater = new MeetingAdapter(mMeetings);
+        mRecyclerView.setAdapter(meetingAdapater);
     }
 
     @Override
@@ -110,6 +114,12 @@ public class HomeActivity extends AppCompatActivity {
     @Subscribe
     public void onDeleteMeeting(DeleteMeetingEvent event) {
         mMeetingApiService.deleteMeeting(event.meeting);
+        initList();
+    }
+
+    @Subscribe
+    public void onCreateMeeting(AddMeetingEvent event){
+        mMeetingApiService.createMeeting(event.meeting);
     }
 
 }

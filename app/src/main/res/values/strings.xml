@@ -1,39 +1,9 @@
 <resources>
     <string name="app_name">Maréu</string>
-
-
-    <string-array name="progamming_language">
-        <item>C++</item>
-        <item>C</item>
-        <item>Java</item>
-        <item>Kotlin</item>
-        <item>Kotlin</item>
-        <item>Kotlin</item>
-        <item>Kotlin</item>
-        <item>Kotlin</item>
-        <item>Kotlin</item>
-        <item>Kotlin</item>
-    </string-array>
-
-
-    <string-array name="email">
-        <item>praal@hotmail.fr</item>
-        <item>toto@gmail.com</item>
-        <item>toti@gmail.com</item>
-        <item>tota@gmail.com</item>
-        <item>tota@gmail.com</item>
-        <item>tota@gmail.com</item>
-        <item>tota@gmail.com</item>
-        <item>tota@gmail.com</item>
-        <item>tota@gmail.com</item>
-        <item>tota@gmail.com</item>
-    </string-array>
-
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="description_text">Description Text</string>
     <string name="email_text">Email text</string>
     <string name="delete_button">Delete_Button</string>
     <string name="color_img">Color_img</string>
-
-
+    <string name="Search">Recherche</string>
 </resources>

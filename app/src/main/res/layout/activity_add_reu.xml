@@ -12,6 +12,21 @@
         tools:context=".ui.AddMeetingActivity"
         android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Veillez sélectionner la salle "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/room_name_layout"
             android:layout_width="match_parent"
@@ -21,13 +36,12 @@
 
             <AutoCompleteTextView
                 android:id="@+id/room_name"
-                android:hint="Nom de la salle de réunion"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
                 android:cursorVisible="false"
-                android:textSize="@dimen/text_view_spinner_size"
-                style="@style/Widget.AppCompat.Spinner.Underlined" />
+                android:inputType="text"
+                android:textSize="@dimen/text_view_spinner_size" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

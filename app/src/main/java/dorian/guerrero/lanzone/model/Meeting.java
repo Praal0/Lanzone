@@ -2,12 +2,9 @@ package dorian.guerrero.lanzone.model;
 
 
 import org.joda.time.DateTime;
-import org.joda.time.LocalTime;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-
 
 public class Meeting {
 
@@ -17,21 +14,18 @@ public class Meeting {
 
     public String meetingSubject;
 
-    public Date meetingDate;
+    public DateTime meetingBegin;
 
-    public DateTime meetingHeureDebut;
-
-    public DateTime meetingHeureFin;
+    public DateTime meetingEnd;
 
     private List<String> mParticipants;
 
-    public Meeting(long idMeeting, long room, String meetingSubject,Date meetingDate, DateTime meetingTimeDebut, DateTime meetingTimeFin, List<String> mParticipants) {
+    public Meeting(long idMeeting, long room, String meetingSubject, DateTime meetingTimeDebut, DateTime meetingTimeFin, List<String> mParticipants) {
         this.idMeeting = idMeeting;
         this.room = room;
         this.meetingSubject = meetingSubject;
-        this.meetingDate = meetingDate;
-        this.meetingHeureDebut = meetingTimeDebut;
-        this.meetingHeureFin = meetingTimeFin;
+        this.meetingBegin = meetingTimeDebut;
+        this.meetingEnd = meetingTimeFin;
         this.mParticipants =  mParticipants;
     }
 
@@ -47,13 +41,12 @@ public class Meeting {
 
     public String getMeetingSubject() { return meetingSubject; }
 
-    public Date getMeetingDate(){ return meetingDate; }
 
-    public DateTime getMeetingHeureDebut() { return meetingHeureDebut;
+    public DateTime getMeetingHeureBegin() { return meetingBegin;
     }
 
-    public DateTime getMeetingHeureFin() {
-        return meetingHeureFin;
+    public DateTime getMeetingHeureEnd() {
+        return meetingEnd;
     }
 
     public List<String>  getMeetingGuestList() {
@@ -68,17 +61,12 @@ public class Meeting {
 
     public void setMeetingSubject(String meetingSubject){this.meetingSubject = meetingSubject;}
 
-
-    public void setMeetingDate(Date meetingDate){
-        this.meetingDate = meetingDate;
+    public void setMeetingBegin(DateTime heureDebut){
+        this.meetingBegin = heureDebut;
     }
 
-    public void setMeetingHeureDebut(DateTime heureDebut){
-        this.meetingHeureDebut = heureDebut;
-    }
-
-    public void setMeetingHeureFin(DateTime heureFin){
-        this.meetingHeureFin = heureFin;
+    public void setMeetingEnd(DateTime heureFin){
+        this.meetingEnd = heureFin;
     }
 
     public void setMeetingGuestList(List<String> meetingGuestList){

@@ -4,6 +4,7 @@
     <shared>
       <config>
         <device id="pixel" />
+        <device id="Nexus 7 2013" />
         <device id="Nexus 9" />
         <device id="Nexus 10" />
         <device id="Nexus 7" />
@@ -25,10 +26,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/model/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/HomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/HomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/MeetingAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/MeetingAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_reu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_reu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +84,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-view/Users/dorianguerrero/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android-custom-view/Users/dorianguerrero/Library/Android/sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="multi-representation-preview/Users/dorianguerrero/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/dorianguerrero/Library/Android/sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -259,9 +266,11 @@
     </state>
     <state x="1201" y="423" key="AndroidCreateXmlResourceDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614003095808" />
     <state x="1201" y="411" key="AndroidCreateXmlResourceDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614335024333" />
-    <state width="526" height="512" key="DebuggerActiveHint" timestamp="1614689470457">
+    <state width="582" height="513" key="DebuggerActiveHint" timestamp="1614849285157">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="509" height="498" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1614846078837" />
+    <state width="582" height="513" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614849285157" />
     <state width="526" height="512" key="DebuggerActiveHint/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614689470457" />
     <state width="496" height="478" key="DebuggerActiveHint/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613715264" />
     <state width="496" height="466" key="DebuggerActiveHint/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614600843968" />
@@ -269,63 +278,79 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613730667549" />
-    <state width="1876" height="304" key="GridCell.Tab.0.bottom" timestamp="1614698330732">
+    <state width="1876" height="262" key="GridCell.Tab.0.bottom" timestamp="1614852300102">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1636" height="254" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1614846528060" />
+    <state width="1876" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300102" />
     <state width="1876" height="304" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614698330732" />
     <state width="1876" height="263" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824342" />
     <state width="1876" height="304" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1614697721707" />
     <state width="1636" height="274" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416927" />
     <state width="1876" height="229" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604070" />
     <state width="1636" height="274" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614680168776" />
-    <state width="1876" height="304" key="GridCell.Tab.0.center" timestamp="1614698330729">
+    <state width="1876" height="262" key="GridCell.Tab.0.center" timestamp="1614852300101">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1636" height="254" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1614846528059" />
+    <state width="1876" height="262" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300101" />
     <state width="1876" height="304" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614698330729" />
     <state width="1876" height="263" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824340" />
     <state width="1876" height="304" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1614697721680" />
     <state width="1636" height="274" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416926" />
     <state width="1876" height="229" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604069" />
     <state width="1636" height="274" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614680168775" />
-    <state width="1876" height="304" key="GridCell.Tab.0.left" timestamp="1614698330727">
+    <state width="1876" height="262" key="GridCell.Tab.0.left" timestamp="1614852300100">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1636" height="254" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1614846528058" />
+    <state width="1876" height="262" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300100" />
     <state width="1876" height="304" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614698330727" />
     <state width="1876" height="263" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824340" />
     <state width="1876" height="304" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1614697721670" />
     <state width="1636" height="274" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416926" />
     <state width="1876" height="229" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604068" />
     <state width="1636" height="274" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614680168775" />
-    <state width="1876" height="304" key="GridCell.Tab.0.right" timestamp="1614698330731">
+    <state width="1876" height="262" key="GridCell.Tab.0.right" timestamp="1614852300102">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1636" height="254" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1614846528060" />
+    <state width="1876" height="262" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300102" />
     <state width="1876" height="304" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614698330731" />
     <state width="1876" height="263" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824341" />
     <state width="1876" height="304" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1614697721706" />
     <state width="1636" height="274" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416927" />
     <state width="1876" height="229" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1614071604070" />
     <state width="1636" height="274" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614680168776" />
-    <state width="1876" height="263" key="GridCell.Tab.1.bottom" timestamp="1614692842869">
+    <state width="1876" height="262" key="GridCell.Tab.1.bottom" timestamp="1614852300105">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1636" height="254" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1614846528063" />
+    <state width="1876" height="262" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300105" />
     <state width="1876" height="263" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614692842869" />
     <state width="1876" height="263" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824345" />
     <state width="1876" height="263" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614614047043" />
-    <state width="1876" height="263" key="GridCell.Tab.1.center" timestamp="1614692842867">
+    <state width="1876" height="262" key="GridCell.Tab.1.center" timestamp="1614852300104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1636" height="254" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1614846528061" />
+    <state width="1876" height="262" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300104" />
     <state width="1876" height="263" key="GridCell.Tab.1.center/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614692842867" />
     <state width="1876" height="263" key="GridCell.Tab.1.center/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824343" />
     <state width="1876" height="263" key="GridCell.Tab.1.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614614047042" />
-    <state width="1876" height="263" key="GridCell.Tab.1.left" timestamp="1614692842867">
+    <state width="1876" height="262" key="GridCell.Tab.1.left" timestamp="1614852300103">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1636" height="254" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1614846528061" />
+    <state width="1876" height="262" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300103" />
     <state width="1876" height="263" key="GridCell.Tab.1.left/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614692842867" />
     <state width="1876" height="263" key="GridCell.Tab.1.left/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824343" />
     <state width="1876" height="263" key="GridCell.Tab.1.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614614047041" />
-    <state width="1876" height="263" key="GridCell.Tab.1.right" timestamp="1614692842868">
+    <state width="1876" height="262" key="GridCell.Tab.1.right" timestamp="1614852300105">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state width="1636" height="254" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1614846528062" />
+    <state width="1876" height="262" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300105" />
     <state width="1876" height="263" key="GridCell.Tab.1.right/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614692842868" />
     <state width="1876" height="263" key="GridCell.Tab.1.right/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1614613824344" />
     <state width="1876" height="263" key="GridCell.Tab.1.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614614047043" />
@@ -355,14 +380,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/MeetingAdapter.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/meeting_list/HomeActivity.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java</url>
+          <line>153</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
