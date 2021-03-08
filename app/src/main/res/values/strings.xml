@@ -15,4 +15,6 @@
     <string name="error_field">Erreur dans les éléments ou éléments manquants</string>
     <string name="error_invalid_time_after">"L'heure de fin doit être supérieur a l'heure de début"</string>
     <string name="error_invalid_time_begin">"L'heure de debut doit être inférieur a l'heure de fin"</string>
+    <string name="select_filter">"Selectionner Salle"</string>
+    <string name="reset">"Reset"</string>
 </resources>

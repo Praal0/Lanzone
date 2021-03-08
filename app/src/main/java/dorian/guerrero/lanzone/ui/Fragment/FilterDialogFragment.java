@@ -1,66 +1,126 @@
 package dorian.guerrero.lanzone.ui.Fragment;
 
+
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+
+import com.google.android.material.textfield.TextInputEditText;
+
+import java.util.Calendar;
+import java.util.List;
+import java.util.Objects;
+
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.OnTouch;
 import dorian.guerrero.lanzone.R;
+import dorian.guerrero.lanzone.ui.AddMeetingActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FilterDialogFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class FilterDialogFragment extends Fragment {
+public class FilterDialogFragment extends DialogFragment {
+    @BindView(R.id.date_filter) TextInputEditText mDateFilter;
+    @BindView(R.id.room_filter) AutoCompleteTextView mRoomFilter;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private List<String> mRooms;
+    private Calendar mDate;
+    private String mRoom;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private OnButtonClickedListener mCallback;
 
-    public FilterDialogFragment() {
-        // Required empty public constructor
+    public FilterDialogFragment(List<String> rooms) {
+        mRooms = rooms;
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FilterDialogFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FilterDialogFragment newInstance(String param1, String param2) {
-        FilterDialogFragment fragment = new FilterDialogFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @NonNull
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        super.onCreateDialog(savedInstanceState);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        @SuppressLint("InflateParams")
+        View view = inflater.inflate(R.layout.fragment_filter, null);
+        ButterKnife.bind(this, view);
+
+        mRoomFilter.setAdapter(new ArrayAdapter<>(
+                Objects.requireNonNull(getContext()),
+                R.layout.room_item,
+                mRooms));
+
+        builder.setView(view);
+        builder.setTitle(R.string.select_filter);
+
+        builder.setPositiveButton(android.R.string.ok, (dialog, which) -> {
+            mCallback.onButtonClicked(mDate, mRoomFilter.getEditableText().toString(), false);
+        });
+
+        builder.setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss());
+
+        builder.setNeutralButton(R.string.reset, (dialog, which) -> mCallback.onButtonClicked(mDate, mRoomFilter.getEditableText().toString(), true));
+
+        return builder.create();
+    }
+
+    public interface OnButtonClickedListener {
+        void onButtonClicked(Calendar date, String room, boolean reset);
+    }
+
+    private void createCallbackToParentActivity() {
+    }
+
+    @OnClick(R.id.date_filter)
+    void displayDatePicker() {
+        Calendar calendar = Calendar.getInstance();
+        DatePickerDialog mDatePickerDialog;
+
+        mDatePickerDialog = new DatePickerDialog(Objects.requireNonNull(getContext()),android.R.style.Theme_Holo_Light,
+                (view, year, month, dayOfMonth) -> {
+                    Calendar cal = Calendar.getInstance();
+                    cal.set(year, month, dayOfMonth);
+                    mDateFilter.setText(DateFormat.getDateFormat(getContext()).format(cal.getTime()));
+                    mDate = cal;
+                },
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH));
+        mDatePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        mDatePickerDialog.show();
+    }
+
+    @OnTouch(R.id.room_filter)
+    boolean onTouch(View v, MotionEvent event) {
+        if(event.getAction() == MotionEvent.ACTION_DOWN) {
+            mRoomFilter.showDropDown();
+            return true;
         }
+
+        return (event.getAction() == MotionEvent.ACTION_UP);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_filter, container, false);
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
     }
 }

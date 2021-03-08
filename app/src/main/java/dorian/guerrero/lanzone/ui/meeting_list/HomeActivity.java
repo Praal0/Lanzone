@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,6 +22,8 @@ import org.greenrobot.eventbus.Subscribe;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.events.AddMeetingEvent;
@@ -28,50 +31,37 @@ import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
 import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 import dorian.guerrero.lanzone.ui.AddMeetingActivity;
+import dorian.guerrero.lanzone.ui.Fragment.FilterDialogFragment;
 
 public class HomeActivity extends AppCompatActivity  {
-
-    private MeetingApiService mMeetingApiService;
+    public static MeetingApiService sApiService;
     List<Meeting> mMeetings,mMeetingFull;
-    private FloatingActionButton addButton;
-    private RecyclerView mRecyclerView;
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.addMeeting) FloatingActionButton mFloatingActionButton;
+    @BindView(R.id.rcvMeeting) RecyclerView mRecyclerView;
     private MeetingAdapter meetingAdapater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+        ButterKnife.bind(this);
+        sApiService = DI.getMeetingApiService();
         mMeetings = new ArrayList<>();
         mMeetingFull = new ArrayList<>(mMeetings);
-        mMeetingApiService = DI.getMeetingApiService();
-        setContentView(R.layout.activity_home);
-        mRecyclerView = findViewById(R.id.rcvMeeting);
-        meetingAdapater = new MeetingAdapter(mMeetingApiService.getMeeting());
+        meetingAdapater = new MeetingAdapter(sApiService.getMeeting());
         mRecyclerView.setAdapter(meetingAdapater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        addbutton();
-    }
-
-    private void addbutton() {
-        addButton = findViewById(R.id.addMeeting);
-        addButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                Intent addIntent = new Intent(HomeActivity.this, AddMeetingActivity.class);
-                startActivity(addIntent);
-            }
-        });
+        mFloatingActionButton.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, AddMeetingActivity.class)));
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.meeting_menu, menu);
-
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
-
         searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -84,21 +74,31 @@ public class HomeActivity extends AppCompatActivity  {
                 return false;
             }
         });
+
+        MenuItem filter = menu.findItem(R.id.filter);
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.filter) {
-            performFilter();
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_search :
+                return true;
+
+            case R.id.filter :
+                performFilterDialog();
+                return true;
+
         }
+
         return super.onOptionsItemSelected(item);
     }
 
-    private  void performFilter() {
-
+    private void performFilterDialog() {
+        new FilterDialogFragment(sApiService.getListNameRooms()).show(getSupportFragmentManager(), null);
     }
+
 
     @Override
     public void onResume() {
@@ -107,7 +107,7 @@ public class HomeActivity extends AppCompatActivity  {
     }
 
     private void initList() {
-        mMeetings = mMeetingApiService.getMeeting();
+        mMeetings = sApiService.getMeeting();
         meetingAdapater = new MeetingAdapter(mMeetings);
         mRecyclerView.setAdapter(meetingAdapater);
     }
@@ -126,13 +126,13 @@ public class HomeActivity extends AppCompatActivity  {
 
     @Subscribe
     public void onDeleteMeeting(DeleteMeetingEvent event) {
-        mMeetingApiService.deleteMeeting(event.meeting);
+        sApiService.deleteMeeting(event.meeting);
         initList();
     }
 
     @Subscribe
     public void onCreateMeeting(AddMeetingEvent event){
-        mMeetingApiService.createMeeting(event.meeting);
+        sApiService.createMeeting(event.meeting);
     }
 
 }

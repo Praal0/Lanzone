@@ -22,6 +22,8 @@ import org.joda.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.events.DeleteMeetingEvent;
@@ -32,16 +34,21 @@ import dorian.guerrero.lanzone.service.MeetingApiService;
 public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> implements Filterable {
     List<Meeting> mMeeting,mMeetingFull;
 
+
     public MeetingAdapter(List<Meeting> items) {
         mMeeting = items;
         // We save full list for when we use search view
         mMeetingFull = new ArrayList<>(mMeeting);
+
     }
 
     @Override
+
+
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.meeting_detail, parent, false);
+        ButterKnife.bind(this,view);
         return new MyViewHolder(view);
     }
 
@@ -77,18 +84,17 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-
         TextView myTextDescription, myTextEmail;
         ImageView myImage;
         ImageButton mDeleteButton;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
             myTextDescription = itemView.findViewById(R.id.description_item);
             myTextEmail = itemView.findViewById(R.id.participants_item);
             myImage = itemView.findViewById(R.id.circle_item);
             mDeleteButton = itemView.findViewById(R.id.delete_item);
-
         }
     }
 

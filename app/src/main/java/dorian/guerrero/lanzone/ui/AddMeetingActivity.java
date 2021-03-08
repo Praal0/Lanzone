@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -36,6 +37,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.events.AddMeetingEvent;
@@ -50,14 +53,22 @@ public class AddMeetingActivity extends AppCompatActivity {
     private DateTime dtBegin, dtEnd;
     private List<String> roomNameList;
     private MeetingApiService mApiService;
-    private TextView mEdtDate, mEditTextTimeStart, mEditTexteTimeEnd,mDateTextView;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-    private AutoCompleteTextView mRoomNameAutoCompleteTextView;
-    private ChipGroup mEmailsChipGroup;
-    private TextInputEditText mEmailsTextInputEditText;
-    private Button mButtonAdd;
-    private TextInputLayout mEmailsTextInputLayout, mStartTimeTextInputLayout, mEndTimeTextInputLayout;
-    private TextInputLayout mSujetInputLayout, mDateTextInputLayout, mRoomNameTextInputLayout;
+
+    @BindView(R.id.date) TextView mDateTextView;
+    @BindView(R.id.from) TextView  mEditTextTimeStart;
+    @BindView(R.id.to) EditText mEditTexteTimeEnd;
+    @BindView(R.id.room_name) AutoCompleteTextView mRoomNameAutoCompleteTextView;
+    @BindView(R.id.emails_group) ChipGroup mEmailsChipGroup;
+    @BindView(R.id.emails) TextInputEditText mEmailsTextInputEditText;
+    @BindView(R.id.btn_add) Button mButtonAdd;
+    @BindView(R.id.room_name_layout) TextInputLayout mRoomNameTextInputLayout;
+    @BindView(R.id.to_layout)TextInputLayout mEndTimeTextInputLayout;
+    @BindView(R.id.participants)TextInputLayout mEmailsTextInputLayout;
+    @BindView(R.id.topic_layout) TextInputLayout mSujetInputLayout;
+    @BindView(R.id.date_layout) TextInputLayout mDateTextInputLayout;
+    @BindView(R.id.from_layout) TextInputLayout mStartTimeTextInputLayout;
+
     private int lastSelectedHourDe = -1;
     private int lastSelectedMinuteDe = -1;
     private int lastSelectedHourA = -1;
@@ -68,6 +79,7 @@ public class AddMeetingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_reu);
         mApiService = DI.getMeetingApiService();
+        ButterKnife.bind(this);
         initDate();
         initTime();
         initListRoom();
@@ -76,14 +88,6 @@ public class AddMeetingActivity extends AppCompatActivity {
     }
 
     private void initButtonAdd() {
-        mSujetInputLayout = findViewById(R.id.topic_layout);
-        mDateTextView = findViewById(R.id.date);
-        mDateTextInputLayout = findViewById(R.id.date_layout);
-        mStartTimeTextInputLayout = findViewById(R.id.from_layout);
-        mRoomNameTextInputLayout = findViewById(R.id.room_name_layout);
-        mEndTimeTextInputLayout = findViewById(R.id.to_layout);
-        mButtonAdd = findViewById(R.id.btn_add);
-        mEmailsTextInputLayout = findViewById(R.id.participants);
         mButtonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,8 +153,6 @@ public class AddMeetingActivity extends AppCompatActivity {
     }
 
     private void initEmailsOnKeyListener() {
-        mEmailsTextInputEditText = findViewById(R.id.emails);
-        mEmailsChipGroup = findViewById(R.id.emails_group);
         mEmailsTextInputEditText.setOnKeyListener((v, keyCode, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN){
               if (keyCode == KeyEvent.KEYCODE_ENTER){
@@ -170,7 +172,6 @@ public class AddMeetingActivity extends AppCompatActivity {
 
     private boolean validateEmailAdress(String value) {
         String email = value;
-
         if(!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             return true;
         }else{
@@ -189,13 +190,12 @@ public class AddMeetingActivity extends AppCompatActivity {
     }
 
     private void initListRoom() {
-        mRoomNameAutoCompleteTextView = findViewById(R.id.room_name);
         // Meeting room -->
         roomNameList = mApiService.getListNameRooms();
 
         mRoomNameAutoCompleteTextView.setAdapter(new ArrayAdapter<>(
                 this,
-                R.layout.root_item,
+                R.layout.room_item,
                 roomNameList));
 
         mRoomNameAutoCompleteTextView.setOnTouchListener(new View.OnTouchListener() {
@@ -217,11 +217,10 @@ public class AddMeetingActivity extends AppCompatActivity {
             this.lastSelectedHourDe = c.get(Calendar.HOUR_OF_DAY);
             this.lastSelectedMinuteDe = c.get(Calendar.MINUTE);
         }
-        mEditTextTimeStart = findViewById(R.id.from);
         mEditTextTimeStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mEdtDate.getText().toString().isEmpty()){
+                if (mDateTextView.getText().toString().isEmpty()){
                     mStartTimeTextInputLayout.setError(getText(R.string.error_empty_date));
                 }else{
                     TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
@@ -233,6 +232,7 @@ public class AddMeetingActivity extends AppCompatActivity {
                             if (dtEnd != null){
                                 if (dtBegin.isBefore(dtEnd)){
                                     mEditTextTimeStart.setText(String.format("%02d:%02d", hourOfDay, minutes));
+                                    mStartTimeTextInputLayout.setError(null);
                                 }else{
                                     dtBegin = null;
                                     mEditTextTimeStart.setText("");
@@ -254,11 +254,10 @@ public class AddMeetingActivity extends AppCompatActivity {
             this.lastSelectedHourA = c.get(Calendar.HOUR_OF_DAY);
             this.lastSelectedMinuteA = c.get(Calendar.MINUTE);
         }
-        mEditTexteTimeEnd = findViewById(R.id.to);
         mEditTexteTimeEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mEdtDate.getText().toString().isEmpty()){
+                if (mDateTextView.getText().toString().isEmpty()){
                     mEndTimeTextInputLayout.setError(getText(R.string.error_empty_date));
                 }else{
                     TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
@@ -269,6 +268,7 @@ public class AddMeetingActivity extends AppCompatActivity {
                             dtEnd = new DateTime(dateReu.getYear(), dateReu.getMonth(), dateReu.getDay(), hourOfDay, minutes, 0, 0);
                             if (dtEnd.isAfter(dtBegin)){
                                 mEditTexteTimeEnd.setText(String.format("%02d:%02d", hourOfDay, minutes));
+                                mEndTimeTextInputLayout.setError(null);
                             }else{
                                 dtEnd = null;
                                 mEditTexteTimeEnd.setText("");
@@ -283,9 +283,7 @@ public class AddMeetingActivity extends AppCompatActivity {
     }
 
     private void initDate() {
-        mEdtDate = findViewById(R.id.date);
-        mEdtDate.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
+        mDateTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Calendar cal = Calendar.getInstance();
@@ -293,7 +291,7 @@ public class AddMeetingActivity extends AppCompatActivity {
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog dialog = new DatePickerDialog(AddMeetingActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                DatePickerDialog dialog = new DatePickerDialog(AddMeetingActivity.this, android.R.style.Theme_Holo_Light,
                         mDateSetListener,year,month,day);
 
                 dialog.updateDate(year,month,day);
@@ -308,7 +306,7 @@ public class AddMeetingActivity extends AppCompatActivity {
                 month++;
                 dateReu = new Date(year,month,dayOfMonth);
                 String date =  dayOfMonth + "/" + month + "/" + year;
-                mEdtDate.setText(date);
+                mDateTextView.setText(date);
             }
         };
     }

@@ -8,22 +8,24 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.ui.meeting_list.HomeActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-    ProgressBar splashProgress;
+    @BindView(R.id.splashProgress) ProgressBar splashProgress;
     int SPLASH_TIME = 5000; //This is 5 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        ButterKnife.bind(this);
         getSupportActionBar().hide();
 
         //Rn a progress bar
-        splashProgress = findViewById(R.id.splashProgress);
         playProgress();
 
         //Code to start timer and take action after the timer ends
