@@ -6,4 +6,13 @@
     <string name="delete_button">Delete_Button</string>
     <string name="color_img">Color_img</string>
     <string name="Search">Recherche</string>
+    <string name="menu_filter">Filtrage</string>
+    <string name="date_filter">Filtre par date</string>
+    <string name="room_filter">Filtre par salle</string>
+    <string name="error_empty_field">Ne peut pas être vide</string>
+    <string name="error_empty_date">Veuillez sélectionner une date</string>
+    <string name="error_invalid_mail">Le mail est incorrect</string>
+    <string name="error_field">Erreur dans les éléments ou éléments manquants</string>
+    <string name="error_invalid_time_after">"L'heure de fin doit être supérieur a l'heure de début"</string>
+    <string name="error_invalid_time_begin">"L'heure de debut doit être inférieur a l'heure de fin"</string>
 </resources>

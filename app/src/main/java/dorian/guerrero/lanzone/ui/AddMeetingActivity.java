@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,6 +22,7 @@ import android.widget.TimePicker;
 
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -42,19 +44,20 @@ import dorian.guerrero.lanzone.service.MeetingApiService;
 
 
 public class AddMeetingActivity extends AppCompatActivity {
-    Date dt;
-    Date dateReu;
-    List<String> participants;
-    private DateTime dtDebut,dtFin;
-    List<String> roomNameList;
+    private boolean mError;
+    private Date dateReu;
+    private List<String> participants;
+    private DateTime dtBegin, dtEnd;
+    private List<String> roomNameList;
     private MeetingApiService mApiService;
-    private TextView mEdtDate, mEditTextTimeStart, mEditTexteTimeEnd, mRootName, mTextSubjet;
+    private TextView mEdtDate, mEditTextTimeStart, mEditTexteTimeEnd,mDateTextView;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private AutoCompleteTextView mRoomNameAutoCompleteTextView;
     private ChipGroup mEmailsChipGroup;
     private TextInputEditText mEmailsTextInputEditText;
     private Button mButtonAdd;
-    private TextInputLayout mEmailsTextInputLayout;
+    private TextInputLayout mEmailsTextInputLayout, mStartTimeTextInputLayout, mEndTimeTextInputLayout;
+    private TextInputLayout mSujetInputLayout, mDateTextInputLayout, mRoomNameTextInputLayout;
     private int lastSelectedHourDe = -1;
     private int lastSelectedMinuteDe = -1;
     private int lastSelectedHourA = -1;
@@ -73,26 +76,57 @@ public class AddMeetingActivity extends AppCompatActivity {
     }
 
     private void initButtonAdd() {
-        mRootName = findViewById(R.id.room_name);
+        mSujetInputLayout = findViewById(R.id.topic_layout);
+        mDateTextView = findViewById(R.id.date);
+        mDateTextInputLayout = findViewById(R.id.date_layout);
+        mStartTimeTextInputLayout = findViewById(R.id.from_layout);
+        mRoomNameTextInputLayout = findViewById(R.id.room_name_layout);
+        mEndTimeTextInputLayout = findViewById(R.id.to_layout);
         mButtonAdd = findViewById(R.id.btn_add);
-        mTextSubjet = findViewById(R.id.topic);
         mEmailsTextInputLayout = findViewById(R.id.participants);
         mButtonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 participants = validateEmailInput(mEmailsTextInputLayout, mEmailsChipGroup);
-                long idRoom = mApiService.getIdRoom(mRootName.getText().toString());
-                String txtSubject = mTextSubjet.getText().toString();
-                Meeting meeting = new Meeting(System.currentTimeMillis(), idRoom ,txtSubject,dtDebut,dtFin,participants);
-                EventBus.getDefault().post(new AddMeetingEvent(meeting));
-                finish();
+                validateTextView(mStartTimeTextInputLayout);
+                validateTextView(mEndTimeTextInputLayout);
+                String subjetMeeting = validateTextView(mSujetInputLayout);
+                validateDateTextView();
+                long idRoom = mApiService.getIdRoom(validateTextView(mRoomNameTextInputLayout));
+                // If error we send message to user can complete Meeting
+                if (mError){
+                    Snackbar.make(v,R.string.error_field , Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                    mError = false;
+                } else {
+                    Meeting meeting = new Meeting(System.currentTimeMillis(), idRoom ,subjetMeeting, dtBegin, dtEnd,participants);
+                    EventBus.getDefault().post(new AddMeetingEvent(meeting));
+                    finish();
+                }
             }
         });
+    }
+
+    private void validateDateTextView(){
+        String dateMeeting = mDateTextView.getText().toString();
+        if (dateMeeting.isEmpty()){
+            mError = true;
+            mDateTextInputLayout.setError(getText(R.string.error_empty_field));
+        } else {
+            mDateTextInputLayout.setError(null);
+        }
     }
 
     private List<String> validateEmailInput(TextInputLayout inputValue, ChipGroup emails) {
         int nb = emails.getChildCount();
         List<String> lEmails = new ArrayList<>();
+
+        if (nb == 0){
+            inputValue.setError(getText(R.string.error_empty_field));
+            mError = true;
+            return null;
+        }else{
+            inputValue.setError(null);
+        }
 
         for (int i = 0; i<nb;i++){
             Chip tmpEmail = (Chip) emails.getChildAt(i);
@@ -102,6 +136,18 @@ public class AddMeetingActivity extends AppCompatActivity {
         return lEmails;
     }
 
+    private String validateTextView (TextInputLayout inputValue){
+      String  tmpValue = inputValue.getEditText().getText().toString();
+       if (tmpValue.isEmpty()) {
+           inputValue.setError(getText(R.string.error_empty_field));
+           mError = true;
+           return null;
+       }else {
+           inputValue.setError(null);
+           return tmpValue;
+       }
+    }
+
     private void initEmailsOnKeyListener() {
         mEmailsTextInputEditText = findViewById(R.id.emails);
         mEmailsChipGroup = findViewById(R.id.emails_group);
@@ -109,12 +155,27 @@ public class AddMeetingActivity extends AppCompatActivity {
             if (event.getAction() == KeyEvent.ACTION_DOWN){
               if (keyCode == KeyEvent.KEYCODE_ENTER){
                   String value = Objects.requireNonNull(mEmailsTextInputEditText.getText()).toString().trim();
-                  addEmailToChipGroup(value);
-                  return true;
+                  if (validateEmailAdress(value)){
+                      addEmailToChipGroup(value);
+                      return true;
+                  }else{
+                      mEmailsTextInputLayout.setError(getText(R.string.error_invalid_mail));
+                      return false;
+                  }
               }
             }
             return false;
         });
+    }
+
+    private boolean validateEmailAdress(String value) {
+        String email = value;
+
+        if(!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     private void addEmailToChipGroup(String email) {
@@ -131,7 +192,6 @@ public class AddMeetingActivity extends AppCompatActivity {
         mRoomNameAutoCompleteTextView = findViewById(R.id.room_name);
         // Meeting room -->
         roomNameList = mApiService.getListNameRooms();
-
 
         mRoomNameAutoCompleteTextView.setAdapter(new ArrayAdapter<>(
                 this,
@@ -161,18 +221,33 @@ public class AddMeetingActivity extends AppCompatActivity {
         mEditTextTimeStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
-                        lastSelectedHourDe = hourOfDay;
-                        lastSelectedMinuteDe = minutes;
-                        mEditTextTimeStart.setText(String.format("%02d:%02d", hourOfDay, minutes));
-                        dtDebut = new DateTime(dateReu.getYear(), dateReu.getMonth(), dateReu.getDay(), hourOfDay, minutes, 0, 0);
-                    }
-                }, lastSelectedHourDe, lastSelectedMinuteDe, true);
-                timePickerDialog.show();
+                if (mEdtDate.getText().toString().isEmpty()){
+                    mStartTimeTextInputLayout.setError(getText(R.string.error_empty_date));
+                }else{
+                    TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
+                            lastSelectedHourDe = hourOfDay;
+                            lastSelectedMinuteDe = minutes;
+                            dtBegin = new DateTime(dateReu.getYear(), dateReu.getMonth(), dateReu.getDay(), hourOfDay, minutes, 0, 0);
+                            if (dtEnd != null){
+                                if (dtBegin.isBefore(dtEnd)){
+                                    mEditTextTimeStart.setText(String.format("%02d:%02d", hourOfDay, minutes));
+                                }else{
+                                    dtBegin = null;
+                                    mEditTextTimeStart.setText("");
+                                    mStartTimeTextInputLayout.setError(getText(R.string.error_invalid_time_after));
+                                }
+                            }else{
+                                mEditTextTimeStart.setText(String.format("%02d:%02d", hourOfDay, minutes));
+                            }
+                        }
+                    }, lastSelectedHourDe, lastSelectedMinuteDe, true);
+                    timePickerDialog.show();
+                }
             }
         });
+
         if(this.lastSelectedHourA == -1)  {
             // Get Current Time
             final Calendar c = Calendar.getInstance();
@@ -183,16 +258,26 @@ public class AddMeetingActivity extends AppCompatActivity {
         mEditTexteTimeEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
-                        lastSelectedHourA = hourOfDay;
-                        lastSelectedMinuteA = minutes;
-                        mEditTexteTimeEnd.setText(String.format("%02d:%02d", hourOfDay, minutes));
-                        dtFin = new DateTime(dateReu.getDate(), dateReu.getMonth(), dateReu.getDay(), hourOfDay, minutes, 0, 0);
-                    }
-                }, lastSelectedHourA, lastSelectedMinuteA, true);
-                timePickerDialog.show();
+                if (mEdtDate.getText().toString().isEmpty()){
+                    mEndTimeTextInputLayout.setError(getText(R.string.error_empty_date));
+                }else{
+                    TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
+                            lastSelectedHourA = hourOfDay;
+                            lastSelectedMinuteA = minutes;
+                            dtEnd = new DateTime(dateReu.getYear(), dateReu.getMonth(), dateReu.getDay(), hourOfDay, minutes, 0, 0);
+                            if (dtEnd.isAfter(dtBegin)){
+                                mEditTexteTimeEnd.setText(String.format("%02d:%02d", hourOfDay, minutes));
+                            }else{
+                                dtEnd = null;
+                                mEditTexteTimeEnd.setText("");
+                                mEndTimeTextInputLayout.setError(getText(R.string.error_invalid_time_after));
+                            }
+                        }
+                    }, lastSelectedHourA, lastSelectedMinuteA, true);
+                    timePickerDialog.show();
+                }
             }
         });
     }
@@ -244,7 +329,4 @@ public class AddMeetingActivity extends AppCompatActivity {
     public void onCreateMeeting(AddMeetingEvent event){
         mApiService.createMeeting(event.meeting);
     }
-
-
-
 }

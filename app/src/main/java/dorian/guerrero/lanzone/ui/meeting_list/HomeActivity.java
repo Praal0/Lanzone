@@ -29,7 +29,7 @@ import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 import dorian.guerrero.lanzone.ui.AddMeetingActivity;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity  {
 
     private MeetingApiService mMeetingApiService;
     List<Meeting> mMeetings,mMeetingFull;
@@ -85,6 +85,19 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.filter) {
+            performFilter();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private  void performFilter() {
+
     }
 
     @Override

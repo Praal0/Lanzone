@@ -56,7 +56,7 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
 
         //Change Pater for have time : HH h mm
         DateTimeFormatter fmt = DateTimeFormat.forPattern("HH'h'mm");
-        String str = fmt.print(meeting.meetingHeureBegin);
+        String str = fmt.print(meeting.meetingBegin);
 
         holder.myImage.setImageResource(room.getDrawableRes());
 
