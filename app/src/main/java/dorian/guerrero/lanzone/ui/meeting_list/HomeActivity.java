@@ -20,6 +20,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
@@ -49,7 +50,7 @@ public class HomeActivity extends AppCompatActivity  {
         sApiService = DI.getMeetingApiService();
         mMeetings = new ArrayList<>();
         mMeetingFull = new ArrayList<>(mMeetings);
-        meetingAdapater = new MeetingAdapter(sApiService.getMeeting());
+        meetingAdapater = new MeetingAdapter(sApiService.getMeetings(null,null));
         mRecyclerView.setAdapter(meetingAdapater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mFloatingActionButton.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, AddMeetingActivity.class)));
@@ -134,7 +135,6 @@ public class HomeActivity extends AppCompatActivity  {
     public void onCreateMeeting(AddMeetingEvent event){
         sApiService.createMeeting(event.meeting);
     }
-
 }
 
 

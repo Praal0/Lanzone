@@ -12,7 +12,9 @@
         <activity android:name=".ui.meeting_list.HomeActivity">
 
         </activity>
-        <activity android:name=".ui.AddMeetingActivity" />
+        <activity android:name=".ui.AddMeetingActivity"
+            android:label="@string/new_reu"
+            />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Maréu</string>
+    <string name="new_reu">Nouvelle Réunion</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="description_text">Description Text</string>
     <string name="email_text">Email text</string>
@@ -17,4 +18,5 @@
     <string name="error_invalid_time_begin">"L'heure de debut doit être inférieur a l'heure de fin"</string>
     <string name="select_filter">"Selectionner Salle"</string>
     <string name="reset">"Reset"</string>
+    <string name="Search_item">Rechercher</string>
 </resources>

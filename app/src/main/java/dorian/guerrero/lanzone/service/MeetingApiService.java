@@ -1,5 +1,8 @@
 package dorian.guerrero.lanzone.service;
 
+import org.joda.time.DateTime;
+
+import java.util.Calendar;
 import java.util.List;
 
 import dorian.guerrero.lanzone.model.Meeting;
@@ -52,6 +55,16 @@ public interface MeetingApiService {
      * @param id
      */
     Room getRoomWithId(long id);
+
+
+    /**
+     * Get meetings
+     *
+     * Unfiltered, filtered by date, filtered by room name or filtered by date and room name
+     * @return list of meetings
+     */
+    List<Meeting> getMeetings(DateTime date, String roomName);
+
 
 
 }
