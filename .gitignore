@@ -215,3 +215,7 @@ fabric.properties
 .gradle/6.5/fileHashes/fileHashes.bin
 .gradle/6.5/fileContent/fileContent.lock
 .gradle/6.5/executionHistory/executionHistory.lock
+.gradle/6.5/javaCompile/classAnalysis.bin
+.gradle/6.5/javaCompile/classAnalysis.bin
+.gradle/6.5/javaCompile/jarAnalysis.bin
+.gradle/6.5/javaCompile/taskHistory.bin
