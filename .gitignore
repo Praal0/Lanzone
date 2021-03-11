@@ -209,3 +209,9 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/android,androidstudio
+.gradle/checksums/checksums.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/6.5/fileHashes/fileHashes.lock
+.gradle/6.5/fileHashes/fileHashes.bin
+.gradle/6.5/fileContent/fileContent.lock
+.gradle/6.5/executionHistory/executionHistory.lock
