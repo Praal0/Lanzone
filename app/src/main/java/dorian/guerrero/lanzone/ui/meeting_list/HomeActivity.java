@@ -35,10 +35,9 @@ import dorian.guerrero.lanzone.service.MeetingApiService;
 import dorian.guerrero.lanzone.ui.AddMeetingActivity;
 import dorian.guerrero.lanzone.ui.Fragment.FilterDialogFragment;
 
-public class HomeActivity extends AppCompatActivity  {
+public class HomeActivity extends AppCompatActivity implements FilterDialogFragment.OnButtonClickedListener  {
     public static MeetingApiService sApiService;
     List<Meeting> mMeetings,mMeetingFull;
-    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.addMeeting) FloatingActionButton mFloatingActionButton;
     @BindView(R.id.rcvMeeting) RecyclerView mRecyclerView;
     private MeetingAdapter meetingAdapater;
@@ -134,17 +133,16 @@ public class HomeActivity extends AppCompatActivity  {
         EventBus.getDefault().unregister(this);
     }
 
-    @Subscribe
-    public void onDeleteMeeting(DeleteMeetingEvent event) {
-        sApiService.deleteMeeting(event.meeting);
-        init();
-    }
-
     public void onButtonClicked(DateTime date, Long room, boolean reset) {
         if (reset || date != null || room != null )
             initList(date, room);
     }
 
+    @Subscribe
+    public void onDeleteMeeting(DeleteMeetingEvent event) {
+        sApiService.deleteMeeting(event.meeting);
+        init();
+    }
 
     @Subscribe
     public void onCreateMeeting(AddMeetingEvent event){

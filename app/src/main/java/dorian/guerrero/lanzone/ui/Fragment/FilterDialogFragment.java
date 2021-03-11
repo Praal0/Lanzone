@@ -60,8 +60,8 @@ public class FilterDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         super.onCreateDialog(savedInstanceState);
-
         mMeetingApiService = DI.getMeetingApiService();
+
         AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
         LayoutInflater inflater = getActivity().getLayoutInflater();
         @SuppressLint("InflateParams")
@@ -104,7 +104,7 @@ public class FilterDialogFragment extends DialogFragment {
     }
 
     private void createCallbackToParentActivity() {
-        mCallback = (OnButtonClickedListener) getActivity();
+        this.mCallback = (OnButtonClickedListener) getActivity();
     }
 
     @OnClick(R.id.date_filter)
@@ -141,7 +141,7 @@ public class FilterDialogFragment extends DialogFragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        createCallbackToParentActivity();
+        this.createCallbackToParentActivity();
 
     }
 }
