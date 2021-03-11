@@ -98,7 +98,8 @@ public class HomeActivity extends AppCompatActivity  {
     }
 
     private void performFilterDialog() {
-        new FilterDialogFragment(sApiService.getListNameRooms()).show(getSupportFragmentManager(), null);
+        FilterDialogFragment filterDialog = new FilterDialogFragment(sApiService.getListNameRooms());
+        filterDialog.show(getSupportFragmentManager(), "filter");
     }
 
 
@@ -109,8 +110,8 @@ public class HomeActivity extends AppCompatActivity  {
     }
 
 
-    private void initList(){
-        mMeetings = sApiService.getMeetings(null,null);
+    private void initList(DateTime date, Long room){
+        mMeetings = sApiService.getMeetings(date,room);
         meetingAdapater = new MeetingAdapter(mMeetings);
         mRecyclerView.setAdapter(meetingAdapater);
     }
@@ -137,6 +138,11 @@ public class HomeActivity extends AppCompatActivity  {
     public void onDeleteMeeting(DeleteMeetingEvent event) {
         sApiService.deleteMeeting(event.meeting);
         init();
+    }
+
+    public void onButtonClicked(DateTime date, Long room, boolean reset) {
+        if (reset || date != null || room != null )
+            initList(date, room);
     }
 
 

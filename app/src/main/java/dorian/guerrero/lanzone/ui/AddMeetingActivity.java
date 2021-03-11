@@ -206,6 +206,8 @@ public class AddMeetingActivity extends AppCompatActivity {
         // Meeting room -->
         roomNameList = mApiService.getListNameRooms();
 
+        mRoomNameAutoCompleteTextView.setText(R.string.select_filter);
+
         mRoomNameAutoCompleteTextView.setAdapter(new ArrayAdapter<>(
                 this,
                 R.layout.room_item,

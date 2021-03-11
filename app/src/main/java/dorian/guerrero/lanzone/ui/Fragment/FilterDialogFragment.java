@@ -9,15 +9,13 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
+
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -41,7 +39,6 @@ import butterknife.OnTouch;
 import dorian.guerrero.lanzone.R;
 import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.service.MeetingApiService;
-import dorian.guerrero.lanzone.ui.AddMeetingActivity;
 
 public class FilterDialogFragment extends DialogFragment {
 
@@ -83,7 +80,8 @@ public class FilterDialogFragment extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 mRoomId = mMeetingApiService.getIdRoom(mRoomFilter.getText().toString());
-                mMeetingApiService.getMeetings(mDate,mRoomId);
+                mCallback.onButtonClicked(mDate, mRoomId, false);
+
             }
         });
 
@@ -92,7 +90,8 @@ public class FilterDialogFragment extends DialogFragment {
         builder.setNeutralButton(R.string.reset, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // TODO trouver un moyen de mettre la liste full dans ma liste
+                mRoomId = mMeetingApiService.getIdRoom(mRoomFilter.getText().toString());
+                mCallback.onButtonClicked(mDate, mRoomId, true);
             }
         });
 
@@ -101,10 +100,11 @@ public class FilterDialogFragment extends DialogFragment {
 
 
     public interface OnButtonClickedListener {
-        void onButtonClicked(Calendar date, String room, boolean reset);
+        void onButtonClicked(DateTime date, Long roomId, boolean reset);
     }
 
     private void createCallbackToParentActivity() {
+        mCallback = (OnButtonClickedListener) getActivity();
     }
 
     @OnClick(R.id.date_filter)
