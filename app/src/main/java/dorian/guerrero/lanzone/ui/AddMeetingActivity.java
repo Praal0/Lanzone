@@ -49,9 +49,8 @@ import dorian.guerrero.lanzone.service.MeetingApiService;
 
 public class AddMeetingActivity extends AppCompatActivity {
     private boolean mError;
-    private Date dateReu;
     private List<String> participants;
-    private DateTime dtBegin, dtEnd;
+    private DateTime dtBegin, dtEnd,dateReu;
     private List<String> roomNameList;
     private MeetingApiService mApiService;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
@@ -172,6 +171,7 @@ public class AddMeetingActivity extends AppCompatActivity {
                   String value = Objects.requireNonNull(mEmailsTextInputEditText.getText()).toString().trim();
                   if (validateEmailAdress(value)){
                       addEmailToChipGroup(value);
+                      mEmailsTextInputLayout.setError(null);
                       return true;
                   }else{
                       mEmailsTextInputLayout.setError(getText(R.string.error_invalid_mail));
@@ -241,7 +241,7 @@ public class AddMeetingActivity extends AppCompatActivity {
                         public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
                             lastSelectedHourDe = hourOfDay;
                             lastSelectedMinuteDe = minutes;
-                            dtBegin = new DateTime(dateReu.getYear(), dateReu.getMonth(), dateReu.getDay(), hourOfDay, minutes, 0, 0);
+                            dtBegin = new DateTime(dateReu.getYear(), dateReu.getMonthOfYear(), dateReu.getDayOfMonth(), hourOfDay, minutes, 0, 0);
                             if (dtEnd != null){
                                 if (dtBegin.isBefore(dtEnd)){
                                     mEditTextTimeStart.setText(String.format("%02d:%02d", hourOfDay, minutes));
@@ -278,7 +278,7 @@ public class AddMeetingActivity extends AppCompatActivity {
                         public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
                             lastSelectedHourA = hourOfDay;
                             lastSelectedMinuteA = minutes;
-                            dtEnd = new DateTime(dateReu.getYear(), dateReu.getMonth(), dateReu.getDay(), hourOfDay, minutes, 0, 0);
+                            dtEnd = new DateTime(dateReu.getYear(), dateReu.getMonthOfYear(), dateReu.getDayOfMonth(), hourOfDay, minutes, 0, 0);
                             if (dtEnd.isAfter(dtBegin)){
                                 mEditTexteTimeEnd.setText(String.format("%02d:%02d", hourOfDay, minutes));
                                 mEndTimeTextInputLayout.setError(null);
@@ -317,7 +317,7 @@ public class AddMeetingActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 month++;
-                dateReu = new Date(year,month,dayOfMonth);
+                dateReu = new DateTime(year,month,dayOfMonth,0,0,0);
                 String date =  dayOfMonth + "/" + month + "/" + year;
                 mDateTextView.setText(date);
             }

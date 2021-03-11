@@ -26,7 +26,10 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import org.joda.time.DateTime;
+
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -36,15 +39,19 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.OnTouch;
 import dorian.guerrero.lanzone.R;
+import dorian.guerrero.lanzone.di.DI;
+import dorian.guerrero.lanzone.service.MeetingApiService;
 import dorian.guerrero.lanzone.ui.AddMeetingActivity;
 
 public class FilterDialogFragment extends DialogFragment {
+
     @BindView(R.id.date_filter) TextInputEditText mDateFilter;
     @BindView(R.id.room_filter) AutoCompleteTextView mRoomFilter;
 
+    private MeetingApiService mMeetingApiService;
     private List<String> mRooms;
-    private Calendar mDate;
-    private String mRoom;
+    private DateTime mDate;
+    private Long mRoomId;
 
     private OnButtonClickedListener mCallback;
 
@@ -57,6 +64,7 @@ public class FilterDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         super.onCreateDialog(savedInstanceState);
 
+        mMeetingApiService = DI.getMeetingApiService();
         AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
         LayoutInflater inflater = getActivity().getLayoutInflater();
         @SuppressLint("InflateParams")
@@ -71,16 +79,26 @@ public class FilterDialogFragment extends DialogFragment {
         builder.setView(view);
         builder.setTitle(R.string.select_filter);
 
-        builder.setPositiveButton(android.R.string.ok, (dialog, which) -> {
-            mCallback.onButtonClicked(mDate, mRoomFilter.getEditableText().toString(), false);
+        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                mRoomId = mMeetingApiService.getIdRoom(mRoomFilter.getText().toString());
+                mMeetingApiService.getMeetings(mDate,mRoomId);
+            }
         });
 
         builder.setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss());
 
-        builder.setNeutralButton(R.string.reset, (dialog, which) -> mCallback.onButtonClicked(mDate, mRoomFilter.getEditableText().toString(), true));
+        builder.setNeutralButton(R.string.reset, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // TODO trouver un moyen de mettre la liste full dans ma liste
+            }
+        });
 
         return builder.create();
     }
+
 
     public interface OnButtonClickedListener {
         void onButtonClicked(Calendar date, String room, boolean reset);
@@ -96,10 +114,12 @@ public class FilterDialogFragment extends DialogFragment {
 
         mDatePickerDialog = new DatePickerDialog(Objects.requireNonNull(getContext()),android.R.style.Theme_Holo_Light,
                 (view, year, month, dayOfMonth) -> {
-                    Calendar cal = Calendar.getInstance();
-                    cal.set(year, month, dayOfMonth);
-                    mDateFilter.setText(DateFormat.getDateFormat(getContext()).format(cal.getTime()));
-                    mDate = cal;
+                month++;
+                Calendar cal = Calendar.getInstance();
+                cal.set(year, month, dayOfMonth);
+                    String date =  dayOfMonth + "/" + month + "/" + year;
+                    mDateFilter.setText(date);
+                    mDate = new DateTime(year,month,dayOfMonth,0,0,0);
                 },
                 calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),
@@ -121,6 +141,7 @@ public class FilterDialogFragment extends DialogFragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
+        createCallbackToParentActivity();
 
     }
 }

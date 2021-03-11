@@ -115,20 +115,23 @@ public class DummyMeetingApiService implements MeetingApiService{
     }
 
     @Override
-    public List<Meeting> getMeetings(DateTime date, String roomName) {
-        if (date != null && roomName != null && ! roomName.isEmpty())
-            return getMeetingsMatchDate(date, getMeetingsMatchRoomName(roomName, mMeetings));
+    public List<Meeting> getMeetings(DateTime date, Long roomId) {
+        if (date != null && roomId != null && roomId != 0)
+            return getMeetingsMatchDate(date, getMeetingsMatchRoomName(roomId, mMeetings));
         else if (date != null)
             return getMeetingsMatchDate(date, mMeetings);
-        else if (roomName != null && ! roomName.isEmpty())
-            return getMeetingsMatchRoomName(roomName, mMeetings);
+        else if (roomId != null && roomId != 0)
+            return getMeetingsMatchRoomName(roomId, mMeetings);
         return mMeetings;
     }
 
     private List<Meeting> getMeetingsMatchDate(DateTime date, List<Meeting> meetings) {
         List<Meeting> tmp = new ArrayList<>();
         for (Meeting m :meetings){
-            if (m.getMeetingHeureBegin().equals(date)){
+            // We Remove clock for check date
+            DateTime dateTime = new DateTime(m.getMeetingHeureBegin().getYear(),m.getMeetingHeureBegin().getMonthOfYear()
+                    ,m.getMeetingHeureBegin().getDayOfMonth(),0,0,0);
+            if (dateTime.equals(date)){
                 tmp.add(m);
             }
         }
@@ -136,13 +139,12 @@ public class DummyMeetingApiService implements MeetingApiService{
 
     }
 
-    private List<Meeting> getMeetingsMatchRoomName(String roomName, List<Meeting> meetings) {
+    private List<Meeting> getMeetingsMatchRoomName(Long roomId, List<Meeting> meetings) {
         List<Meeting> tmp = new ArrayList<>();
-        Long idRoom = mMeetingApiService.getIdRoom(roomName);
-
-        for (Meeting m: meetings)
-            if (m.getRoomId() == idRoom)
+        for (Meeting m: meetings){
+            if (m.room == roomId)
                 tmp.add(m);
+        }
         return tmp;
     }
 }

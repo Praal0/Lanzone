@@ -10,14 +10,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.SearchView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
+import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -104,10 +105,17 @@ public class HomeActivity extends AppCompatActivity  {
     @Override
     public void onResume() {
         super.onResume();
-        initList();
+        init();
     }
 
-    private void initList() {
+
+    private void initList(){
+        mMeetings = sApiService.getMeetings(null,null);
+        meetingAdapater = new MeetingAdapter(mMeetings);
+        mRecyclerView.setAdapter(meetingAdapater);
+    }
+
+    private void init() {
         mMeetings = sApiService.getMeeting();
         meetingAdapater = new MeetingAdapter(mMeetings);
         mRecyclerView.setAdapter(meetingAdapater);
@@ -128,13 +136,15 @@ public class HomeActivity extends AppCompatActivity  {
     @Subscribe
     public void onDeleteMeeting(DeleteMeetingEvent event) {
         sApiService.deleteMeeting(event.meeting);
-        initList();
+        init();
     }
+
 
     @Subscribe
     public void onCreateMeeting(AddMeetingEvent event){
         sApiService.createMeeting(event.meeting);
     }
+
 }
 
 
