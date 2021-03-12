@@ -17,15 +17,15 @@ public abstract class DummyGenerator {
     private static List<Meeting> DUMMY_MEETINGS = asList(
             new Meeting(1,2,"Reunion 1",
                     new DateTime(2021, 3, 15, 12, 0, 0, 0),
-                    new DateTime(DateTime.now()),
+                    new DateTime(2021, 3, 15, 13, 0, 0, 0),
                     asList("toto@hotmail.fr","tito@gmail.com")),
             new Meeting(2,7,"Reunion 2",
                     new DateTime(2021, 3, 26, 16, 58, 0, 0),
-                    new DateTime(DateTime.now()),
+                    new DateTime(2021, 3, 26, 17, 58, 0, 0),
                     asList("toto@hotmail.fr","tito@gmail.com")),
             new Meeting(3,6,"Reunion 3",
                     new DateTime(2021, 3, 21, 18, 30, 0, 0),
-                    new DateTime(DateTime.now()),
+                    new DateTime(2021, 3, 26, 20, 58, 0, 0),
                     asList("toto@hotmail.fr","tito@gmail.com"))
     );
 

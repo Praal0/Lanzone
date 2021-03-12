@@ -46,6 +46,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        // Bind ButterKnif and init all element (Adapter,List...)
         ButterKnife.bind(this);
         sApiService = DI.getMeetingApiService();
         mMeetings = new ArrayList<>();
@@ -60,6 +61,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.meeting_menu, menu);
+        // We init searchItem for use searchView
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
         searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);

@@ -2,6 +2,7 @@ package dorian.guerrero.lanzone.service;
 
 import org.joda.time.DateTime;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -101,6 +102,10 @@ public class DummyMeetingApiService implements MeetingApiService{
 
     }
 
+    /**
+     * Get Room use with Id of Room
+     * @param id
+     */
     @Override
     public Room getRoomWithId(long id) {
         Room roomReturn = null;
@@ -114,6 +119,30 @@ public class DummyMeetingApiService implements MeetingApiService{
         return roomReturn;
     }
 
+    /**
+     * Check if meeting exist or not before we can add in list
+     * @param meeting
+     */
+    @Override
+    public Boolean checkMeeting(Meeting meeting) {
+        Boolean valid = true;
+        for(Meeting m : getMeeting()){
+            if (meeting.getRoomId() == m.getRoomId()) {
+                if (meeting.getMeetingHeureBegin().equals(m.getMeetingHeureBegin()) || meeting.getMeetingHeureEnd().equals(m.getMeetingHeureEnd()))
+                    return false;
+                if (meeting.getMeetingHeureBegin().isAfter(m.getMeetingHeureBegin()) && meeting.getMeetingHeureBegin().isBefore(m.getMeetingHeureEnd()))
+                    return false;
+                if (meeting.getMeetingHeureEnd().isAfter(m.getMeetingHeureBegin()) && meeting.getMeetingHeureEnd().isBefore(m.getMeetingHeureEnd()))
+                    return false;
+            }
+        }
+        return valid;
+    }
+
+    /**
+     * Return List Meeting with element who use Room or in date
+     * @param date,roomId
+     */
     @Override
     public List<Meeting> getMeetings(DateTime date, Long roomId) {
         if (date != null && roomId != null && roomId != 0)
@@ -125,6 +154,10 @@ public class DummyMeetingApiService implements MeetingApiService{
         return mMeetings;
     }
 
+    /**
+     * Return List Meeting with element in date
+     * @param date,roomId
+     */
     private List<Meeting> getMeetingsMatchDate(DateTime date, List<Meeting> meetings) {
         List<Meeting> tmp = new ArrayList<>();
         for (Meeting m :meetings){
@@ -139,6 +172,11 @@ public class DummyMeetingApiService implements MeetingApiService{
 
     }
 
+
+    /**
+     * Return List Meeting with element in Room selected
+     * @param roomId,meetings
+     */
     private List<Meeting> getMeetingsMatchRoomName(Long roomId, List<Meeting> meetings) {
         List<Meeting> tmp = new ArrayList<>();
         for (Meeting m: meetings){

@@ -57,6 +57,13 @@ public interface MeetingApiService {
     Room getRoomWithId(long id);
 
 
+    /***
+     * Check if meeting exist
+     * @return boolean
+     * param meeting
+     */
+    Boolean checkMeeting(Meeting meeting);
+
     /**
      * Get meetings
      *
