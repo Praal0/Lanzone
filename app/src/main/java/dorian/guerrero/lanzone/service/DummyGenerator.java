@@ -14,7 +14,7 @@ import dorian.guerrero.lanzone.model.Meeting;
 import static java.util.Arrays.asList;
 
 public abstract class DummyGenerator {
-    private static List<Meeting> DUMMY_MEETINGS = asList(
+    public static List<Meeting> DUMMY_MEETINGS = asList(
             new Meeting(1,2,"Reunion 1",
                     new DateTime(2021, 3, 15, 12, 0, 0, 0),
                     new DateTime(2021, 3, 15, 13, 0, 0, 0),
