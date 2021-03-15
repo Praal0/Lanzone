@@ -144,7 +144,7 @@ public class DummyMeetingApiService implements MeetingApiService{
      * @param date,roomId
      */
     @Override
-    public List<Meeting> getMeetings(DateTime date, Long roomId) {
+    public List<Meeting> getMeetingFilter(DateTime date, Long roomId) {
         if (date != null && roomId != null && roomId != 0)
             return getMeetingsMatchDate(date, getMeetingsMatchRoomName(roomId, mMeetings));
         else if (date != null)

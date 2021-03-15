@@ -11,7 +11,7 @@ import static java.util.Arrays.asList;
 
 public abstract class GeneratorRoom {
 
-    private static List<Room> DUMMY_ROOM = asList(
+    public static List<Room> DUMMY_ROOM = asList(
             new Room(1,"Mario", R.drawable.mario),
             new Room(2,"Luigi", R.drawable.luigi),
             new Room(3,"Ness", R.drawable.ness),

@@ -70,7 +70,7 @@ public interface MeetingApiService {
      * Unfiltered, filtered by date, filtered by room name or filtered by date and room name
      * @return list of meetings
      */
-    List<Meeting> getMeetings(DateTime date, Long roomId);
+    List<Meeting> getMeetingFilter(DateTime date, Long roomId);
 
 
 

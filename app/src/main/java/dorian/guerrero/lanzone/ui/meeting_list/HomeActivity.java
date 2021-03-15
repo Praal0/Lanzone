@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
 import android.widget.SearchView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,7 +19,6 @@ import org.greenrobot.eventbus.Subscribe;
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
@@ -51,7 +48,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
         sApiService = DI.getMeetingApiService();
         mMeetings = new ArrayList<>();
         mMeetingFull = new ArrayList<>(mMeetings);
-        meetingAdapater = new MeetingAdapter(sApiService.getMeetings(null,null));
+        meetingAdapater = new MeetingAdapter(sApiService.getMeetingFilter(null,null));
         mRecyclerView.setAdapter(meetingAdapater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mFloatingActionButton.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, AddMeetingActivity.class)));
@@ -112,7 +109,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
 
 
     private void initList(DateTime date, Long room){
-        mMeetings = sApiService.getMeetings(date,room);
+        mMeetings = sApiService.getMeetingFilter(date,room);
         meetingAdapater = new MeetingAdapter(mMeetings);
         mRecyclerView.setAdapter(meetingAdapater);
     }
