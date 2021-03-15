@@ -219,3 +219,4 @@ fabric.properties
 .gradle/6.5/javaCompile/classAnalysis.bin
 .gradle/6.5/javaCompile/jarAnalysis.bin
 .gradle/6.5/javaCompile/taskHistory.bin
+*.lock
