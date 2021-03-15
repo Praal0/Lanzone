@@ -22,17 +22,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/dorian/guerrero/lanzone/DeleteViewAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_startup_startup_runtime_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__joda_time_joda_time_2_10_9_no_tzdb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_danlew_android_joda_2_10_9_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/Lanzone.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/Lanzone.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_reu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_reu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/dorian/guerrero/lanzone/MeetingInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/dorian/guerrero/lanzone/MeetingInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/dorian/guerrero/lanzone/MeetingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/dorian/guerrero/lanzone/MeetingServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +53,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Nexus_4_API_21]" />
+  <component name="ExportTestResults" outputFolder="$USER_HOME$/Downloads" openResultsInEditor="true" userTempatePath="" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -135,12 +148,12 @@
       <recent name="dorian.guerrero.lanzone.mareu_list" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Android Instrumented Tests.myNeighboursList_d...()">
     <configuration name="MeetingServiceTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lanzone.app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dorian.guerrero.lanzone.*" />
+          <option name="PATTERN" value="dorian.guerrero.lanzone.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,68 +165,17 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MeetingServiceTest.AddNeighbourWithSuccess" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MeetingServiceTest.getMeetingFilterWithSuccess" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lanzone.app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dorian.guerrero.lanzone.*" />
+          <option name="PATTERN" value="dorian.guerrero.lanzone.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dorian.guerrero.lanzone" />
       <option name="MAIN_CLASS_NAME" value="dorian.guerrero.lanzone.MeetingServiceTest" />
-      <option name="METHOD_NAME" value="AddNeighbourWithSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MeetingServiceTest.checkMeetingWithSuccess" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lanzone.app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dorian.guerrero.lanzone.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dorian.guerrero.lanzone" />
-      <option name="MAIN_CLASS_NAME" value="dorian.guerrero.lanzone.MeetingServiceTest" />
-      <option name="METHOD_NAME" value="checkMeetingWithSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MeetingServiceTest.deleteNeighbourWithSuccess" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lanzone.app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dorian.guerrero.lanzone.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dorian.guerrero.lanzone" />
-      <option name="MAIN_CLASS_NAME" value="dorian.guerrero.lanzone.MeetingServiceTest" />
-      <option name="METHOD_NAME" value="deleteNeighbourWithSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MeetingServiceTest.getNeighboursWithSuccess" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lanzone.app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dorian.guerrero.lanzone.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dorian.guerrero.lanzone" />
-      <option name="MAIN_CLASS_NAME" value="dorian.guerrero.lanzone.MeetingServiceTest" />
-      <option name="METHOD_NAME" value="getNeighboursWithSuccess" />
+      <option name="METHOD_NAME" value="getMeetingFilterWithSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -284,12 +246,165 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MeetingInstrumentedT..." type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="Lanzone.app" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="dorian.guerrero.lanzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="INCLUDE_GRADLE_EXTRA_OPTIONS" value="true" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myNeighboursList_d...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="Lanzone.app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="METHOD_NAME" value="myNeighboursList_deleteAction_shouldRemoveItem" />
+      <option name="CLASS_NAME" value="dorian.guerrero.lanzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="INCLUDE_GRADLE_EXTRA_OPTIONS" value="true" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myNeighboursList_s...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="Lanzone.app" />
+      <option name="TESTING_TYPE" value="3" />
+      <option name="METHOD_NAME" value="myNeighboursList_shouldNotBeEmpty" />
+      <option name="CLASS_NAME" value="dorian.guerrero.lanzone.MeetingInstrumentedTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="INCLUDE_GRADLE_EXTRA_OPTIONS" value="true" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.MeetingServiceTest.checkMeetingWithSuccess" />
-        <item itemvalue="Android JUnit.MeetingServiceTest.getNeighboursWithSuccess" />
-        <item itemvalue="Android JUnit.MeetingServiceTest.deleteNeighbourWithSuccess" />
-        <item itemvalue="Android JUnit.MeetingServiceTest.AddNeighbourWithSuccess" />
+        <item itemvalue="Android Instrumented Tests.myNeighboursList_d...()" />
+        <item itemvalue="Android Instrumented Tests.myNeighboursList_s...()" />
+        <item itemvalue="Android Instrumented Tests.MeetingInstrumentedT..." />
+        <item itemvalue="Android JUnit.MeetingServiceTest.getMeetingFilterWithSuccess" />
         <item itemvalue="Android JUnit.MeetingServiceTest" />
       </list>
     </recent_temporary>
@@ -313,6 +428,10 @@
     </state>
     <state x="698" y="299" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615214772792" />
     <state x="698" y="280" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615215778183" />
+    <state x="100" y="125" width="1720" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1615812961559">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="100" y="125" width="1720" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812961559" />
     <state x="587" y="231" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1614671334491">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -382,129 +501,138 @@
     <state x="729" y="310" key="AndroidProcessChooserDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615545724725" />
     <state x="729" y="290" key="AndroidProcessChooserDialog/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199005390" />
     <state x="729" y="310" key="AndroidProcessChooserDialog/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615224118691" />
-    <state width="547" height="478" key="DebuggerActiveHint" timestamp="1615192142762">
-      <screen x="0" y="0" width="1920" height="1010" />
+    <state width="547" height="500" key="DebuggerActiveHint" timestamp="1615815590432">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="509" height="498" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1614846078837" />
     <state width="582" height="513" key="DebuggerActiveHint/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614849285157" />
     <state width="526" height="512" key="DebuggerActiveHint/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614689470457" />
     <state width="547" height="478" key="DebuggerActiveHint/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615192142762" />
+    <state width="547" height="500" key="DebuggerActiveHint/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615815590432" />
     <state width="496" height="466" key="DebuggerActiveHint/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614600843968" />
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog" timestamp="1613730667549">
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613730667549" />
-    <state width="1878" height="303" key="GridCell.Tab.0.bottom" timestamp="1615800064053">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="285" key="GridCell.Tab.0.bottom" timestamp="1615819675890">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180458" />
     <state width="1876" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300102" />
     <state width="939" height="221" key="GridCell.Tab.0.bottom/0.25.1680.955@0.25.1680.955" timestamp="1615247108387" />
     <state width="1788" height="274" key="GridCell.Tab.0.bottom/0.25.1920.985/1920.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1614879337537" />
-    <state width="1878" height="294" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799218840" />
+    <state width="1878" height="277" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812940059" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1010/-1920.0.1920.1080@0.0.1920.1010" timestamp="1615215422602" />
     <state width="1878" height="270" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199037242" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064053" />
     <state width="1878" height="339" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420299" />
+    <state width="1878" height="285" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615819675890" />
     <state width="1636" height="274" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416927" />
     <state width="1878" height="339" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541071" />
     <state width="1790" height="274" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981473" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323143" />
-    <state width="1878" height="303" key="GridCell.Tab.0.center" timestamp="1615800064048">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="285" key="GridCell.Tab.0.center" timestamp="1615819675888">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180456" />
     <state width="1876" height="262" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300101" />
     <state width="939" height="221" key="GridCell.Tab.0.center/0.25.1680.955@0.25.1680.955" timestamp="1615247108386" />
     <state width="1788" height="274" key="GridCell.Tab.0.center/0.25.1920.985/1920.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1614879337536" />
-    <state width="1878" height="294" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799218837" />
+    <state width="1878" height="277" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812940057" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1010/-1920.0.1920.1080@0.0.1920.1010" timestamp="1615215422594" />
     <state width="1878" height="270" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199037240" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064048" />
     <state width="1878" height="339" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420298" />
+    <state width="1878" height="285" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615819675888" />
     <state width="1636" height="274" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416926" />
     <state width="1878" height="339" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541069" />
     <state width="1790" height="274" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981472" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323142" />
-    <state width="1878" height="303" key="GridCell.Tab.0.left" timestamp="1615800064047">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="285" key="GridCell.Tab.0.left" timestamp="1615819675887">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180456" />
     <state width="1876" height="262" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300100" />
     <state width="939" height="221" key="GridCell.Tab.0.left/0.25.1680.955@0.25.1680.955" timestamp="1615247108386" />
     <state width="1788" height="274" key="GridCell.Tab.0.left/0.25.1920.985/1920.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1614879337535" />
-    <state width="1878" height="294" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799218836" />
+    <state width="1878" height="277" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812940056" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1010/-1920.0.1920.1080@0.0.1920.1010" timestamp="1615215422592" />
     <state width="1878" height="270" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199037239" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064047" />
     <state width="1878" height="339" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420297" />
+    <state width="1878" height="285" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615819675887" />
     <state width="1636" height="274" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416926" />
     <state width="1878" height="339" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541068" />
     <state width="1790" height="274" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981471" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323141" />
-    <state width="1878" height="303" key="GridCell.Tab.0.right" timestamp="1615800064051">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="285" key="GridCell.Tab.0.right" timestamp="1615819675889">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180457" />
     <state width="1876" height="262" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300102" />
     <state width="939" height="221" key="GridCell.Tab.0.right/0.25.1680.955@0.25.1680.955" timestamp="1615247108387" />
     <state width="1788" height="274" key="GridCell.Tab.0.right/0.25.1920.985/1920.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1614879337537" />
-    <state width="1878" height="294" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799218838" />
+    <state width="1878" height="277" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812940058" />
     <state width="1878" height="303" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1010/-1920.0.1920.1080@0.0.1920.1010" timestamp="1615215422595" />
     <state width="1878" height="270" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199037241" />
     <state width="1878" height="303" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064051" />
     <state width="1878" height="339" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420299" />
+    <state width="1878" height="285" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615819675889" />
     <state width="1636" height="274" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1614678416927" />
     <state width="1878" height="339" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541070" />
     <state width="1790" height="274" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981472" />
     <state width="1878" height="303" key="GridCell.Tab.0.right/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323142" />
-    <state width="1878" height="294" key="GridCell.Tab.1.bottom" timestamp="1615799219227">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="277" key="GridCell.Tab.1.bottom" timestamp="1615815899373">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180460" />
     <state width="1876" height="262" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300105" />
     <state width="939" height="221" key="GridCell.Tab.1.bottom/0.25.1680.955@0.25.1680.955" timestamp="1615247108388" />
     <state width="1876" height="262" key="GridCell.Tab.1.bottom/0.25.1920.985/1920.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1614873692459" />
-    <state width="1878" height="294" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799219227" />
+    <state width="1878" height="277" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812940466" />
     <state width="1878" height="270" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199037247" />
     <state width="1878" height="270" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615225963221" />
     <state width="1878" height="270" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615224121327" />
+    <state width="1878" height="277" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615815899373" />
     <state width="1876" height="263" key="GridCell.Tab.1.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614614047043" />
-    <state width="1878" height="294" key="GridCell.Tab.1.center" timestamp="1615799219226">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="277" key="GridCell.Tab.1.center" timestamp="1615815899372">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180459" />
     <state width="1876" height="262" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300104" />
     <state width="939" height="221" key="GridCell.Tab.1.center/0.25.1680.955@0.25.1680.955" timestamp="1615247108387" />
     <state width="1876" height="262" key="GridCell.Tab.1.center/0.25.1920.985/1920.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1614873692458" />
-    <state width="1878" height="294" key="GridCell.Tab.1.center/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799219226" />
+    <state width="1878" height="277" key="GridCell.Tab.1.center/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812940462" />
     <state width="1878" height="270" key="GridCell.Tab.1.center/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199037244" />
     <state width="1878" height="270" key="GridCell.Tab.1.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615225963219" />
     <state width="1878" height="270" key="GridCell.Tab.1.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615224121322" />
+    <state width="1878" height="277" key="GridCell.Tab.1.center/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615815899372" />
     <state width="1876" height="263" key="GridCell.Tab.1.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614614047042" />
-    <state width="1878" height="294" key="GridCell.Tab.1.left" timestamp="1615799219225">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="277" key="GridCell.Tab.1.left" timestamp="1615815899371">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180458" />
     <state width="1876" height="262" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300103" />
     <state width="939" height="221" key="GridCell.Tab.1.left/0.25.1680.955@0.25.1680.955" timestamp="1615247108387" />
     <state width="1876" height="262" key="GridCell.Tab.1.left/0.25.1920.985/1920.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1614873692458" />
-    <state width="1878" height="294" key="GridCell.Tab.1.left/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799219225" />
+    <state width="1878" height="277" key="GridCell.Tab.1.left/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812940461" />
     <state width="1878" height="270" key="GridCell.Tab.1.left/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199037243" />
     <state width="1878" height="270" key="GridCell.Tab.1.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615225963218" />
     <state width="1878" height="270" key="GridCell.Tab.1.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615224121321" />
+    <state width="1878" height="277" key="GridCell.Tab.1.left/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615815899371" />
     <state width="1876" height="263" key="GridCell.Tab.1.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614614047041" />
-    <state width="1878" height="294" key="GridCell.Tab.1.right" timestamp="1615799219227">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1878" height="277" key="GridCell.Tab.1.right" timestamp="1615815899372">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180460" />
     <state width="1876" height="262" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300105" />
     <state width="939" height="221" key="GridCell.Tab.1.right/0.25.1680.955@0.25.1680.955" timestamp="1615247108388" />
     <state width="1876" height="262" key="GridCell.Tab.1.right/0.25.1920.985/1920.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1614873692459" />
-    <state width="1878" height="294" key="GridCell.Tab.1.right/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799219227" />
+    <state width="1878" height="277" key="GridCell.Tab.1.right/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615812940465" />
     <state width="1878" height="270" key="GridCell.Tab.1.right/1920.25.1920.1055/0.0.1920.1010/-1920.25.1920.1055@0.0.1920.1010" timestamp="1615199037246" />
     <state width="1878" height="270" key="GridCell.Tab.1.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615225963220" />
     <state width="1878" height="270" key="GridCell.Tab.1.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615224121323" />
+    <state width="1878" height="277" key="GridCell.Tab.1.right/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615815899372" />
     <state width="1876" height="263" key="GridCell.Tab.1.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614614047043" />
     <state x="566" y="264" key="IDE.errors.dialog" timestamp="1614595869019">
       <screen x="0" y="25" width="1920" height="985" />
@@ -528,6 +656,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="686" y="373" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615213886921" />
+    <state x="764" y="381" key="export.test.results" timestamp="1615813890669">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="764" y="381" key="export.test.results/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615813890669" />
     <state x="800" y="320" key="refactoring.ChangeSignatureDialog" timestamp="1614606216621">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -560,11 +692,6 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/Fragment/FilterDialogFragment.java</url>
           <line>41</line>
           <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java</url>
-          <line>128</line>
-          <option name="timeStamp" value="86" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

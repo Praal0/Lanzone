@@ -17,33 +17,32 @@ import dorian.guerrero.lanzone.service.MeetingApiService;
 import static java.util.Arrays.asList;
 import static org.junit.Assert.*;
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
 public class MeetingServiceTest {
 
     private MeetingApiService mService;
-    private List<Room> lstRoom;
-    private Room mRoom;
-    private Meeting mMeetingNotValide,mMeetingValide;
-    private List<Meeting> lstMeeting;
+    private Meeting mMeetingNotValide,mMeetingValide,mMeetingPast;
+    private List<Meeting> mMeetingList;
     private Boolean valide;
+    private DateTime mDateTime;
+
 
     @Before
     public void setup() {
         mService = DI.getNewInstanceApiService();
-        mMeetingNotValide = new Meeting(System.currentTimeMillis(),2,"Reunion 1",
+        mMeetingNotValide = new Meeting(System.currentTimeMillis(),1,"Reunion Valide",
                 new DateTime(2021, 3, 15, 12, 30, 0, 0),
                 new DateTime(2021, 3, 15, 13, 0, 0, 0),
                 asList("toto@hotmail.fr","tito@gmail.com"));
-        mMeetingValide = new Meeting(System.currentTimeMillis(),2,"Reunion 1",
+        mMeetingValide = new Meeting(System.currentTimeMillis(),1,"Reunion Non Valide",
                 new DateTime(2021, 3, 15, 14, 30, 0, 0),
                 new DateTime(2021, 3, 15, 15, 0, 0, 0),
                 asList("toto@hotmail.fr","tito@gmail.com"));
-        lstRoom = GeneratorRoom.DUMMY_ROOM;
-        lstMeeting = DummyGenerator.DUMMY_MEETINGS;
+
+        mMeetingPast = new Meeting(System.currentTimeMillis(),1,"Reunion Past",
+                new DateTime(2020, 3, 15, 14, 30, 0, 0),
+                new DateTime(2020, 3, 15, 15, 0, 0, 0),
+                asList("toto@hotmail.fr","tito@gmail.com"));
+        mDateTime = new DateTime(2021,3,15,0,0);
     }
 
     @Test
@@ -63,31 +62,52 @@ public class MeetingServiceTest {
     @Test
     public void AddNeighbourWithSuccess() {
         mService.getMeeting().clear();
-        Meeting neighbourToAdd = DummyGenerator.DUMMY_MEETINGS.get(0);
-        mService.createMeeting(neighbourToAdd);
-        assertTrue(mService.getMeeting().contains(neighbourToAdd));
+        Meeting meetingToAdd = DummyGenerator.DUMMY_MEETINGS.get(0);
+        mService.createMeeting(meetingToAdd);
+        assertTrue(mService.getMeeting().contains(meetingToAdd));
     }
 
     @Test
     public void checkMeetingWithSuccess() {
         valide = mService.checkMeeting(mMeetingNotValide);
-        assertTrue(valide == false);
+        assertEquals(valide == false,false);
         valide = mService.checkMeeting(mMeetingValide);
         assertTrue(valide == true);
     }
 
     @Test
-    public void getMeetingFilterWithSucess(){
+    public void getMeetingFilterWithSuccess(){
+        //We add 3 Meeting in list
+        mService.createMeeting(mMeetingValide);
+        mService.createMeeting(mMeetingNotValide);
+        mService.createMeeting(mMeetingPast);
 
+        // Now we filter to check if we have 3 élement (my 2 element and one in list who use same Date)
+        mMeetingList = mService.getMeetingFilter(mDateTime,null);
+        assertTrue(mMeetingList.size() == 3);
+
+        //We check  and if mMeetingValide is in List
+        assertTrue(mService.getMeetingFilter(mDateTime,null).contains(mMeetingValide));
+
+        // We CHack if we have only 3 Meeting (3 Who we have add in list)
+        mMeetingList = mService.getMeetingFilter(null,1L);
+        assertTrue(mMeetingList.size() == 3);
+
+
+        //Now we filter with IdRoom and check if we have only my 2 element
+        mMeetingList = mService.getMeetingFilter(null,1L);
+        assertTrue(mService.getMeetingFilter(mDateTime,null).contains(mMeetingValide));
+        assertTrue(mMeetingList.size() == 3);
+
+        //Now we filter with date and list
+        assertTrue(mService.getMeetingFilter(mDateTime,1L).contains(mMeetingValide));
+        assertTrue(mService.getMeetingFilter(mDateTime,1L).size()==2);
+
+        // We check if we don't have element use other Room
+        Meeting meeting = DummyGenerator.DUMMY_MEETINGS.get(2);
+        assertFalse(mService.getMeetingFilter(mDateTime,1L).contains(meeting));
+        assertFalse(mService.getMeetingFilter(mDateTime,null).contains(meeting));
+        assertFalse(mService.getMeetingFilter(null,1L).contains(meeting));
     }
 
-    @Test
-    public void getMeetingsMatchDate(){
-
-    }
-
-    @Test
-    public void getMeetingsMatchRoomName(){
-
-    }
 }
