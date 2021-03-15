@@ -43,6 +43,7 @@ public class MeetingServiceTest {
                 new DateTime(2021, 3, 15, 15, 0, 0, 0),
                 asList("toto@hotmail.fr","tito@gmail.com"));
         lstRoom = GeneratorRoom.DUMMY_ROOM;
+        lstMeeting = DummyGenerator.DUMMY_MEETINGS;
     }
 
     @Test

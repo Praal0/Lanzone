@@ -20,4 +20,5 @@
     <string name="select_filter">"Selectionner Salle"</string>
     <string name="reset">"Reset"</string>
     <string name="Search_item">Rechercher</string>
+    <string name="Add">Ajouter</string>
 </resources>

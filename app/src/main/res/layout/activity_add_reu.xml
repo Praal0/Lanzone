@@ -13,19 +13,20 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:id="@+id/room_name_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_input_layout_margin"
+            android:hint="@string/select_filter"
             app:errorEnabled="true" >
 
             <AutoCompleteTextView
                 android:id="@+id/room_name"
-                style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:cursorVisible="false"
-                android:inputType="text"
+                android:inputType="none"
                 android:textSize="@dimen/text_view_spinner_size" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -145,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
-                android:text="Ajouter"
+                android:text="@string/Add"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
