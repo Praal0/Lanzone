@@ -6,7 +6,7 @@
     <string name="email_text">Email text</string>
     <string name="delete_button">Delete_Button</string>
     <string name="color_img">Color_img</string>
-    <string name="Search">Recherche</string>
+    <string name="list_of_participants">E-mail des participants</string>
     <string name="menu_filter">Filtrage</string>
     <string name="date_filter">Filtre par date</string>
     <string name="room_filter">Filtre par salle</string>

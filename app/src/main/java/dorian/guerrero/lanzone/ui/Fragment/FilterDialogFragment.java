@@ -62,6 +62,7 @@ public class FilterDialogFragment extends DialogFragment {
         super.onCreateDialog(savedInstanceState);
         mMeetingApiService = DI.getMeetingApiService();
 
+        // Builder Use for Alert Dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
         LayoutInflater inflater = getActivity().getLayoutInflater();
         @SuppressLint("InflateParams")
@@ -74,8 +75,6 @@ public class FilterDialogFragment extends DialogFragment {
                 mRooms));
 
         builder.setView(view);
-        builder.setTitle(R.string.select_filter);
-
         builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

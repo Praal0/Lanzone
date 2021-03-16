@@ -91,6 +91,7 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            // We use findview because we cannot use butterknif here
             myTextDescription = itemView.findViewById(R.id.description_item);
             myTextEmail = itemView.findViewById(R.id.participants_item);
             myImage = itemView.findViewById(R.id.circle_item);
@@ -113,6 +114,7 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
         protected FilterResults performFiltering(CharSequence constraint) {
             List<Meeting> filteredList = new ArrayList<>();
 
+            //If we don't have element in constraint we use save of list
             if (constraint == null || constraint.length() == 0) {
                 filteredList.addAll(mMeetingFull);
             } else {

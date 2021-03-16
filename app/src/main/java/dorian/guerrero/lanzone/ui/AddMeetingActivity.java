@@ -230,10 +230,7 @@ public class AddMeetingActivity extends AppCompatActivity {
 
         mRoomNameAutoCompleteTextView.setText(R.string.select_filter);
 
-        mRoomNameAutoCompleteTextView.setAdapter(new ArrayAdapter<>(
-                this,
-                R.layout.room_item,
-                roomNameList));
+
 
         mRoomNameAutoCompleteTextView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -360,6 +357,15 @@ public class AddMeetingActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
         EventBus.getDefault().unregister(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mRoomNameAutoCompleteTextView.setAdapter(new ArrayAdapter<>(
+                this,
+                R.layout.room_item,
+                roomNameList));
     }
 
     @Subscribe

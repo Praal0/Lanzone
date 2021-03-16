@@ -61,6 +61,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
         // We init searchItem for use searchView
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setQueryHint(String.valueOf("Sujet de la réunion"));
         searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -96,6 +97,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     }
 
     private void performFilterDialog() {
+        // Init Filter
         FilterDialogFragment filterDialog = new FilterDialogFragment(sApiService.getListNameRooms());
         filterDialog.show(getSupportFragmentManager(), "filter");
     }
@@ -104,21 +106,17 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     @Override
     public void onResume() {
         super.onResume();
-        init();
+        initList(null,null);
     }
 
 
     private void initList(DateTime date, Long room){
+        // Init List use when we use filter or delete and other
         mMeetings = sApiService.getMeetingFilter(date,room);
         meetingAdapater = new MeetingAdapter(mMeetings);
         mRecyclerView.setAdapter(meetingAdapater);
     }
 
-    private void init() {
-        mMeetings = sApiService.getMeeting();
-        meetingAdapater = new MeetingAdapter(mMeetings);
-        mRecyclerView.setAdapter(meetingAdapater);
-    }
 
     @Override
     public void onStart() {
@@ -133,6 +131,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     }
 
     public void onButtonClicked(DateTime date, Long room, boolean reset) {
+        // When we click on reset or Validation in alert dialog we lauch filter
         if (reset || date != null || room != null )
             initList(date, room);
     }
@@ -140,7 +139,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     @Subscribe
     public void onDeleteMeeting(DeleteMeetingEvent event) {
         sApiService.deleteMeeting(event.meeting);
-        init();
+        initList(null,null);
     }
 
     @Subscribe
