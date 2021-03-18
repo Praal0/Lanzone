@@ -25,7 +25,7 @@ public abstract class DummyGenerator {
                     asList("toto@hotmail.fr","tito@gmail.com")),
             new Meeting(3,6,"Reunion 3",
                     new DateTime(2021, 3, 21, 18, 30, 0, 0),
-                    new DateTime(2021, 3, 26, 20, 58, 0, 0),
+                    new DateTime(2021, 3, 21, 20, 58, 0, 0),
                     asList("toto@hotmail.fr","tito@gmail.com"))
     );
 

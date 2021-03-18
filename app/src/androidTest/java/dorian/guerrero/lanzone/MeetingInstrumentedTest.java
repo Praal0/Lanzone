@@ -1,5 +1,6 @@
 package dorian.guerrero.lanzone;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.KeyEvent;
 import android.widget.DatePicker;
@@ -10,6 +11,7 @@ import androidx.test.espresso.contrib.PickerActions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
+import androidx.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
 
 import org.hamcrest.Matchers;
 import org.joda.time.DateTime;
@@ -19,6 +21,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.Calendar;
+import java.util.Collection;
 
 import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.model.Meeting;
@@ -38,9 +41,12 @@ import static androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtP
 import static androidx.test.espresso.matcher.RootMatchers.isPlatformPopup;
 import static androidx.test.espresso.matcher.ViewMatchers.hasMinimumChildCount;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withHint;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
+import static androidx.test.runner.lifecycle.Stage.RESUMED;
 import static dorian.guerrero.lanzone.utils.assertions.ChipValueAssertion.matchesChipTextAtPosition;
 import static dorian.guerrero.lanzone.utils.assertions.RecyclerViewItemCountAssertion.withItemCount;
 import static dorian.guerrero.lanzone.utils.assertions.TextInputLayoutErrorValueAssertion.matchesErrorText;
@@ -61,6 +67,7 @@ import static org.junit.Assert.*;
 public class MeetingInstrumentedTest {
 
     private static int ITEMS_EMPTY = 0;
+    private static int ITEMS_ONE = 1;
     private static int ITEMS_COUNT = 3;
     public static final String INVALID_EMAIL = "foobar";
     public static final String VALID_EMAIL_1 = "d.gue@gmail.com";
@@ -84,8 +91,8 @@ public class MeetingInstrumentedTest {
         assertThat(mHomeActivity, notNullValue());
         mApiService = DI.getMeetingApiService();
         mMeeting =  new Meeting(1,2,"Reunion 1",
-                new DateTime(2021, 3, 15, 12, 0, 0, 0),
-                new DateTime(2021, 3, 15, 13, 0, 0, 0),
+                new DateTime(2021, 3, 16, 12, 0, 0, 0),
+                new DateTime(2021, 3, 16, 13, 0, 0, 0),
                 asList("toto@hotmail.fr","tito@gmail.com"));
     }
     @Test
@@ -96,23 +103,7 @@ public class MeetingInstrumentedTest {
     public void myMeetingList_shouldNotBeEmpty() {
         // First scroll to the position that needs to be matched and click on it.
         onView(withId(R.id.rcvMeeting))
-                .check(matches(hasMinimumChildCount(1)));
-    }
-
-    /**
-     * Check Delete
-     */
-
-    @Test
-    public void myMeetingList_deleteAction_shouldRemoveItem() {
-        onView(withId(R.id.rcvMeeting)).check(withItemCount(ITEMS_COUNT));
-
-        // When perform a click on a delete icon
-        onView(withId(R.id.rcvMeeting))
-                .perform(actionOnItemAtPosition(1, new DeleteViewAction()));
-
-        // Then : the number of element is 2
-        onView(withId(R.id.rcvMeeting)).check(withItemCount(ITEMS_COUNT-1));
+                .check(matches(hasMinimumChildCount(ITEMS_ONE)));
     }
 
     /**
@@ -161,6 +152,38 @@ public class MeetingInstrumentedTest {
         // Test <--
     }
 
+    /**
+     * Scenario: abort an booked in progress
+     */
+    @Test
+    public void whenMakingReservationAndWhenWeClickToCancel_thenItIsAborted() {
+        // Click to add meeting
+        onView(ViewMatchers.withId(R.id.addMeeting))
+                .perform(click());
+
+        Activity currentAddMeetingActivity = getActivityInstance();
+
+        // Abort
+        Espresso.pressBack();
+
+        // Check abort
+        assertTrue(currentAddMeetingActivity.isFinishing());
+    }
+
+    private Activity currentActivity = null;
+
+    private Activity getActivityInstance(){
+        getInstrumentation().runOnMainSync(() -> {
+            Collection<Activity> resumedActivities =
+                    ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(RESUMED);
+            for (Activity activity: resumedActivities){
+                currentActivity = activity;
+                break;
+            }
+        });
+
+        return currentActivity;
+    }
 
     /**
      * Check room filter
@@ -184,25 +207,145 @@ public class MeetingInstrumentedTest {
                 .perform(click());
 
         onView(ViewMatchers.withId(R.id.rcvMeeting))
-                .check(withItemCount(1));
+                .check(withItemCount(ITEMS_ONE));
+    }
+    /**
+     * Check room filter and we test reset
+     */
+    @Test
+    public void check_room_filter_and_reset() {
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_COUNT));
+
+        onView(ViewMatchers.withId(R.id.filter))
+                .perform(click());
+
+        onView(withId(R.id.room_filter))
+                .perform(click());
+
+        onData(allOf(is(instanceOf(String.class)), is("Mario")))
+                .inRoot(isPlatformPopup())
+                .perform(click());
+
+        onView(withId(android.R.id.button1))
+                .perform(click());
+
+        // We check if the list is empty
+
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_EMPTY));
+
+        // After we Reset the list
+        onView(ViewMatchers.withId(R.id.filter))
+                .perform(click());
+
+        onView(withId(android.R.id.button3))
+                .perform(click());
+
+        // We Check if we have all element in List
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_COUNT));
+    }
+
+    /**
+     * Check date filter
+     */
+    @Test
+    public void check_date_filter() {
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_COUNT));
+
+        onView(ViewMatchers.withId(R.id.filter))
+                .perform(click());
+
+        onView(withId(R.id.date_filter))
+                .perform(click());
+
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2021,3,15));
+
+        onView(withId(android.R.id.button1))
+                .perform(click());
+
+        onView(withId(android.R.id.button1))
+                .perform(click());
+
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_ONE));
     }
 
 
+    /**
+     * Check date filter and we test reset
+     */
+    @Test
+    public void check_date_filter_and_reset() {
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_COUNT));
 
+        onView(ViewMatchers.withId(R.id.filter))
+                .perform(click());
 
+        onView(withId(R.id.date_filter))
+                .perform(click());
 
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2021,3,15));
 
+        onView(withId(android.R.id.button1))
+                .perform(click());
 
+        onView(withId(android.R.id.button1))
+                .perform(click());
+
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(1));
+
+        // After we Reset the list
+        onView(ViewMatchers.withId(R.id.filter))
+                .perform(click());
+
+        onView(withId(android.R.id.button3))
+                .perform(click());
+
+        // We Check if we have all element in List
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_COUNT));
+    }
+
+    /**
+     * Check date and room filter
+     */
+    @Test
+    public void check_date_and_room_filter() {
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_COUNT));
+
+        // Room
+        onView(ViewMatchers.withId(R.id.filter))
+                .perform(click());
+
+        onView(withId(R.id.room_filter))
+                .perform(click());
+
+        onData(allOf(is(instanceOf(String.class)), is("Pikachu")))
+                .inRoot(isPlatformPopup())
+                .perform(click());
+
+        // Date
+        onView(withId(R.id.date_filter))
+                .perform(click());
+
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2021,3,21));
+        onView(withId(android.R.id.button1)).perform(click());
+
+        // Valid
+        onView(withId(android.R.id.button1)).perform(click());
+
+        onView(ViewMatchers.withId(R.id.rcvMeeting))
+                .check(withItemCount(ITEMS_ONE));
+    }
 
 
 }
-
-
-
-
-
-
-
-
-
-
