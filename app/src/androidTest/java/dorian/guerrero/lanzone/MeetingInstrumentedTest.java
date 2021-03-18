@@ -73,10 +73,7 @@ public class MeetingInstrumentedTest {
     public static final String VALID_EMAIL_1 = "d.gue@gmail.com";
     public static final String VALID_EMAIL_2 = "toto@gmail.com";
     private MeetingApiService mApiService;
-    private Context mContext;
     private HomeActivity mHomeActivity;
-    private Meeting mMeeting;
-    public String internalFieldDelimiter;
 
     @Rule
     public ActivityTestRule<HomeActivity> mActivityRule =
@@ -90,10 +87,6 @@ public class MeetingInstrumentedTest {
         mHomeActivity = mActivityRule.getActivity();
         assertThat(mHomeActivity, notNullValue());
         mApiService = DI.getMeetingApiService();
-        mMeeting =  new Meeting(1,2,"Reunion 1",
-                new DateTime(2021, 3, 16, 12, 0, 0, 0),
-                new DateTime(2021, 3, 16, 13, 0, 0, 0),
-                asList("toto@hotmail.fr","tito@gmail.com"));
     }
     @Test
 
@@ -120,7 +113,14 @@ public class MeetingInstrumentedTest {
 
         // confirm that first chip is present
         onView(withId(R.id.emails_group)).check(matchesChipTextAtPosition(1, VALID_EMAIL_1));
-        // Initialize test <--
+
+        // add chip email 2
+        onView(withId(R.id.emails)).perform(typeText(VALID_EMAIL_2));
+
+        onView(withId(R.id.emails)).perform(pressImeActionButton());
+
+        // confirm that second chip is present
+        onView(withId(R.id.emails_group)).check(matchesChipTextAtPosition(2, VALID_EMAIL_2));
 
         // Test -->
         onView(withId(R.id.emails)).check(matches(withHint(R.string.list_of_participants)));

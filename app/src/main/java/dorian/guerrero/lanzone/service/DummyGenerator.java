@@ -30,7 +30,7 @@ public abstract class DummyGenerator {
     );
 
     static List<Meeting> generateMeetings() {
-        return new ArrayList<Meeting>(DUMMY_MEETINGS);
+        return new ArrayList<Meeting>();
     }
 
 

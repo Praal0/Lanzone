@@ -22,16 +22,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/dorian/guerrero/lanzone/MeetingInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/dorian/guerrero/lanzone/MeetingInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" afterDir="false" />
@@ -41,7 +31,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_4_API_21]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExportTestResults" outputFolder="$USER_HOME$/Downloads" openResultsInEditor="true" userTempatePath="" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -137,7 +127,7 @@
       <recent name="dorian.guerrero.lanzone.mareu_list" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Instrumented Tests.MeetingInstrumentedT...">
+  <component name="RunManager" selected="Android Instrumented Tests.givenTwoValidEmail...()">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -304,10 +294,10 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="check_date_filter()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="check_date_filter_...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
       <module name="Lanzone.app" />
       <option name="TESTING_TYPE" value="3" />
-      <option name="METHOD_NAME" value="check_date_filter" />
+      <option name="METHOD_NAME" value="check_date_filter_and_reset" />
       <option name="CLASS_NAME" value="dorian.guerrero.lanzone.MeetingInstrumentedTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
@@ -355,10 +345,10 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="check_date_filter_...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+    <configuration name="givenTwoValidEmail...()" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
       <module name="Lanzone.app" />
       <option name="TESTING_TYPE" value="3" />
-      <option name="METHOD_NAME" value="check_date_filter_and_reset" />
+      <option name="METHOD_NAME" value="givenTwoValidEmail_whenTypeTextWithDelimiter_thenGetEmailsWithoutError" />
       <option name="CLASS_NAME" value="dorian.guerrero.lanzone.MeetingInstrumentedTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
@@ -459,11 +449,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Android Instrumented Tests.givenTwoValidEmail...()" />
         <item itemvalue="Android Instrumented Tests.MeetingInstrumentedT..." />
         <item itemvalue="Android Instrumented Tests.check_date_filter_...()" />
         <item itemvalue="Android Instrumented Tests.whenMakingReservat...()" />
         <item itemvalue="Android Instrumented Tests.check_date_and_roo...()" />
-        <item itemvalue="Android Instrumented Tests.check_date_filter()" />
       </list>
     </recent_temporary>
   </component>
@@ -578,7 +568,7 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613730667549" />
-    <state width="1878" height="285" key="GridCell.Tab.0.bottom" timestamp="1616056584078">
+    <state width="1878" height="285" key="GridCell.Tab.0.bottom" timestamp="1616057833991">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180458" />
@@ -594,11 +584,11 @@
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064053" />
     <state width="1878" height="339" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420299" />
     <state width="1878" height="285" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820467884" />
-    <state width="1878" height="285" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616056584078" />
+    <state width="1878" height="285" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616057833991" />
     <state width="1878" height="339" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541071" />
     <state width="1790" height="274" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981473" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323143" />
-    <state width="1878" height="285" key="GridCell.Tab.0.center" timestamp="1616056584077">
+    <state width="1878" height="285" key="GridCell.Tab.0.center" timestamp="1616057833990">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180456" />
@@ -614,11 +604,11 @@
     <state width="1878" height="303" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064048" />
     <state width="1878" height="339" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420298" />
     <state width="1878" height="285" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820467883" />
-    <state width="1878" height="285" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616056584077" />
+    <state width="1878" height="285" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616057833990" />
     <state width="1878" height="339" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541069" />
     <state width="1790" height="274" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981472" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323142" />
-    <state width="1878" height="285" key="GridCell.Tab.0.left" timestamp="1616056584076">
+    <state width="1878" height="285" key="GridCell.Tab.0.left" timestamp="1616057833989">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180456" />
@@ -634,11 +624,11 @@
     <state width="1878" height="303" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064047" />
     <state width="1878" height="339" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420297" />
     <state width="1878" height="285" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820467882" />
-    <state width="1878" height="285" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616056584076" />
+    <state width="1878" height="285" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616057833989" />
     <state width="1878" height="339" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541068" />
     <state width="1790" height="274" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981471" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323141" />
-    <state width="1878" height="285" key="GridCell.Tab.0.right" timestamp="1616056584078">
+    <state width="1878" height="285" key="GridCell.Tab.0.right" timestamp="1616057833991">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180457" />
@@ -654,7 +644,7 @@
     <state width="1878" height="303" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064051" />
     <state width="1878" height="339" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420299" />
     <state width="1878" height="285" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820467884" />
-    <state width="1878" height="285" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616056584078" />
+    <state width="1878" height="285" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616057833991" />
     <state width="1878" height="339" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541070" />
     <state width="1790" height="274" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981472" />
     <state width="1878" height="303" key="GridCell.Tab.0.right/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323142" />
