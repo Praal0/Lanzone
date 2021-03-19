@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/circle_item"
-        android:layout_width="61dp"
-        android:layout_height="54dp"
+        android:layout_width="@dimen/layout_with_list"
+        android:layout_height="@dimen/layout_height_list"
         android:layout_margin="@dimen/text_margin"
         android:contentDescription="@string/color_img"
         app:layout_constraintBottom_toBottomOf="parent"
