@@ -23,27 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099dd52d-ff51-4096-8aae-ec4ae856a271" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/P4_03_Instrumental_Test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/dorian/guerrero/lanzone/MeetingInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/dorian/guerrero/lanzone/MeetingInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/di/DI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/di/DI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyGeneratorMeeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/service/DummyMeetingApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dorian/guerrero/lanzone/ui/AddMeetingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/meeting_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/meeting_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/meeting_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/meeting_detail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/dorian/guerrero/lanzone/MeetingServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/dorian/guerrero/lanzone/MeetingServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,8 +83,8 @@
     <property name="DEBUGGABLE_DEVICE" value="emulator-5556" />
     <property name="DEBUGGABLE_PROCESS" value="dorian.guerrero.lanzone" />
     <property name="DEBUGGER_ID" value="Auto" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_4_API_21" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-18T12:27:42.636Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_4_API_21" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-03-19T09:19:05.106Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -104,7 +94,7 @@
     <property name="android-custom-view/Users/dorianguerrero/Library/Android/sdk/sources/android-30/android/view/ViewGroup.java_SELECTED" value="ViewGroup" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/values" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout-land" />
     <property name="multi-representation-preview/Users/dorianguerrero/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="multi-representation-preview/Users/dorianguerrero/Library/Android/sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
@@ -146,7 +136,7 @@
       <recent name="dorian.guerrero.lanzone.mareu_list" />
     </key>
   </component>
-  <component name="RunManager" selected="Android JUnit.MeetingServiceTest">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="MeetingServiceTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lanzone.app" />
       <extension name="coverage">
@@ -484,11 +474,12 @@
     <state x="100" y="100" width="1720" height="880" key="AVDManager/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615801763931" />
     <state x="100" y="123" width="1720" height="860" key="AVDManager/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616070310888" />
     <state x="100" y="116" width="1720" height="803" key="AVDManager/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614932120647" />
-    <state x="318" y="260" key="AndroidCreateResourceDirectoryDialog" timestamp="1615800153029">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="318" y="279" key="AndroidCreateResourceDirectoryDialog" timestamp="1616147157566">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="318" y="260" key="AndroidCreateResourceDirectoryDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614671460727" />
     <state x="318" y="260" key="AndroidCreateResourceDirectoryDialog/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800153029" />
+    <state x="318" y="279" key="AndroidCreateResourceDirectoryDialog/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616147157566" />
     <state x="318" y="262" key="AndroidCreateResourceDirectoryDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613485781775" />
     <state x="558" y="270" width="824" height="478" key="AndroidCreateResourceFileDialog" timestamp="1614931208158">
       <screen x="0" y="25" width="1920" height="985" />
@@ -520,8 +511,8 @@
       <screen x="0" y="25" width="1920" height="985" />
     </state>
     <state x="100" y="125" width="1720" height="785" key="DiffContextDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613730667549" />
-    <state width="1878" height="285" key="GridCell.Tab.0.bottom" timestamp="1616070757464">
-      <screen x="1920" y="25" width="1920" height="1055" />
+    <state width="1878" height="285" key="GridCell.Tab.0.bottom" timestamp="1616143413782">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180458" />
     <state width="1876" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300102" />
@@ -536,13 +527,13 @@
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064053" />
     <state width="1878" height="339" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420299" />
     <state width="1878" height="285" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820467884" />
-    <state width="1878" height="285" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616070466845" />
+    <state width="1878" height="285" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616143413782" />
     <state width="1878" height="285" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1616070757464" />
     <state width="1878" height="339" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541071" />
     <state width="1790" height="274" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981473" />
     <state width="1878" height="303" key="GridCell.Tab.0.bottom/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323143" />
-    <state width="1878" height="285" key="GridCell.Tab.0.center" timestamp="1616070757461">
-      <screen x="1920" y="25" width="1920" height="1055" />
+    <state width="1878" height="285" key="GridCell.Tab.0.center" timestamp="1616143413781">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180456" />
     <state width="1876" height="262" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300101" />
@@ -557,13 +548,13 @@
     <state width="1878" height="303" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064048" />
     <state width="1878" height="339" key="GridCell.Tab.0.center/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420298" />
     <state width="1878" height="285" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820467883" />
-    <state width="1878" height="285" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616070466843" />
+    <state width="1878" height="285" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616143413781" />
     <state width="1878" height="285" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1616070757461" />
     <state width="1878" height="339" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541069" />
     <state width="1790" height="274" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981472" />
     <state width="1878" height="303" key="GridCell.Tab.0.center/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323142" />
-    <state width="1878" height="285" key="GridCell.Tab.0.left" timestamp="1616070757460">
-      <screen x="1920" y="25" width="1920" height="1055" />
+    <state width="1878" height="285" key="GridCell.Tab.0.left" timestamp="1616143413781">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180456" />
     <state width="1876" height="262" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300100" />
@@ -578,13 +569,13 @@
     <state width="1878" height="303" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064047" />
     <state width="1878" height="339" key="GridCell.Tab.0.left/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420297" />
     <state width="1878" height="285" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820467882" />
-    <state width="1878" height="285" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616070466843" />
+    <state width="1878" height="285" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616143413781" />
     <state width="1878" height="285" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1616070757460" />
     <state width="1878" height="339" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541068" />
     <state width="1790" height="274" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981471" />
     <state width="1878" height="303" key="GridCell.Tab.0.left/1920.25.1920.985/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615216323141" />
-    <state width="1878" height="285" key="GridCell.Tab.0.right" timestamp="1616070757462">
-      <screen x="1920" y="25" width="1920" height="1055" />
+    <state width="1878" height="285" key="GridCell.Tab.0.right" timestamp="1616143413782">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1638" height="220" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1615247180457" />
     <state width="1876" height="262" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1614852300102" />
@@ -599,7 +590,7 @@
     <state width="1878" height="303" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.1055@0.0.1920.1080" timestamp="1615800064051" />
     <state width="1878" height="339" key="GridCell.Tab.0.right/1920.25.1920.1055/0.0.1920.1080/-1920.25.1920.985@0.0.1920.1080" timestamp="1615225420299" />
     <state width="1878" height="285" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820467884" />
-    <state width="1878" height="285" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616070466844" />
+    <state width="1878" height="285" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616143413782" />
     <state width="1878" height="285" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@1920.25.1920.1055" timestamp="1616070757462" />
     <state width="1878" height="339" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.0.1920.1080@0.25.1920.985" timestamp="1615211541070" />
     <state width="1790" height="274" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614934981472" />
@@ -678,10 +669,11 @@
     <state width="500" height="524" key="SwitcherDM/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615820022049" />
     <state width="500" height="524" key="SwitcherDM/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616068519649" />
     <state width="500" height="496" key="SwitcherDM/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1614938108037" />
-    <state x="605" y="347" key="chooseDestDirectoryDialog" timestamp="1615799698616">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="605" y="364" key="chooseDestDirectoryDialog" timestamp="1616147588033">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="605" y="347" key="chooseDestDirectoryDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615799698616" />
+    <state x="605" y="364" key="chooseDestDirectoryDialog/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616147588033" />
     <state x="-1173" y="300" key="chooseDestDirectoryDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@-1920.25.1920.1055" timestamp="1613032361495" />
     <state x="747" y="282" key="chooseDestDirectoryDialog/1920.25.1920.1055/0.25.1920.985/-1920.25.1920.1055@0.25.1920.985" timestamp="1613984492162" />
     <state x="747" y="300" key="chooseDestDirectoryDialog/1920.25.1920.985/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1613033448735" />
@@ -689,11 +681,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="686" y="373" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.1920.1080/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1615213886921" />
-    <state x="764" y="381" key="export.test.results" timestamp="1616069528667">
+    <state x="764" y="381" key="export.test.results" timestamp="1616142769556">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="764" y="381" key="export.test.results/1920.25.1920.1055/0.25.1920.1055/-1920.0.1920.1080@0.25.1920.1055" timestamp="1615813890669" />
-    <state x="764" y="381" key="export.test.results/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616069528667" />
+    <state x="764" y="381" key="export.test.results/1920.25.1920.1055/0.25.1920.1055/-1920.25.1920.1055@0.25.1920.1055" timestamp="1616142769556" />
     <state x="800" y="338" key="refactoring.ChangeSignatureDialog" timestamp="1615904521809">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
