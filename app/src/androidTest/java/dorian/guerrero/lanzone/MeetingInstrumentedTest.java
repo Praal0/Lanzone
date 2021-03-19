@@ -47,6 +47,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static androidx.test.runner.lifecycle.Stage.RESUMED;
+import static dorian.guerrero.lanzone.service.DummyGeneratorMeeting.generateMeetings;
+import static dorian.guerrero.lanzone.service.DummyGeneratorMeeting.generateMeetingsTest;
 import static dorian.guerrero.lanzone.utils.assertions.ChipValueAssertion.matchesChipTextAtPosition;
 import static dorian.guerrero.lanzone.utils.assertions.RecyclerViewItemCountAssertion.withItemCount;
 import static dorian.guerrero.lanzone.utils.assertions.TextInputLayoutErrorValueAssertion.matchesErrorText;
@@ -72,12 +74,16 @@ public class MeetingInstrumentedTest {
     public static final String INVALID_EMAIL = "foobar";
     public static final String VALID_EMAIL_1 = "d.gue@gmail.com";
     public static final String VALID_EMAIL_2 = "toto@gmail.com";
-    private MeetingApiService mApiService;
     private HomeActivity mHomeActivity;
 
     @Rule
     public ActivityTestRule<HomeActivity> mActivityRule =
-            new ActivityTestRule(HomeActivity.class);
+            new ActivityTestRule<HomeActivity>(HomeActivity.class) {
+                @Override
+                protected void beforeActivityLaunched() {
+                        DI.initializeMeetingApiService(generateMeetingsTest());
+                }
+            };
     @Rule
     public ActivityTestRule<AddMeetingActivity> mAddMeetingActivityRule =
             new ActivityTestRule<>(AddMeetingActivity.class);
@@ -86,7 +92,6 @@ public class MeetingInstrumentedTest {
     public void setUp() {
         mHomeActivity = mActivityRule.getActivity();
         assertThat(mHomeActivity, notNullValue());
-        mApiService = DI.getMeetingApiService();
     }
     @Test
 

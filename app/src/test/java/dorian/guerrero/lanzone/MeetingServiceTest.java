@@ -9,11 +9,11 @@ import java.util.List;
 
 import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.model.Meeting;
-import dorian.guerrero.lanzone.model.Room;
-import dorian.guerrero.lanzone.service.DummyGenerator;
-import dorian.guerrero.lanzone.service.GeneratorRoom;
+import dorian.guerrero.lanzone.service.DummyGeneratorMeeting;
+import dorian.guerrero.lanzone.service.DummyMeetingApiService;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 
+import static dorian.guerrero.lanzone.service.DummyGeneratorMeeting.generateMeetingsTest;
 import static java.util.Arrays.asList;
 import static org.junit.Assert.*;
 
@@ -25,10 +25,16 @@ public class MeetingServiceTest {
     private Boolean valide;
     private DateTime mDateTime;
 
+    /**
+     * Setup
+     */
 
     @Before
     public void setup() {
         mService = DI.getNewInstanceApiService();
+        for (Meeting meeting: generateMeetingsTest())
+            mService.createMeeting(meeting);
+
         mMeetingNotValide = new Meeting(System.currentTimeMillis(),1,"Reunion Valide",
                 new DateTime(2021, 3, 15, 12, 30, 0, 0),
                 new DateTime(2021, 3, 15, 13, 0, 0, 0),
@@ -45,13 +51,20 @@ public class MeetingServiceTest {
         mDateTime = new DateTime(2021,3,15,0,0);
     }
 
+    /**
+     * Check Return List of Neighbours
+     */
+
     @Test
     public void getNeighboursWithSuccess() {
-        List<Meeting> neighbours = mService.getMeeting();
-        List<Meeting> expectedNeighbours = DummyGenerator.DUMMY_MEETINGS;
+        List<Meeting> neighbours = DummyGeneratorMeeting.generateMeetingsTest();
+        List<Meeting> expectedNeighbours = DummyGeneratorMeeting.DUMMY_MEETINGS;
         assertThat(neighbours, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedNeighbours.toArray()));
     }
 
+    /**
+     * Check Delete Neighbours in List
+     */
     @Test
     public void deleteNeighbourWithSuccess() {
         Meeting meetingToDelete = mService.getMeeting().get(0);
@@ -59,14 +72,19 @@ public class MeetingServiceTest {
         assertFalse(mService.getMeeting().contains(meetingToDelete));
     }
 
+    /**
+     * Check Add Neighbours in List
+     */
     @Test
     public void AddNeighbourWithSuccess() {
         mService.getMeeting().clear();
-        Meeting meetingToAdd = DummyGenerator.DUMMY_MEETINGS.get(0);
+        Meeting meetingToAdd = DummyGeneratorMeeting.DUMMY_MEETINGS.get(0);
         mService.createMeeting(meetingToAdd);
         assertTrue(mService.getMeeting().contains(meetingToAdd));
     }
-
+    /**
+     * Check if meeting is valid (if time is not same with other meeting in)
+     */
     @Test
     public void checkMeetingWithSuccess() {
         valide = mService.checkMeeting(mMeetingNotValide);
@@ -76,7 +94,7 @@ public class MeetingServiceTest {
     }
 
     @Test
-    public void getMeetingFilterWithSuccess(){
+    public void getMeetingFilterDateWithSuccess(){
         //We add 3 Meeting in list
         mService.createMeeting(mMeetingValide);
         mService.createMeeting(mMeetingNotValide);
@@ -88,26 +106,40 @@ public class MeetingServiceTest {
 
         //We check  and if mMeetingValide is in List
         assertTrue(mService.getMeetingFilter(mDateTime,null).contains(mMeetingValide));
+    }
 
-        // We CHack if we have only 3 Meeting (3 Who we have add in list)
+    @Test
+    public void getMeetingFilterRoomWithSuccess(){
+        //We add 3 Meeting in list
+        mService.createMeeting(mMeetingValide);
+        mService.createMeeting(mMeetingNotValide);
+        mService.createMeeting(mMeetingPast);
+
+        // We Check if we have only 3 Meeting (3 Who we have add in list)
         mMeetingList = mService.getMeetingFilter(null,1L);
         assertTrue(mMeetingList.size() == 3);
-
-
-        //Now we filter with IdRoom and check if we have only my 2 element
-        mMeetingList = mService.getMeetingFilter(null,1L);
         assertTrue(mService.getMeetingFilter(mDateTime,null).contains(mMeetingValide));
-        assertTrue(mMeetingList.size() == 3);
+
+    }
+
+    @Test
+    public void getMeetingFilterRoomAndDateWithSuccess(){
+        //We add 3 Meeting in list
+        mService.createMeeting(mMeetingValide);
+        mService.createMeeting(mMeetingNotValide);
+        mService.createMeeting(mMeetingPast);
 
         //Now we filter with date and list
         assertTrue(mService.getMeetingFilter(mDateTime,1L).contains(mMeetingValide));
         assertTrue(mService.getMeetingFilter(mDateTime,1L).size()==2);
 
         // We check if we don't have element use other Room
-        Meeting meeting = DummyGenerator.DUMMY_MEETINGS.get(2);
+        Meeting meeting = DummyGeneratorMeeting.DUMMY_MEETINGS.get(2);
         assertFalse(mService.getMeetingFilter(mDateTime,1L).contains(meeting));
         assertFalse(mService.getMeetingFilter(mDateTime,null).contains(meeting));
         assertFalse(mService.getMeetingFilter(null,1L).contains(meeting));
     }
+
+
 
 }

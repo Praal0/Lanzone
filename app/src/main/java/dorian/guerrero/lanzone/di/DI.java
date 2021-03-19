@@ -1,5 +1,8 @@
 package dorian.guerrero.lanzone.di;
 
+import java.util.List;
+
+import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.service.DummyMeetingApiService;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 
@@ -21,6 +24,14 @@ public class DI {
      */
     public static MeetingApiService getNewInstanceApiService() {
         return new DummyMeetingApiService();
+    }
+
+    public static void initializeMeetingApiService(List<Meeting> meetings) {
+        // Purge
+        service = new DummyMeetingApiService();
+
+        for (Meeting meeting: meetings)
+            service.createMeeting(meeting);
     }
 
 

@@ -2,10 +2,7 @@ package dorian.guerrero.lanzone.service;
 
 import org.joda.time.DateTime;
 
-import java.text.Normalizer;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
 import java.util.List;
 
 import dorian.guerrero.lanzone.di.DI;
@@ -19,7 +16,7 @@ public class DummyMeetingApiService implements MeetingApiService{
     private MeetingApiService mMeetingApiService;
 
     public DummyMeetingApiService(){
-        mMeetings = DummyGenerator.generateMeetings();
+        mMeetings = DummyGeneratorMeeting.generateMeetings();
         mRooms = GeneratorRoom.generateRoom();
         mMeetingApiService = DI.getMeetingApiService();
     }

@@ -254,32 +254,29 @@ public class AddMeetingActivity extends AppCompatActivity {
         mEditTextTimeStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mDateTextView.getText().toString().isEmpty()){
-                    mStartTimeTextInputLayout.setError(getText(R.string.error_empty_date));
-                }else{
-                    TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                        @Override
-                        public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
-                            lastSelectedHourDe = hourOfDay;
-                            lastSelectedMinuteDe = minutes;
-                            savTmBegin = new LocalTime(hourOfDay,minutes);
-                            if (dtEnd != null){
-                                if (dtBegin.isBefore(dtEnd)){
-                                    mEditTextTimeStart.setText(String.format("%02d:%02d", hourOfDay, minutes));
-                                    mStartTimeTextInputLayout.setError(null);
-                                }else{
-                                    dtBegin = null;
-                                    mEditTextTimeStart.setText("");
-                                    mStartTimeTextInputLayout.setError(getText(R.string.error_invalid_time_after));
-                                }
-                            }else{
+                TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
+                        lastSelectedHourDe = hourOfDay;
+                        lastSelectedMinuteDe = minutes;
+                        savTmBegin = new LocalTime(hourOfDay,minutes);
+                        if (savTmEnd != null){
+                            if (savTmBegin.isBefore(savTmEnd)){
                                 mEditTextTimeStart.setText(String.format("%02d:%02d", hourOfDay, minutes));
+                                mStartTimeTextInputLayout.setError(null);
+                            }else{
+                                savTmBegin = null;
+                                mEditTextTimeStart.setText("");
+                                mStartTimeTextInputLayout.setError(getText(R.string.error_invalid_time_after));
                             }
+                        }else{
+                            mEditTextTimeStart.setText(String.format("%02d:%02d", hourOfDay, minutes));
                         }
+                    }
                     }, lastSelectedHourDe, lastSelectedMinuteDe, true);
-                    timePickerDialog.show();
-                }
+                timePickerDialog.show();
             }
+
         });
     }
 
@@ -293,27 +290,23 @@ public class AddMeetingActivity extends AppCompatActivity {
         mEditTexteTimeEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mDateTextView.getText().toString().isEmpty()){
-                    mEndTimeTextInputLayout.setError(getText(R.string.error_empty_date));
-                }else{
-                    TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                        @Override
-                        public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
-                            lastSelectedHourA = hourOfDay;
-                            lastSelectedMinuteA = minutes;
-                            savTmEnd = new LocalTime(hourOfDay,minutes);
-                            if (savTmEnd.isAfter(savTmBegin)){
-                                mEditTexteTimeEnd.setText(String.format("%02d:%02d", hourOfDay, minutes));
-                                mEndTimeTextInputLayout.setError(null);
-                            }else{
-                                savTmEnd = null;
-                                mEditTexteTimeEnd.setText("");
-                                mEndTimeTextInputLayout.setError(getText(R.string.error_invalid_time_after));
-                            }
+                TimePickerDialog timePickerDialog = new TimePickerDialog(AddMeetingActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int hourOfDay, int minutes) {
+                        lastSelectedHourA = hourOfDay;
+                        lastSelectedMinuteA = minutes;
+                        savTmEnd = new LocalTime(hourOfDay,minutes);
+                        if (savTmEnd.isAfter(savTmBegin)){
+                            mEditTexteTimeEnd.setText(String.format("%02d:%02d", hourOfDay, minutes));
+                            mEndTimeTextInputLayout.setError(null);
+                        }else{
+                            savTmEnd = null;
+                            mEditTexteTimeEnd.setText("");
+                            mEndTimeTextInputLayout.setError(getText(R.string.error_invalid_time_after));
                         }
+                    }
                     }, lastSelectedHourA, lastSelectedMinuteA, true);
-                    timePickerDialog.show();
-                }
+                timePickerDialog.show();
             }
         });
     }
