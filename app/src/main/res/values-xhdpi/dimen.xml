@@ -5,8 +5,6 @@
     <dimen name="circle_size">48dp</dimen>
     <dimen name="layout_width">75dp</dimen>
     <dimen name="layout_with_list">75dp</dimen>
-    <dimen name="layout_width_img_trash">80dp</dimen>
-    <dimen name="layout_width_img_trash_land">110dp</dimen>
     <dimen name="layout_height">300dp</dimen>
     <dimen name="layout_height_land">200dp</dimen>
     <dimen name="layout_height_list">65dp</dimen>
@@ -23,6 +21,7 @@
     <dimen name="text_view_spinner_item_size">16sp</dimen>
     <dimen name="chip_group_top_margin">8dp</dimen>
     <!-- Images -->
-    <dimen name="size_image_height">200dip</dimen>
-    <dimen name="size_image_width">@dimen/size_image_height</dimen>
+    <dimen name="layout_width_img_trash">80dp</dimen>
+    <dimen name="layout_width_img_trash_land">110dp</dimen>
+
 </resources>
