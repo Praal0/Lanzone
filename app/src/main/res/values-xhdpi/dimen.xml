@@ -4,10 +4,10 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="circle_size">48dp</dimen>
     <dimen name="layout_width">75dp</dimen>
-    <dimen name="layout_with_list">75dp</dimen>
+    <dimen name="layout_with_list">55dp</dimen>
     <dimen name="layout_height">300dp</dimen>
     <dimen name="layout_height_land">200dp</dimen>
-    <dimen name="layout_height_list">65dp</dimen>
+    <dimen name="layout_height_list">75dp</dimen>
     <dimen name="text_size_list">25dp</dimen>
     <dimen name="text_size_list_land">20dp</dimen>
     <dimen name="text_size_splash">30dp</dimen>
@@ -23,5 +23,4 @@
     <!-- Images -->
     <dimen name="layout_width_img_trash">80dp</dimen>
     <dimen name="layout_width_img_trash_land">110dp</dimen>
-
 </resources>

@@ -7,7 +7,7 @@
     <dimen name="layout_with_list">90dp</dimen>
     <dimen name="layout_height">200dp</dimen>
     <dimen name="layout_height_land">200dp</dimen>
-    <dimen name="layout_height_list">60dp</dimen>
+    <dimen name="layout_height_list">55dp</dimen>
     <dimen name="text_size_list">20dp</dimen>
     <dimen name="text_size_list_land">20dp</dimen>
     <dimen name="text_size_splash">30dp</dimen>
