@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/circle_item"
-        android:layout_width="@dimen/layout_with_list"
+        android:layout_width="0dp"
         android:layout_height="@dimen/layout_height_list"
         android:layout_margin="@dimen/text_margin"
         android:contentDescription="@string/color_img"
@@ -28,7 +28,7 @@
         android:singleLine="true"
         android:text="@string/description_text"
         android:textAlignment="textStart"
-        android:textSize="14sp"
+        android:textSize="@dimen/text_size_list"
         android:textStyle="bold"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toTopOf="@id/participants_item"
@@ -46,6 +46,7 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:text="@string/email_text"
+        android:textSize="@dimen/text_size_list"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/delete_item"

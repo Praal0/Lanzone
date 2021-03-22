@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="1048dp"
-        android:layout_height="184dp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/layout_height_land"
         android:layout_marginBottom="24dp"
         android:paddingBottom="40dp"
         android:src="@drawable/ic_hello"
@@ -30,7 +30,7 @@
         android:layout_marginEnd="141dp"
         android:text="Lanzone"
         android:textColor="@android:color/white"
-        android:textSize="50dp"
+        android:textSize="@dimen/text_size_splash_land"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -5,8 +5,15 @@
     <dimen name="circle_size">48dp</dimen>
     <dimen name="layout_width">90dp</dimen>
     <dimen name="layout_with_list">90dp</dimen>
+    <dimen name="layout_width_img_trash">80dp</dimen>
+    <dimen name="layout_width_img_trash_land">110dp</dimen>
     <dimen name="layout_height">200dp</dimen>
+    <dimen name="layout_height_land">200dp</dimen>
     <dimen name="layout_height_list">60dp</dimen>
+    <dimen name="text_size_list">15dp</dimen>
+    <dimen name="text_size_list_land">20dp</dimen>
+    <dimen name="text_size_splash">30dp</dimen>
+    <dimen name="text_size_splash_land">50dp</dimen>
     <dimen name="layout_margin">50dp</dimen>
     <dimen name="fab_margin">100dp</dimen>
     <dimen name="text_input_layout_margin">16dp</dimen>
