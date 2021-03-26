@@ -35,8 +35,6 @@ public interface MeetingApiService {
      */
     long getIdRoom(String roomName);
 
-    String getNameRoom(long idRoom);
-
     /**
      * Deletes a Meeting
      * @param meeting

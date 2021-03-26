@@ -5,7 +5,6 @@ import org.joda.time.DateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import dorian.guerrero.lanzone.di.DI;
 import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.model.Room;
 
@@ -13,12 +12,10 @@ import dorian.guerrero.lanzone.model.Room;
 public class DummyMeetingApiService implements MeetingApiService{
     private List<Meeting> mMeetings;
     private List<Room> mRooms;
-    private MeetingApiService mMeetingApiService;
 
     public DummyMeetingApiService(){
         mMeetings = DummyGeneratorMeeting.generateMeetings();
         mRooms = GeneratorRoom.generateRoom();
-        mMeetingApiService = DI.getMeetingApiService();
     }
 
     /**
@@ -65,21 +62,6 @@ public class DummyMeetingApiService implements MeetingApiService{
         return idRoom;
     }
 
-    /**
-     * Return name of Rooms
-     */
-    @Override
-    public String getNameRoom(long idRoom) {
-        String name = null;
-        for (Room room : getRooms()){
-            long roomId = room.getId();
-            if (roomId == idRoom){
-                name = room.getRoomName();
-                break;
-            }
-        }
-        return name;
-    }
     /**
      * Delete Meeting in list
      * @param meeting

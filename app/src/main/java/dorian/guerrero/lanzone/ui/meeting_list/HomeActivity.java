@@ -52,6 +52,11 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
         meetingAdapater = new MeetingAdapter(sApiService.getMeeting());
         mRecyclerView.setAdapter(meetingAdapater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        initAdd();
+
+    }
+
+    private void initAdd() {
         mFloatingActionButton.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, AddMeetingActivity.class)));
     }
 
@@ -129,5 +134,3 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     }
 
 }
-
-
