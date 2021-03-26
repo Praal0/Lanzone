@@ -38,6 +38,8 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     @BindView(R.id.addMeeting) FloatingActionButton mFloatingActionButton;
     @BindView(R.id.rcvMeeting) RecyclerView mRecyclerView;
     private MeetingAdapter meetingAdapater;
+    private DateTime dateSelect;
+    private long roomSelect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
         ButterKnife.bind(this);
         sApiService = DI.getMeetingApiService();
         mMeetings = new ArrayList<>();
-        meetingAdapater = new MeetingAdapter(sApiService.getMeetingFilter(null,null));
+        meetingAdapater = new MeetingAdapter(sApiService.getMeeting());
         mRecyclerView.setAdapter(meetingAdapater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mFloatingActionButton.setOnClickListener(v -> startActivity(new Intent(HomeActivity.this, AddMeetingActivity.class)));
@@ -107,14 +109,17 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
 
     public void onButtonClicked(DateTime date, Long room, boolean reset) {
         // When we click on reset or Validation in alert dialog we lauch filter
-        if (reset || date != null || room != null )
+        if (reset || date != null || room != null ){
+            roomSelect = room;
+            dateSelect = date;
             initList(date, room);
+        }
     }
 
     @Subscribe
     public void onDeleteMeeting(DeleteMeetingEvent event) {
         sApiService.deleteMeeting(event.meeting);
-        initList(null,null);
+        initList(dateSelect,roomSelect);
 
     }
 

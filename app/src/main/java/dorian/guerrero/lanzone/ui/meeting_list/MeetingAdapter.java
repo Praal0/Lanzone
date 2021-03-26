@@ -32,7 +32,7 @@ import dorian.guerrero.lanzone.model.Room;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 
 public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> {
-    List<Meeting> mMeeting,mMeetingFull;
+    List<Meeting> mMeeting;
 
     public MeetingAdapter(List<Meeting> items) {
         mMeeting = items;
