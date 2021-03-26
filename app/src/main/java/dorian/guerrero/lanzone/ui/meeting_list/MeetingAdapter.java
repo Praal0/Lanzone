@@ -31,20 +31,14 @@ import dorian.guerrero.lanzone.model.Meeting;
 import dorian.guerrero.lanzone.model.Room;
 import dorian.guerrero.lanzone.service.MeetingApiService;
 
-public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> implements Filterable {
+public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHolder> {
     List<Meeting> mMeeting,mMeetingFull;
-
 
     public MeetingAdapter(List<Meeting> items) {
         mMeeting = items;
-        // We save full list for when we use search view
-        mMeetingFull = new ArrayList<>(mMeeting);
-
     }
 
     @Override
-
-
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.meeting_detail, parent, false);
@@ -52,7 +46,6 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
         return new MyViewHolder(view);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         MeetingApiService mApiService = DI.getMeetingApiService();
@@ -77,7 +70,6 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
             @Override
             public void onClick(View v) {
                 EventBus.getDefault().post(new DeleteMeetingEvent(meeting));
-                mMeetingFull.remove(meeting);
                 notifyItemRemoved(position);
             }
         });
@@ -103,45 +95,5 @@ public class MeetingAdapter extends RecyclerView.Adapter<MeetingAdapter.MyViewHo
     public int getItemCount() {
         return mMeeting.size() ;
     }
-
-    @Override
-    public Filter getFilter() {
-        return meetingFilter;
-    }
-
-    private Filter meetingFilter = new Filter() {
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-            List<Meeting> filteredList = new ArrayList<>();
-
-            //If we don't have element in constraint we use save of list
-            if (constraint == null || constraint.length() == 0) {
-                filteredList.addAll(mMeetingFull);
-            } else {
-                String filterPattern = constraint.toString().toLowerCase().trim();
-                for (Meeting item : mMeeting) {
-                    if (item.getMeetingSubject().toLowerCase().contains(filterPattern)) {
-                        filteredList.add(item);
-                    }
-                    if (item.getMeetingGuestList().contains(filterPattern)) {
-                        filteredList.add(item);
-                    }
-                }
-            }
-            FilterResults results = new FilterResults();
-            results.values = filteredList;
-            return results;
-        }
-
-
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            mMeeting.clear();
-            mMeeting.addAll((List) results.values);
-            notifyDataSetChanged();
-        }
-    };
-
-
 
 }

@@ -34,7 +34,7 @@ import dorian.guerrero.lanzone.ui.Fragment.FilterDialogFragment;
 
 public class HomeActivity extends AppCompatActivity implements FilterDialogFragment.OnButtonClickedListener  {
     public static MeetingApiService sApiService;
-    List<Meeting> mMeetings,mMeetingFull;
+    List<Meeting> mMeetings;
     @BindView(R.id.addMeeting) FloatingActionButton mFloatingActionButton;
     @BindView(R.id.rcvMeeting) RecyclerView mRecyclerView;
     private MeetingAdapter meetingAdapater;
@@ -47,7 +47,6 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
         ButterKnife.bind(this);
         sApiService = DI.getMeetingApiService();
         mMeetings = new ArrayList<>();
-        mMeetingFull = new ArrayList<>(mMeetings);
         meetingAdapater = new MeetingAdapter(sApiService.getMeetingFilter(null,null));
         mRecyclerView.setAdapter(meetingAdapater);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -58,25 +57,6 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.meeting_menu, menu);
-        // We init searchItem for use searchView
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setQueryHint(String.valueOf("Sujet de la réunion"));
-        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                meetingAdapater.getFilter().filter(newText);
-                return false;
-            }
-        });
-
-        MenuItem filter = menu.findItem(R.id.filter);
 
         return true;
     }
@@ -84,15 +64,10 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_search :
-                return true;
-
             case R.id.filter :
                 performFilterDialog();
                 return true;
-
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -140,6 +115,7 @@ public class HomeActivity extends AppCompatActivity implements FilterDialogFragm
     public void onDeleteMeeting(DeleteMeetingEvent event) {
         sApiService.deleteMeeting(event.meeting);
         initList(null,null);
+
     }
 
     @Subscribe
