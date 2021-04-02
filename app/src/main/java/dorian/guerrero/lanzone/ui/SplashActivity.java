@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
@@ -24,6 +25,8 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
         getSupportActionBar().hide();
+        // Lock Orientation before lauch activity for avoid lauch other app;
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LOCKED);
 
         //Rn a progress bar
         playProgress();
@@ -35,6 +38,8 @@ public class SplashActivity extends AppCompatActivity {
                 //We are moving to next page
                 Intent mySuperIntent = new Intent(SplashActivity.this, HomeActivity.class);
                 startActivity(mySuperIntent);
+                // Unlock Orientation before lauch activity;
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
                 //This 'finish()' is for exiting the app when back button pressed from Home page which is HomeActivity
                 finish();
 
